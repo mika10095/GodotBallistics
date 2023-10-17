@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "eafdf0ad62e45aae",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce34f215e38c48c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4c838ff04cf18d19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily/2023-09-13.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2facf4e30a3872c0",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f7f85315f48d26b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8aafe7ed3b9e599a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b553ad6920c3c719",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "849e980401b74d54",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "172e179eaa53e72c",
+    "type": "split",
+    "children": [
+      {
+        "id": "73fde21f29e41813",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "88cdcd1136a289f9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Daily/2023-09-13.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ea2ad703076b7725",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Daily/2023-09-13.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f8f77a0bd6e0af0a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "67f4fdc5e53fab07",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Daily/2023-09-13.md"
+              }
+            }
+          },
+          {
+            "id": "57394c3ba229c02b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "daily-notes:Open today's daily note": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "4c838ff04cf18d19",
+  "lastOpenFiles": [
+    "Daily/2023-09-06.md",
+    "Daily/2023-09-08.md",
+    "Daily/2023-09-13.md",
+    "Daily/2023-09-15.md",
+    "Daily/2023-09-25.md",
+    "Daily/2023-10-12.md",
+    "Daily/2023-09-27.md",
+    "Daily/2023-09-26.md",
+    "Images/PDFS/ISO-2533-1975.pdf",
+    "Images/PDFS/Nincs megerősítve 92046.crdownload",
+    "Images/PDFS/vdoc.pub_stanag-4355-the-modified-point-mass-and-five-degrees-of-freedom-trajectory-models-edition-3.pdf",
+    "Images/PDFS/Nincs megerősítve 974330.crdownload",
+    "Images/junk/Pasted image 20230927103242.png",
+    "Images/junk/Pasted image 20230927104531.png",
+    "Images/PDFS/22_D1167-1175_01415_Bpast.No.68-5_30.10.20_.pdf",
+    "Images/junk/1.png",
+    "Images/junk/Pasted image 20230927104531 másolata.png",
+    "Images/PDFS/Nincs megerősítve 275824.crdownload",
+    "Images/junk",
+    "Images/junk/Pasted image 20230927103912.png",
+    "Images/junk/Pasted image 20230927103549.png",
+    "Images/junk/Pasted image 20230927103504.png",
+    "Images/junk/Pasted image 20230927103501.png",
+    "Images/junk/Pasted image 20230927103403.png",
+    "Images/PDFS/06_01+(7).pdf",
+    "Daily/2023-09-05.md",
+    "Images/PDFS/bpasts-2016-0010.pdf",
+    "Images/PDFS/107-125-1-PB.pdf",
+    "Overview.md",
+    "Daily/Daily Notes.md",
+    "Modules/Ballistic Simulator/BallS Problems and failures+Todo.md",
+    "Modules/Ballistic Simulator/Projectile.md",
+    "Modules/3D Cellular Automata/3DCA Problems and failures+Todo.md",
+    "Modules/Mesh Manipulator/MeshM Problems and failures+Todo.md",
+    "Modules/3D Cellular Automata/3DCA.md",
+    "Modules/Ballistic Simulator/Shells.md",
+    "Modules/Ballistic Simulator/BallS.md",
+    "Modules/3D Cellular Automata/SV.md",
+    "Modules/3D Cellular Automata/Cell.md",
+    "Images/Simulation Process.md",
+    "Todo.md",
+    "Untitled.canvas",
+    "Modules/Mesh Manipulator/MeshM.md"
+  ]
+}

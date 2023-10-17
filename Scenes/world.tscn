@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://cvs7fmdivo7fv"]
+
+[ext_resource type="Material" uid="uid://7k11wvh8nton" path="res://Resources/Materials/ground.tres" id="1_y2ul3"]
+[ext_resource type="Script" path="res://Resources/Scripts/free_look_camera.gd" id="2_qkbwh"]
+[ext_resource type="Script" path="res://Resources/Scripts/Gun.gd" id="3_dsruq"]
+[ext_resource type="Script" path="res://Resources/Scripts/Breech.gd" id="4_vn2qj"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_65pfv"]
+sky_top_color = Color(0.188235, 0.54902, 1, 1)
+sky_horizon_color = Color(0.901961, 0.560784, 0.290196, 1)
+ground_horizon_color = Color(0.646078, 0.655975, 0.670505, 1)
+
+[sub_resource type="Sky" id="Sky_kk03u"]
+sky_material = SubResource("ProceduralSkyMaterial_65pfv")
+
+[sub_resource type="Environment" id="Environment_pd5j1"]
+background_mode = 2
+sky = SubResource("Sky_kk03u")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6funn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tus7q"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kmyy1"]
+
+[node name="World" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pd5j1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(-0.866025, -0.231648, 0.443102, 0, 0.886204, 0.463296, -0.5, 0.401226, -0.767475, 0, 485.906, 41.4758)
+light_color = Color(1, 0.847059, 0.717647, 1)
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 4096.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldEnvironment"]
+transform = Transform3D(10000, 0, 0, 0, 100, 0, 0, 0, 10000, 0, 0, 0)
+material_override = ExtResource("1_y2ul3")
+mesh = SubResource("PlaneMesh_6funn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50752, 0)
+mesh = SubResource("BoxMesh_tus7q")
+
+[node name="PlayerCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+current = true
+script = ExtResource("2_qkbwh")
+
+[node name="UniversalGun" type="Node" parent="."]
+
+[node name="GunMovement" type="Node3D" parent="UniversalGun"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.505, -0.001)
+script = ExtResource("3_dsruq")
+
+[node name="Barrel" type="MeshInstance3D" parent="UniversalGun/GunMovement"]
+transform = Transform3D(-1.09278e-08, -1, 0, 0.25, -4.37114e-08, 0, 0, 0, 0.25, 0.5, 0, 0)
+mesh = SubResource("BoxMesh_kmyy1")
+
+[node name="FirePoint" type="Node3D" parent="UniversalGun/GunMovement/Barrel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="Breech" type="Node" parent="UniversalGun/GunMovement"]
+script = ExtResource("4_vn2qj")
+Diameter = 10.0

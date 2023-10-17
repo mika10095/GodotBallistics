@@ -1,0 +1,5 @@
+- [ ] Create Unity Project and setup everything
+- [ ] Create the first version of the [[3DCA]]
+- [ ] Create the first version of the [[BallS]]
+- [ ] Create the first version of the [[MeshM]]
+- [ ] Figure out a solution to the [[Shells]]

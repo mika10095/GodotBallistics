@@ -1,0 +1,1 @@
+2 types of projectiles can be simulated

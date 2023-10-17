@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm3mp0ko2rmue"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/Ballisti.cs" id="1_3yyo7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_32dsj"]
+
+[node name="Bullet" type="Node3D"]
+script = ExtResource("1_3yyo7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_32dsj")
