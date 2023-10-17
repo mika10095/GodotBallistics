@@ -3,15 +3,15 @@ using System;
 
 public partial class Ballisti : Node3D
 {
-	
+	float Velocity;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 	   
 	}
-	public void Setup(float ASD)
+	public void Setup(float Velocity)
 	{
-		GD.Print(ASD);
+		Velocity = this.Velocity;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

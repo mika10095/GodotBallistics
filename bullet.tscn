@@ -2,11 +2,10 @@
 
 [ext_resource type="Script" path="res://Resources/Scripts/Ballisti.cs" id="1_3yyo7"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_32dsj"]
+[sub_resource type="SphereMesh" id="SphereMesh_ms08r"]
 
 [node name="Bullet" type="Node3D"]
 script = ExtResource("1_3yyo7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.4, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-mesh = SubResource("BoxMesh_32dsj")
+mesh = SubResource("SphereMesh_ms08r")
