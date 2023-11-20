@@ -13,7 +13,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Daily/2023-09-27.md",
+                "file": "Daily/2023-11-20.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "129878d079207748",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39e658faf0f1a8e3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily/Mi Micsoda!.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2023-09-27.md",
+                "file": "Daily/2023-11-20.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2023-09-27.md",
+                "file": "Daily/2023-11-20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2023-09-27.md"
+                "file": "Daily/2023-11-20.md"
               }
             }
           },
@@ -158,39 +176,41 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "838ad1f66db3c0bb",
+  "active": "8aafe7ed3b9e599a",
   "lastOpenFiles": [
-    "Daily/2023-10-17.md",
+    "Images/PDFS/Stanag4355.pdf",
+    "Daily/2023-11-20.md",
+    "Daily/Mi Micsoda!.md",
+    "Daily/2023-09-05.md",
     "Daily/2023-09-06.md",
-    "Daily/2023-09-08.md",
     "Daily/2023-09-13.md",
-    "Daily/2023-09-15.md",
-    "Daily/2023-09-25.md",
+    "Daily/2023-09-08.md",
+    "Images/PDFS/Stanag 4119.pdf",
+    "Images/PDFS/ISO-2533-1975.pdf",
+    "Images/PDFS/FULLTEXT01.pdf",
+    "Images/PDFS/flightstab.pdf",
+    "Images/PDFS/ExplicitRefinement.pdf",
+    "Images/PDFS/explicitimplicit.pdf",
+    "Images/PDFS/Explicit ballistic M-2.pdf",
+    "Images/PDFS/Explicit M-2.pdf",
+    "Images/PDFS/155mmTraj.pdf",
     "Daily/2023-10-12.md",
     "Daily/2023-09-27.md",
     "Daily/2023-09-26.md",
-    "Images/PDFS/ISO-2533-1975.pdf",
-    "Images/PDFS/Nincs megerősítve 92046.crdownload",
-    "Images/PDFS/vdoc.pub_stanag-4355-the-modified-point-mass-and-five-degrees-of-freedom-trajectory-models-edition-3.pdf",
-    "Images/PDFS/Nincs megerősítve 974330.crdownload",
+    "Daily/2023-09-25.md",
+    "Daily/2023-09-15.md",
+    "Daily/Daily Notes.md",
+    "Daily/2023-10-17.md",
     "Images/junk/Pasted image 20230927103242.png",
     "Images/junk/Pasted image 20230927104531.png",
-    "Images/PDFS/22_D1167-1175_01415_Bpast.No.68-5_30.10.20_.pdf",
     "Images/junk/1.png",
     "Images/junk/Pasted image 20230927104531 másolata.png",
-    "Images/PDFS/Nincs megerősítve 275824.crdownload",
-    "Images/junk",
     "Images/junk/Pasted image 20230927103912.png",
     "Images/junk/Pasted image 20230927103549.png",
     "Images/junk/Pasted image 20230927103504.png",
     "Images/junk/Pasted image 20230927103501.png",
     "Images/junk/Pasted image 20230927103403.png",
-    "Images/PDFS/06_01+(7).pdf",
-    "Daily/2023-09-05.md",
-    "Images/PDFS/bpasts-2016-0010.pdf",
-    "Images/PDFS/107-125-1-PB.pdf",
     "Overview.md",
-    "Daily/Daily Notes.md",
     "Modules/Ballistic Simulator/BallS Problems and failures+Todo.md",
     "Modules/Ballistic Simulator/Projectile.md",
     "Modules/3D Cellular Automata/3DCA Problems and failures+Todo.md",
@@ -202,7 +222,6 @@
     "Modules/3D Cellular Automata/Cell.md",
     "Images/Simulation Process.md",
     "Todo.md",
-    "Untitled.canvas",
-    "Modules/Mesh Manipulator/MeshM.md"
+    "Untitled.canvas"
   ]
 }
