@@ -11,11 +11,9 @@
             "id": "838ad1f66db3c0bb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Daily/2023-11-20.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/PDFS/Stanag4355.pdf"
               }
             }
           }
@@ -29,12 +27,8 @@
             "id": "39e658faf0f1a8e3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Daily/Mi Micsoda!.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -103,7 +97,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily/2023-11-20.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily/2023-11-20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily/2023-11-20.md"
+                "file": "Images/PDFS/Stanag4355.pdf"
               }
             }
           },
@@ -176,31 +168,32 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "8aafe7ed3b9e599a",
+  "active": "838ad1f66db3c0bb",
   "lastOpenFiles": [
+    "Images/PDFS/flightstab.pdf",
+    "Images/PDFS/explicitimplicit.pdf",
     "Images/PDFS/Stanag4355.pdf",
-    "Daily/2023-11-20.md",
+    "Images/PDFS/Stanag 4119.pdf",
+    "Images/PDFS/ExplicitRefinement.pdf",
+    "Images/PDFS/Explicit ballistic M-2.pdf",
+    "Images/PDFS/Explicit M-2.pdf",
+    "Images/PDFS/379956.pdf",
+    "Images/PDFS/155mmTraj.pdf",
     "Daily/Mi Micsoda!.md",
+    "Daily/2023-11-20.md",
+    "Images/PDFS/vdoc.pub_stanag-4355-the-modified-point-mass-and-five-degrees-of-freedom-trajectory-models-edition-3.pdf",
+    "Images/PDFS/bulletin_2020_5_baranowski_majewski_szymonik.pdf",
+    "Daily/2023-10-17.md",
     "Daily/2023-09-05.md",
     "Daily/2023-09-06.md",
     "Daily/2023-09-13.md",
     "Daily/2023-09-08.md",
-    "Images/PDFS/Stanag 4119.pdf",
-    "Images/PDFS/ISO-2533-1975.pdf",
-    "Images/PDFS/FULLTEXT01.pdf",
-    "Images/PDFS/flightstab.pdf",
-    "Images/PDFS/ExplicitRefinement.pdf",
-    "Images/PDFS/explicitimplicit.pdf",
-    "Images/PDFS/Explicit ballistic M-2.pdf",
-    "Images/PDFS/Explicit M-2.pdf",
-    "Images/PDFS/155mmTraj.pdf",
     "Daily/2023-10-12.md",
     "Daily/2023-09-27.md",
     "Daily/2023-09-26.md",
     "Daily/2023-09-25.md",
     "Daily/2023-09-15.md",
     "Daily/Daily Notes.md",
-    "Daily/2023-10-17.md",
     "Images/junk/Pasted image 20230927103242.png",
     "Images/junk/Pasted image 20230927104531.png",
     "Images/junk/1.png",
