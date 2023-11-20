@@ -18,11 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 EnviromentSetup="*res://Resources/Scripts/EnviromentSetup.gd"
+BallisticsManager="*res://Resources/Scripts/BallisticsManager.cs"
 
 [dotnet]
 
 project/assembly_name="Projects"
-
-[rendering]
-
-renderer/rendering_method="mobile"
