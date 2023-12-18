@@ -1,32 +1,55 @@
 using Godot;
-using System;
+using System.Collections.Generic;
 
 public partial class Ballisti : Node3D
 {
-	Vector3 Velocity;
-	Vector3 Forward;
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		 Forward = new Vector3(0, -1, 0);
+    private readonly Vector3 Forward = new Vector3(0, -1, 0);
 
-	}
-	public void Setup(float Velocity)
-	{
-		this.Velocity.X = Velocity;
+    // Called when the node enters the scene tree for the first time.
+    private List<StepData> SimulationSteps = new List<StepData>();
 
-	}
+    private struct StepData
+    {
+        public int time;
+        public Transform3D pos;
+        public float velocity;
+        public float spinRate;
+        public void StepDataSet()
+        {
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-		var forward_dir = Basis * Forward;
-       
-        Position += (float)delta * Velocity.X* forward_dir;
-		Velocity.Y -= 9.8f*(float)delta;
-		Position += new Vector3(0, (float)delta * Velocity.Y,0);
-
-
+        }
     }
-	
+
+    public override void _Ready()
+    {
+    }
+
+    public void Setup(float Velocity, float Diameter, float Mass, float SpinRate)
+    {
+        //this.Velocity.X = Velocity;
+        SimulationSteps.Add(new StepData());
+    }
+
+    public void Setup(float Velocity)
+    {
+    }
+
+    public void CalculateStep(int numberOfSteps, int timestep)
+    {
+        int tempTime = SimulationSteps[SimulationSteps.Count].time;
+        for (int i = 0; i < numberOfSteps; i++)
+        {
+            SimulationSteps.Add(new StepData {time = 0});
+        }
+    }
+
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
+    {
+        var forward_dir = Basis * Forward;
+        GD.Print();
+        /*Position += (float)delta * Velocity.X* forward_dir;
+		Velocity.Y -= 9.8f*(float)delta;
+		Position += new Vector3(0, (float)delta * Velocity.Y,0);*/
+    }
 }

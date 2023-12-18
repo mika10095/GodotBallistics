@@ -4,31 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "ce34f215e38c48c7",
+        "id": "dd88e809962e0168",
         "type": "tabs",
         "children": [
           {
-            "id": "838ad1f66db3c0bb",
+            "id": "b5ab37bbbedf52fa",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Images/PDFS/Stanag4355.pdf"
+                "file": "V2.5 Godot/Agyfolyás.md",
+                "mode": "source",
+                "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "129878d079207748",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "39e658faf0f1a8e3",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
             }
           }
         ]
@@ -97,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "V2.5 Godot/Agyfolyás.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "V2.5 Godot/Agyfolyás.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/PDFS/Stanag4355.pdf"
+                "file": "V2.5 Godot/Agyfolyás.md"
               }
             }
           },
@@ -148,12 +138,21 @@
                 "sortOrder": "frequency"
               }
             }
+          },
+          {
+            "id": "2378f002011ae8d5",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -168,53 +167,52 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "838ad1f66db3c0bb",
+  "active": "b5ab37bbbedf52fa",
   "lastOpenFiles": [
-    "Images/PDFS/flightstab.pdf",
-    "Images/PDFS/explicitimplicit.pdf",
-    "Images/PDFS/Stanag4355.pdf",
-    "Images/PDFS/Stanag 4119.pdf",
-    "Images/PDFS/ExplicitRefinement.pdf",
-    "Images/PDFS/Explicit ballistic M-2.pdf",
-    "Images/PDFS/Explicit M-2.pdf",
-    "Images/PDFS/379956.pdf",
-    "Images/PDFS/155mmTraj.pdf",
+    "Szemetes/Daily Notes.md",
     "Daily/Mi Micsoda!.md",
+    "Szemetes/2023-11-23.md",
+    "Szemetes/2023-10-12.md",
     "Daily/2023-11-20.md",
-    "Images/PDFS/vdoc.pub_stanag-4355-the-modified-point-mass-and-five-degrees-of-freedom-trajectory-models-edition-3.pdf",
-    "Images/PDFS/bulletin_2020_5_baranowski_majewski_szymonik.pdf",
-    "Daily/2023-10-17.md",
-    "Daily/2023-09-05.md",
-    "Daily/2023-09-06.md",
-    "Daily/2023-09-13.md",
-    "Daily/2023-09-08.md",
-    "Daily/2023-10-12.md",
-    "Daily/2023-09-27.md",
+    "Szemetes/2023-09-27.md",
     "Daily/2023-09-26.md",
     "Daily/2023-09-25.md",
     "Daily/2023-09-15.md",
-    "Daily/Daily Notes.md",
-    "Images/junk/Pasted image 20230927103242.png",
-    "Images/junk/Pasted image 20230927104531.png",
-    "Images/junk/1.png",
+    "Daily/2023-09-13.md",
+    "Szemetes/2023-09-08.md",
+    "Szemetes/2023-09-06.md",
+    "Daily/2023-09-05.md",
+    "Szemetes/junk/1.png",
+    "Szemetes/junk/Pasted image 20230927103242.png",
+    "Images/PDFS/Stanag4355.pdf",
+    "Images/PDFS/Stanag 4119.pdf",
+    "Szemetes/Simulation Process.md",
+    "V2.5 Godot/Agyfolyás.md",
+    "Szemetes/Todo.md",
+    "Szemetes/Overview.md",
+    "Szemetes",
+    "Images/PDFS/MAM.pdf",
+    "Images/PDFS/379956.pdf",
+    "Images/PDFS/155mmTraj.pdf",
+    "V2.5 Godot",
+    "Images/PDFS/Nincs megerősítve 480842.crdownload",
+    "Images/PDFS/flightstab.pdf",
+    "Images/PDFS/explicitimplicit.pdf",
+    "Daily/2023-10-17.md",
+    "Szemetes/junk/Pasted image 20230927104531.png",
     "Images/junk/Pasted image 20230927104531 másolata.png",
-    "Images/junk/Pasted image 20230927103912.png",
-    "Images/junk/Pasted image 20230927103549.png",
-    "Images/junk/Pasted image 20230927103504.png",
-    "Images/junk/Pasted image 20230927103501.png",
-    "Images/junk/Pasted image 20230927103403.png",
-    "Overview.md",
-    "Modules/Ballistic Simulator/BallS Problems and failures+Todo.md",
-    "Modules/Ballistic Simulator/Projectile.md",
-    "Modules/3D Cellular Automata/3DCA Problems and failures+Todo.md",
-    "Modules/Mesh Manipulator/MeshM Problems and failures+Todo.md",
-    "Modules/3D Cellular Automata/3DCA.md",
-    "Modules/Ballistic Simulator/Shells.md",
-    "Modules/Ballistic Simulator/BallS.md",
-    "Modules/3D Cellular Automata/SV.md",
-    "Modules/3D Cellular Automata/Cell.md",
-    "Images/Simulation Process.md",
-    "Todo.md",
+    "Szemetes/junk/Pasted image 20230927103912.png",
+    "Szemetes/junk/Pasted image 20230927103549.png",
+    "Szemetes/junk/Pasted image 20230927103504.png",
+    "Szemetes/junk/Pasted image 20230927103501.png",
+    "Szemetes/junk/Pasted image 20230927103403.png",
+    "Szemetes/Modules/Ballistic Simulator/BallS Problems and failures+Todo.md",
+    "Szemetes/Modules/Ballistic Simulator/Projectile.md",
+    "Szemetes/Modules/3D Cellular Automata/3DCA Problems and failures+Todo.md",
+    "Szemetes/Modules/Mesh Manipulator/MeshM Problems and failures+Todo.md",
+    "Szemetes/Modules/3D Cellular Automata/3DCA.md",
+    "Szemetes/Modules/Ballistic Simulator/Shells.md",
+    "Szemetes/Modules/Ballistic Simulator/BallS.md",
     "Untitled.canvas"
   ]
 }
