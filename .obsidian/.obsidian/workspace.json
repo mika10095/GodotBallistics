@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Daily/2023-09-25.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "125826c56ae5bcea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "V2.5 Godot/Agyfolyás.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -135,7 +148,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           },
@@ -167,16 +182,18 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "b5ab37bbbedf52fa",
+  "active": "125826c56ae5bcea",
   "lastOpenFiles": [
-    "Szemetes/Daily Notes.md",
     "Daily/Mi Micsoda!.md",
+    "Daily/2023-09-25.md",
+    "Szemetes.rar",
+    "V2.5 Godot/Agyfolyás.md",
+    "Szemetes/Daily Notes.md",
     "Szemetes/2023-11-23.md",
     "Szemetes/2023-10-12.md",
     "Daily/2023-11-20.md",
     "Szemetes/2023-09-27.md",
     "Daily/2023-09-26.md",
-    "Daily/2023-09-25.md",
     "Daily/2023-09-15.md",
     "Daily/2023-09-13.md",
     "Szemetes/2023-09-08.md",
@@ -187,7 +204,6 @@
     "Images/PDFS/Stanag4355.pdf",
     "Images/PDFS/Stanag 4119.pdf",
     "Szemetes/Simulation Process.md",
-    "V2.5 Godot/Agyfolyás.md",
     "Szemetes/Todo.md",
     "Szemetes/Overview.md",
     "Szemetes",
@@ -197,7 +213,6 @@
     "V2.5 Godot",
     "Images/PDFS/Nincs megerősítve 480842.crdownload",
     "Images/PDFS/flightstab.pdf",
-    "Images/PDFS/explicitimplicit.pdf",
     "Daily/2023-10-17.md",
     "Szemetes/junk/Pasted image 20230927104531.png",
     "Images/junk/Pasted image 20230927104531 másolata.png",
