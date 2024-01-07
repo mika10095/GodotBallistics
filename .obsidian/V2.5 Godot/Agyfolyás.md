@@ -35,4 +35,5 @@ Közös methódusok moduloknak
 Mi az acél?
 	Beraksz 1 dolgot autoloadba írsz vagy 2 sort azt 1 methódussal képes vagy létrehozni egy lövedéket. 
 			Ehez a lövedékinfókat be kell tölteni minden adat stb... Ezeket egy fájlból vagy valami de nem egy nagy string az lassú..
-			 
+
+Egyszer kell az idő management
