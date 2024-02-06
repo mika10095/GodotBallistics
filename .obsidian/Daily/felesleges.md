@@ -1,0 +1,7 @@
+https://apps.dtic.mil/sti/pdfs/ADA248292.pdf
+ez base burn nekem nem kell
+
+https://www.researchgate.net/publication/299524797_Explicit_ballistic_M-model_A_refinement_of_the_implicit_modified_point_mass_trajectory_model
+megvan 6szor
+https://www.researchgate.net/publication/347953995_Explicit_form_of_the_modified_point_mass_trajectory_model_for_the_use_in_Fire_Control_Systems
+szintén

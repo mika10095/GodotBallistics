@@ -4,35 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "dd88e809962e0168",
+        "id": "d8b04429c2cbd25d",
         "type": "tabs",
         "children": [
           {
-            "id": "b5ab37bbbedf52fa",
+            "id": "f10669c6af643f42",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Daily/2023-09-25.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "125826c56ae5bcea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "V2.5 Godot/Agyfolyás.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/PDFS/Stanag4355.pdf"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "V2.5 Godot/Agyfolyás.md",
+                "file": "Images/PDFS/Stanag4355.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "V2.5 Godot/Agyfolyás.md",
+                "file": "Images/PDFS/Stanag4355.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "V2.5 Godot/Agyfolyás.md"
+                "file": "Images/PDFS/Stanag4355.pdf"
               }
             }
           },
@@ -182,23 +167,30 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "125826c56ae5bcea",
+  "active": "8aafe7ed3b9e599a",
   "lastOpenFiles": [
-    "Daily/Mi Micsoda!.md",
+    "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
+    "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf.crdownload",
+    "Daily/2023-09-26.md",
+    "Daily/2023-11-20.md",
+    "Daily/2024-01-09.md",
     "Daily/2023-09-25.md",
-    "Szemetes.rar",
+    "Daily/Mi Micsoda!.md",
+    "Images/PDFS/Explicit ballistic M-2.pdf",
+    "Images/PDFS/flightstab.pdf",
+    "Images/PDFS/155mmTraj.pdf",
+    "Daily/2023-09-15.md",
+    "Daily/felesleges.md",
+    "Daily/2023-09-13.md",
+    "Daily/2023-09-05.md",
     "V2.5 Godot/Agyfolyás.md",
+    "Szemetes.rar",
     "Szemetes/Daily Notes.md",
     "Szemetes/2023-11-23.md",
     "Szemetes/2023-10-12.md",
-    "Daily/2023-11-20.md",
     "Szemetes/2023-09-27.md",
-    "Daily/2023-09-26.md",
-    "Daily/2023-09-15.md",
-    "Daily/2023-09-13.md",
     "Szemetes/2023-09-08.md",
     "Szemetes/2023-09-06.md",
-    "Daily/2023-09-05.md",
     "Szemetes/junk/1.png",
     "Szemetes/junk/Pasted image 20230927103242.png",
     "Images/PDFS/Stanag4355.pdf",
@@ -209,10 +201,6 @@
     "Szemetes",
     "Images/PDFS/MAM.pdf",
     "Images/PDFS/379956.pdf",
-    "Images/PDFS/155mmTraj.pdf",
-    "V2.5 Godot",
-    "Images/PDFS/Nincs megerősítve 480842.crdownload",
-    "Images/PDFS/flightstab.pdf",
     "Daily/2023-10-17.md",
     "Szemetes/junk/Pasted image 20230927104531.png",
     "Images/junk/Pasted image 20230927104531 másolata.png",
@@ -226,8 +214,6 @@
     "Szemetes/Modules/3D Cellular Automata/3DCA Problems and failures+Todo.md",
     "Szemetes/Modules/Mesh Manipulator/MeshM Problems and failures+Todo.md",
     "Szemetes/Modules/3D Cellular Automata/3DCA.md",
-    "Szemetes/Modules/Ballistic Simulator/Shells.md",
-    "Szemetes/Modules/Ballistic Simulator/BallS.md",
     "Untitled.canvas"
   ]
 }

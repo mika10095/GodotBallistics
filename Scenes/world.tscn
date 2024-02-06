@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvs7fmdivo7fv"]
+[gd_scene load_steps=9 format=3 uid="uid://cvs7fmdivo7fv"]
 
 [ext_resource type="Material" uid="uid://7k11wvh8nton" path="res://Resources/Materials/ground.tres" id="1_y2ul3"]
-[ext_resource type="Script" path="res://Resources/Scripts/free_look_camera.gd" id="2_qkbwh"]
-[ext_resource type="Script" path="res://Resources/Scripts/Gun.gd" id="3_dsruq"]
+[ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://addons/NCBS/Scenes/camera_follow.tscn" id="2_cvvl6"]
+[ext_resource type="PackedScene" uid="uid://hr4e77pbobu1" path="res://addons/NCBS/Scenes/test_cube_spawner.tscn" id="3_hqrn0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_65pfv"]
 sky_top_color = Color(0.188235, 0.54902, 1, 1)
@@ -20,11 +20,24 @@ glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6funn"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_tus7q"]
+[sub_resource type="GDScript" id="GDScript_5n2e7"]
+resource_name = "fps_debug"
+script/source = "extends Node
+var fps
 
-[sub_resource type="BoxMesh" id="BoxMesh_5sgh8"]
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
 
-[node name="World" type="Node"]
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	fps = str(Engine.get_frames_per_second())
+	if  Input.is_key_pressed(KEY_TAB):
+		print_debug(fps)
+"
+
+[node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pd5j1")
@@ -41,21 +54,12 @@ transform = Transform3D(10000, 0, 0, 0, 100, 0, 0, 0, 10000, 0, 0, 0)
 material_override = ExtResource("1_y2ul3")
 mesh = SubResource("PlaneMesh_6funn")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50752, 0)
-mesh = SubResource("BoxMesh_tus7q")
+[node name="Player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.32324, 0)
 
-[node name="PlayerCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
-current = true
-script = ExtResource("2_qkbwh")
+[node name="CameraFollow" parent="Player" instance=ExtResource("2_cvvl6")]
 
-[node name="UniversalGun" type="Node" parent="."]
+[node name="FPSDebug" type="Node" parent="."]
+script = SubResource("GDScript_5n2e7")
 
-[node name="GunMovement" type="Node3D" parent="UniversalGun"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.505, -0.001)
-script = ExtResource("3_dsruq")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="UniversalGun/GunMovement"]
-transform = Transform3D(0.4, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.2, 0, 0)
-mesh = SubResource("BoxMesh_5sgh8")
+[node name="TestCubeSpawner" parent="." instance=ExtResource("3_hqrn0")]
