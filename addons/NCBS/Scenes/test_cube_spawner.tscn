@@ -2,8 +2,11 @@
 
 [sub_resource type="GDScript" id="GDScript_rajq0"]
 resource_name = "TestCubeSpawner"
-script/source = "extends Node3D
+script/source = "##Ez egy kalap kaga ami csak kockákat spawnol
+extends Node3D
+##ez egy kocka
 var cube = preload(\"res://addons/NCBS/Scenes/tescube.tscn\")
+##ez hogy ne spameld
 var semiauto = true;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

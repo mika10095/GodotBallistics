@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cvs7fmdivo7fv"]
+[gd_scene load_steps=8 format=3 uid="uid://cvs7fmdivo7fv"]
 
 [ext_resource type="Material" uid="uid://7k11wvh8nton" path="res://Resources/Materials/ground.tres" id="1_y2ul3"]
 [ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://addons/NCBS/Scenes/camera_follow.tscn" id="2_cvvl6"]
-[ext_resource type="PackedScene" uid="uid://hr4e77pbobu1" path="res://addons/NCBS/Scenes/test_cube_spawner.tscn" id="3_hqrn0"]
+[ext_resource type="PackedScene" uid="uid://hr4e77pbobu1" path="res://addons/NCBS/Scenes/test_cube_spawner.tscn" id="3_wwx8a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_65pfv"]
 sky_top_color = Color(0.188235, 0.54902, 1, 1)
@@ -19,23 +19,6 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6funn"]
-
-[sub_resource type="GDScript" id="GDScript_5n2e7"]
-resource_name = "fps_debug"
-script/source = "extends Node
-var fps
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	fps = str(Engine.get_frames_per_second())
-	if  Input.is_key_pressed(KEY_TAB):
-		print_debug(fps)
-"
 
 [node name="World" type="Node3D"]
 
@@ -59,7 +42,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.32324, 0)
 
 [node name="CameraFollow" parent="Player" instance=ExtResource("2_cvvl6")]
 
-[node name="FPSDebug" type="Node" parent="."]
-script = SubResource("GDScript_5n2e7")
-
-[node name="TestCubeSpawner" parent="." instance=ExtResource("3_hqrn0")]
+[node name="TestCubeSpawner" parent="." instance=ExtResource("3_wwx8a")]

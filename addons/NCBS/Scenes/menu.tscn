@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://d6ix7nve622o"]
+
+[sub_resource type="GDScript" id="GDScript_mxnsp"]
+resource_name = "menu"
+script/source = "extends Control
+@onready var play_button: Button = $PlayButton
+@onready var settings_button: Button = $SettingsButton
+@onready var exit_button: Button = $ExitButton
+var level = preload(\"res://Scenes/world.tscn\").instantiate()
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	play_button.pressed.connect(on_play_button)
+	settings_button.pressed.connect(on_settings_button)
+	exit_button.pressed.connect(on_exit_button)
+
+func on_play_button():
+	get_tree().root.add_child(level)
+	queue_free()
+func on_settings_button():
+	pass
+func on_exit_button():
+	get_tree().quit()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Menu" type="Node3D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -578.0
+offset_top = -324.0
+offset_right = 582.0
+offset_bottom = 325.0
+script = SubResource("GDScript_mxnsp")
+
+[node name="PlayButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 260.0
+offset_right = 668.0
+offset_bottom = 347.0
+text = "Töccsé"
+
+[node name="SettingsButton" type="Button" parent="Control"]
+offset_left = 490.0
+offset_top = 356.0
+offset_right = 666.0
+offset_bottom = 404.0
+text = "Állíts
+"
+
+[node name="ExitButton" type="Button" parent="Control"]
+offset_left = 490.0
+offset_top = 412.0
+offset_right = 666.0
+offset_bottom = 460.0
+text = "Ne Töccsé"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 604.0
+offset_right = 1146.0
+offset_bottom = 636.0
+bbcode_enabled = true
+text = "[wave][rainbow]Csengeri Miklós 2023-24 update 0"
+
+[node name="Camera2D" type="Camera2D" parent="."]

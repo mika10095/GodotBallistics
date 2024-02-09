@@ -16,6 +16,34 @@
                 "file": "Images/PDFS/Stanag4355.pdf"
               }
             }
+          },
+          {
+            "id": "fa10df3379d4e1d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily/2024-02-06.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "9105d1e52a22b1b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0aadb87302abce12",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Images/PDFS/MAM.pdf"
+              }
+            }
           }
         ]
       }
@@ -83,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/PDFS/Stanag4355.pdf",
+                "file": "Images/PDFS/MAM.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/PDFS/Stanag4355.pdf",
+                "file": "Images/PDFS/MAM.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/PDFS/Stanag4355.pdf"
+                "file": "Images/PDFS/MAM.pdf"
               }
             }
           },
@@ -167,24 +195,30 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "8aafe7ed3b9e599a",
+  "active": "0aadb87302abce12",
   "lastOpenFiles": [
+    "Images/PDFS/ISO-2533-1975.pdf",
+    "Images/PDFS/FULLTEXT01.pdf",
+    "Images/PDFS/flightstab.pdf",
+    "Images/PDFS/ExplicitRefinement.pdf",
+    "Images/PDFS/explicitimplicit.pdf",
+    "Images/PDFS/Explicit M-2.pdf",
+    "Images/PDFS/Explicit ballistic M-2.pdf",
+    "Images/PDFS/155mmTraj.pdf",
+    "Images/PDFS/379956.pdf",
+    "Images/PDFS/Stanag4355.pdf",
+    "Daily/2024-02-06.md",
     "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
-    "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf.crdownload",
     "Daily/2023-09-26.md",
     "Daily/2023-11-20.md",
     "Daily/2024-01-09.md",
     "Daily/2023-09-25.md",
     "Daily/Mi Micsoda!.md",
-    "Images/PDFS/Explicit ballistic M-2.pdf",
-    "Images/PDFS/flightstab.pdf",
-    "Images/PDFS/155mmTraj.pdf",
     "Daily/2023-09-15.md",
     "Daily/felesleges.md",
     "Daily/2023-09-13.md",
     "Daily/2023-09-05.md",
     "V2.5 Godot/Agyfolyás.md",
-    "Szemetes.rar",
     "Szemetes/Daily Notes.md",
     "Szemetes/2023-11-23.md",
     "Szemetes/2023-10-12.md",
@@ -193,14 +227,9 @@
     "Szemetes/2023-09-06.md",
     "Szemetes/junk/1.png",
     "Szemetes/junk/Pasted image 20230927103242.png",
-    "Images/PDFS/Stanag4355.pdf",
-    "Images/PDFS/Stanag 4119.pdf",
     "Szemetes/Simulation Process.md",
     "Szemetes/Todo.md",
     "Szemetes/Overview.md",
-    "Szemetes",
-    "Images/PDFS/MAM.pdf",
-    "Images/PDFS/379956.pdf",
     "Daily/2023-10-17.md",
     "Szemetes/junk/Pasted image 20230927104531.png",
     "Images/junk/Pasted image 20230927104531 másolata.png",
@@ -213,7 +242,6 @@
     "Szemetes/Modules/Ballistic Simulator/Projectile.md",
     "Szemetes/Modules/3D Cellular Automata/3DCA Problems and failures+Todo.md",
     "Szemetes/Modules/Mesh Manipulator/MeshM Problems and failures+Todo.md",
-    "Szemetes/Modules/3D Cellular Automata/3DCA.md",
     "Untitled.canvas"
   ]
 }

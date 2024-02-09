@@ -11,13 +11,16 @@ config_version=5
 [application]
 
 config/name="Ballistics"
-run/main_scene="res://Scenes/world.tscn"
+run/main_scene="res://addons/NCBS/Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.407843, 0.462745, 0.470588, 1)
+boot_splash/image="res://addons/NCBS/icon.png"
+config/icon="res://addons/NCBS/icon.png"
 
 [autoload]
 
 FollowObjectManager="*res://addons/NCBS/Resources/Scripts/followObjectManager.gd"
+PrototypeTrajectory="*res://addons/NCBS/Resources/Scripts/prototypetrajectory.gd"
 
 [display]
 
