@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cvs7fmdivo7fv"]
 
-[ext_resource type="Material" uid="uid://7k11wvh8nton" path="res://Resources/Materials/ground.tres" id="1_y2ul3"]
 [ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://addons/NCBS/Scenes/camera_follow.tscn" id="2_cvvl6"]
+[ext_resource type="Shader" path="res://addons/m_terrain/start.gdshader" id="3_swp3o"]
 [ext_resource type="PackedScene" uid="uid://hr4e77pbobu1" path="res://addons/NCBS/Scenes/test_cube_spawner.tscn" id="3_wwx8a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_65pfv"]
@@ -9,16 +9,17 @@ sky_top_color = Color(0.188235, 0.54902, 1, 1)
 sky_horizon_color = Color(0.901961, 0.560784, 0.290196, 1)
 ground_horizon_color = Color(0.646078, 0.655975, 0.670505, 1)
 
-[sub_resource type="Sky" id="Sky_kk03u"]
+[sub_resource type="Sky" id="Sky_84f4p"]
 sky_material = SubResource("ProceduralSkyMaterial_65pfv")
 
 [sub_resource type="Environment" id="Environment_pd5j1"]
 background_mode = 2
-sky = SubResource("Sky_kk03u")
+sky = SubResource("Sky_84f4p")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_6funn"]
+[sub_resource type="MTerrainMaterial" id="MTerrainMaterial_4ijhb"]
+shader = ExtResource("3_swp3o")
 
 [node name="World" type="Node3D"]
 
@@ -32,14 +33,15 @@ shadow_enabled = true
 directional_shadow_mode = 0
 directional_shadow_max_distance = 4096.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldEnvironment"]
-transform = Transform3D(10000, 0, 0, 0, 100, 0, 0, 0, 10000, 0, 0, 0)
-material_override = ExtResource("1_y2ul3")
-mesh = SubResource("PlaneMesh_6funn")
-
 [node name="Player" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.32324, 0)
 
 [node name="CameraFollow" parent="Player" instance=ExtResource("2_cvvl6")]
 
 [node name="TestCubeSpawner" parent="." instance=ExtResource("3_wwx8a")]
+
+[node name="MTerrain" type="MTerrain" parent="."]
+dataDir = "res://Resources/MTerrain/Data"
+layersDataDir = "C:/Godot/Projects/Ballistics/Resources/MTerrain/Layers"
+terrain_material = SubResource("MTerrainMaterial_4ijhb")
+heightmap_layers = PackedStringArray("background")
