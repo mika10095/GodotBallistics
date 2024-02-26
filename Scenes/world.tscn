@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvs7fmdivo7fv"]
+[gd_scene load_steps=8 format=3 uid="uid://cvs7fmdivo7fv"]
 
 [ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://addons/NCBS/Scenes/camera_follow.tscn" id="2_cvvl6"]
+[ext_resource type="MTerrainMaterial" uid="uid://c5wrbosqge3qw" path="res://addons/m_terrain/start_material.res" id="3_6wguc"]
 [ext_resource type="PackedScene" uid="uid://hr4e77pbobu1" path="res://addons/NCBS/Scenes/test_cube_spawner.tscn" id="3_wwx8a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_65pfv"]
@@ -16,6 +17,21 @@ background_mode = 2
 sky = SubResource("Sky_84f4p")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="GDScript" id="GDScript_mhw6n"]
+resource_name = "terrainstuff"
+script/source = "extends MTerrain
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	create_grid()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="World" type="Node3D"]
 
@@ -35,3 +51,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.32324, 0)
 [node name="CameraFollow" parent="Player" instance=ExtResource("2_cvvl6")]
 
 [node name="TestCubeSpawner" parent="." instance=ExtResource("3_wwx8a")]
+
+[node name="Terrain" type="Node3D" parent="."]
+
+[node name="MTerrain" type="MTerrain" parent="Terrain"]
+dataDir = "res://Resources/MTerrain/Data"
+layersDataDir = "C:/Godot/Projects/Ballistics/Resources/MTerrain/Layers"
+terrain_material = ExtResource("3_6wguc")
+heightmap_layers = PackedStringArray("background")
+terrain_size = Vector2i(128, 128)
+offset = Vector3(-8192, 0, 0)
+script = SubResource("GDScript_mhw6n")
