@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvs7fmdivo7fv"]
+[gd_scene load_steps=10 format=3 uid="uid://cvs7fmdivo7fv"]
 
 [ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://addons/NCBS/Scenes/camera_follow.tscn" id="2_cvvl6"]
-[ext_resource type="MTerrainMaterial" uid="uid://c5wrbosqge3qw" path="res://addons/m_terrain/start_material.res" id="3_6wguc"]
+[ext_resource type="Shader" path="res://addons/m_terrain/start.gdshader" id="3_i1u8k"]
 [ext_resource type="PackedScene" uid="uid://hr4e77pbobu1" path="res://addons/NCBS/Scenes/test_cube_spawner.tscn" id="3_wwx8a"]
+[ext_resource type="Script" path="res://addons/NCBS/Resources/Scripts/NCBSWorldVariables.gd" id="4_vg8gh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_65pfv"]
 sky_top_color = Color(0.188235, 0.54902, 1, 1)
@@ -17,6 +18,14 @@ background_mode = 2
 sky = SubResource("Sky_84f4p")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="MTerrainMaterial" id="MTerrainMaterial_be73r"]
+shader = ExtResource("3_i1u8k")
+_next_passes = {
+-1: {
+"next_pass": null
+}
+}
 
 [sub_resource type="GDScript" id="GDScript_mhw6n"]
 resource_name = "terrainstuff"
@@ -57,8 +66,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.32324, 0)
 [node name="MTerrain" type="MTerrain" parent="Terrain"]
 dataDir = "res://Resources/MTerrain/Data"
 layersDataDir = "C:/Godot/Projects/Ballistics/Resources/MTerrain/Layers"
-terrain_material = ExtResource("3_6wguc")
+terrain_material = SubResource("MTerrainMaterial_be73r")
 heightmap_layers = PackedStringArray("background")
-terrain_size = Vector2i(128, 128)
-offset = Vector3(-8192, 0, 0)
+terrain_size = Vector2i(32, 32)
+offset = Vector3(-256, 0, -256)
 script = SubResource("GDScript_mhw6n")
+
+[node name="NCBSWorldVariables" type="Node" parent="."]
+script = ExtResource("4_vg8gh")

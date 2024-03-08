@@ -44,8 +44,19 @@
                 "file": "Images/PDFS/MAM.pdf"
               }
             }
+          },
+          {
+            "id": "e7473650c81edc18",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,8 +206,10 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "0aadb87302abce12",
+  "active": "e7473650c81edc18",
   "lastOpenFiles": [
+    "Images/PDFS/Stanag4355.pdf",
+    "Images/PDFS/MAM.pdf",
     "Images/PDFS/ISO-2533-1975.pdf",
     "Images/PDFS/FULLTEXT01.pdf",
     "Images/PDFS/flightstab.pdf",
@@ -206,9 +219,7 @@
     "Images/PDFS/Explicit ballistic M-2.pdf",
     "Images/PDFS/155mmTraj.pdf",
     "Images/PDFS/379956.pdf",
-    "Images/PDFS/Stanag4355.pdf",
     "Daily/2024-02-06.md",
-    "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
     "Daily/2023-09-26.md",
     "Daily/2023-11-20.md",
     "Daily/2024-01-09.md",

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://p8tvymy5qicw"]
 
-[ext_resource type="PackedScene" uid="uid://bpi66wm38y21p" path="res://agyu.glb" id="1_iv6xy"]
+[ext_resource type="PackedScene" uid="uid://bpi66wm38y21p" path="res://Resources/Models/agyu.glb" id="1_iv6xy"]
 
 [sub_resource type="Gradient" id="Gradient_wlc0u"]
 

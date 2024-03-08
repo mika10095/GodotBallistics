@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://fmguqkxj6lv7"]
 
-[ext_resource type="Script" path="res://addons/NCBS/Resources/Scripts/followObject.gd" id="1_8ist7"]
+[ext_resource type="Script" path="res://addons/NCBS/Resources/Scripts/follow_object.gd" id="1_1tnfr"]
 [ext_resource type="Script" path="res://addons/NCBS/Resources/Scripts/free_look_camera.gd" id="2_3t6eo"]
 
 [node name="CameraFollow" type="Node3D"]
-script = ExtResource("1_8ist7")
+script = ExtResource("1_1tnfr")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 script = ExtResource("2_3t6eo")

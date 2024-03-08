@@ -19,8 +19,8 @@ config/icon="res://addons/NCBS/icon.png"
 
 [autoload]
 
-FollowObjectManager="*res://addons/NCBS/Resources/Scripts/followObjectManager.gd"
-PrototypeTrajectory="*res://addons/NCBS/Resources/Scripts/prototypetrajectory.gd"
+FollowObjectManager="*res://addons/NCBS/Resources/Scripts/follow_object_manager.gd"
+PrototypeTrajectory="*res://addons/NCBS/Resources/Scripts/prototype_trajectory.gd"
 
 [display]
 
