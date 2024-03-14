@@ -24,7 +24,7 @@ PrototypeTrajectory="*res://addons/NCBS/Resources/Scripts/prototype_trajectory.g
 
 [display]
 
-window/vsync/vsync_mode=0
+window/vsync/vsync_mode=2
 
 [dotnet]
 

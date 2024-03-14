@@ -44,19 +44,8 @@
                 "file": "Images/PDFS/MAM.pdf"
               }
             }
-          },
-          {
-            "id": "e7473650c81edc18",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.8"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,7 +195,7 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "e7473650c81edc18",
+  "active": "0aadb87302abce12",
   "lastOpenFiles": [
     "Images/PDFS/Stanag4355.pdf",
     "Images/PDFS/MAM.pdf",
