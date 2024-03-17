@@ -32,7 +32,7 @@ project/assembly_name="Projects"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/NCBS/plugin.cfg", "res://addons/RunCounter/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/timer/plugin.cfg")
+enabled=PackedStringArray("res://addons/NCBS/plugin.cfg", "res://addons/RunCounter/plugin.cfg", "res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/timer/plugin.cfg")
 
 [filesystem]
 
