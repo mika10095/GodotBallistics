@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cvs7fmdivo7fv"]
+[gd_scene load_steps=9 format=3 uid="uid://cvs7fmdivo7fv"]
 
 [ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://addons/NCBS/Scenes/camera_follow.tscn" id="2_cvvl6"]
-[ext_resource type="Shader" path="res://addons/m_terrain/start.gdshader" id="3_i1u8k"]
 [ext_resource type="PackedScene" uid="uid://hr4e77pbobu1" path="res://addons/NCBS/Scenes/test_cube_spawner.tscn" id="3_wwx8a"]
 [ext_resource type="Script" path="res://addons/NCBS/Resources/Scripts/NCBSWorldVariables.gd" id="4_vg8gh"]
 [ext_resource type="PackedScene" uid="uid://dcor5jlv31rs2" path="res://Resources/Models/Koporso/koporso.glb" id="5_drxl3"]
@@ -11,37 +10,14 @@ sky_top_color = Color(0.188235, 0.54902, 1, 1)
 sky_horizon_color = Color(0.901961, 0.560784, 0.290196, 1)
 ground_horizon_color = Color(0.646078, 0.655975, 0.670505, 1)
 
-[sub_resource type="Sky" id="Sky_84f4p"]
+[sub_resource type="Sky" id="Sky_sg50o"]
 sky_material = SubResource("ProceduralSkyMaterial_65pfv")
 
 [sub_resource type="Environment" id="Environment_pd5j1"]
 background_mode = 2
-sky = SubResource("Sky_84f4p")
+sky = SubResource("Sky_sg50o")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="MTerrainMaterial" id="MTerrainMaterial_be73r"]
-shader = ExtResource("3_i1u8k")
-_next_passes = {
--1: {
-"next_pass": null
-}
-}
-
-[sub_resource type="GDScript" id="GDScript_mhw6n"]
-resource_name = "terrainstuff"
-script/source = "extends MTerrain
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	create_grid()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
 
 [sub_resource type="BoxMesh" id="BoxMesh_4f3yi"]
 
@@ -65,17 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.32324, 0)
 [node name="TestCubeSpawner" parent="." instance=ExtResource("3_wwx8a")]
 
 [node name="Terrain" type="Node3D" parent="."]
-
-[node name="MTerrain" type="MTerrain" parent="Terrain"]
-dataDir = "res://Resources/MTerrain/Data"
-layersDataDir = "C:/Godot/Projects/Ballistics/Resources/MTerrain/Layers"
-create = true
-terrain_material = SubResource("MTerrainMaterial_be73r")
-heightmap_layers = PackedStringArray("background")
-terrain_size = Vector2i(32, 32)
-offset = Vector3(-256, 0, -256)
-transform = Transform3D(0.99996, 0.00895342, 0, -0.00895342, 0.99996, 0, 0, 0, 1, 0, 0, 0)
-script = SubResource("GDScript_mhw6n")
 
 [node name="NCBSWorldVariables" type="Node" parent="."]
 script = ExtResource("4_vg8gh")

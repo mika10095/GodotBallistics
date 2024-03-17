@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://vnnerl8ahke7"]
+
+[ext_resource type="PackedScene" uid="uid://dsb3rhs54nlwx" path="res://Resources/Models/TankT34/t34.glb" id="1_ye6t5"]
+
+[node name="t34" instance=ExtResource("1_ye6t5")]

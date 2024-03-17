@@ -8,7 +8,7 @@ script/source = "extends Control
 @onready var play_button: Button = $PlayButton
 @onready var settings_button: Button = $SettingsButton
 @onready var exit_button: Button = $ExitButton
-var level = preload(\"res://Scenes/world.tscn\").instantiate()
+var level = preload(\"res://Scenes/new_world.tscn\").instantiate()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8cmib0d838q1"]
+
+[ext_resource type="PackedScene" uid="uid://dcor5jlv31rs2" path="res://Resources/Models/Koporso/koporso.glb" id="1_x258u"]
+
+[node name="koporso" instance=ExtResource("1_x258u")]
+transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, 0, 0, -0.699931)
