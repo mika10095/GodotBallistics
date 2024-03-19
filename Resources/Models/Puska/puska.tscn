@@ -489,7 +489,6 @@ tracks/6/keys = PackedFloat32Array(0, 1, -0.655865, 0.264275, 0.655865, 0.264275
 [sub_resource type="Animation" id="Animation_75pvg"]
 resource_name = "Action_001"
 length = 3.0
-loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -563,8 +562,8 @@ bones/1/name = "Bolt"
 bones/1/parent = 0
 bones/1/rest = Transform3D(0, 1, 0, -1, 0, -4.37114e-08, -4.37114e-08, 0, 1, 0.0254307, 0.0490179, 5.23869e-09)
 bones/1/enabled = true
-bones/1/position = Vector3(-0.0532051, 0.0490179, 5.26028e-09)
-bones/1/rotation = Quaternion(-0.464899, -0.464239, -0.533123, 0.533039)
+bones/1/position = Vector3(0.0254307, 0.0490179, 5.26028e-09)
+bones/1/rotation = Quaternion(1.54543e-08, 1.54543e-08, -0.707107, 0.707107)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "bolt.001"
 bones/2/parent = 1
@@ -577,8 +576,8 @@ bones/3/name = "EmptyCartridge"
 bones/3/parent = 0
 bones/3/rest = Transform3D(0, 1, 0, -1, 0, -4.37114e-08, -4.37114e-08, 0, 1, 0.157877, 0.0480869, 5.12227e-09)
 bones/3/enabled = true
-bones/3/position = Vector3(-0.0805351, -0.10109, 0.0908689)
-bones/3/rotation = Quaternion(-0.128744, 0.265802, 0.665009, 0.685957)
+bones/3/position = Vector3(0.157877, 0.0480869, 5.06815e-09)
+bones/3/rotation = Quaternion(1.54543e-08, 1.54543e-08, -0.707107, 0.707107)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "Cartridge Casing.001"
 bones/4/parent = 3
@@ -591,8 +590,8 @@ bones/5/name = "NewCartridge"
 bones/5/parent = 0
 bones/5/rest = Transform3D(0, 1, 0, -1, 0, -4.37114e-08, -4.37114e-08, 0, 1, 0.0637465, 0.0373212, 0.00509399)
 bones/5/enabled = true
-bones/5/position = Vector3(0.0818463, 0.0439306, 0.00285193)
-bones/5/rotation = Quaternion(-0.0310001, -0.0152588, -0.692604, 0.72049)
+bones/5/position = Vector3(0.0637465, 0.0373212, 0.00509399)
+bones/5/rotation = Quaternion(1.54543e-08, 1.54543e-08, -0.707107, 0.707107)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/name = "Cartridge Mag.001"
 bones/6/parent = 5
@@ -659,7 +658,7 @@ bones/14/rotation = Quaternion(0, 0, 0, 1)
 bones/14/scale = Vector3(1, 1, 1)
 
 [node name="bolt_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, -0.00052309, 0.000782162, -0.000703335, 0.136702, 0.990612, -0.000625104, -0.990612, 0.136702, -0.113413, 0.0341996, 0.00836558)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, -0.0347912, 0.0155332, 0.0107881)
 bone_name = "bolt.001"
 bone_idx = 2
 
@@ -669,7 +668,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_8aolp")
 
 [node name="Cartridge Casing_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(-0.980776, 0.0257747, 0.193426, 0.0823767, -0.843894, 0.530148, 0.176895, 0.53589, 0.825548, -0.145239, -0.126003, 0.090749)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, 0.105386, 0.0223995, -0.00113257)
 bone_name = "Cartridge Casing.001"
 bone_idx = 4
 
@@ -679,7 +678,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_45yon")
 
 [node name="Cartridge Mag_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0.998975, -0.0401344, 0.0209539, 0.0386781, 0.997083, 0.0658071, -0.0235339, -0.0649292, 0.997612, 0.0476391, 0.0193431, 0.00121197)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, 0.0295631, 0.0117826, 0.00403037)
 bone_name = "Cartridge Mag.001"
 bone_idx = 6
 

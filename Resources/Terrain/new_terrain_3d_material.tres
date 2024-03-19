@@ -38,15 +38,7 @@ _shader_parameters = {
 "noise2_scale": 0.076,
 "noise3_scale": 0.225,
 "noise_texture": SubResource("NoiseTexture2D_txsai"),
-"tri_scale_reduction": 0.3,
-"world_noise_blend_far": null,
-"world_noise_blend_near": null,
-"world_noise_height": null,
-"world_noise_lod_distance": null,
-"world_noise_max_octaves": null,
-"world_noise_min_octaves": null,
-"world_noise_offset": null,
-"world_noise_scale": null
+"tri_scale_reduction": 0.3
 }
-world_background = 2
+world_background = 0
 dual_scaling = true
