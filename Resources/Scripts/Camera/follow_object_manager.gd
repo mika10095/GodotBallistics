@@ -28,22 +28,22 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		else:
 			print_debug("invalid camera id")
 	if Input.is_action_just_pressed("ClearCameras"):
-		cameraid = 1
 		cameras.clear
+		cameraid = 1
 		clear_cameras.emit()
 
 func set_current_camera(cameraID: int):
 		currentcamera = cameraID
 		print_debug("cameraid= " + str(currentcamera))
 func register_camera() -> int:
-		return cameraid
 		cameras.push_front(cameraid)
 		cameraid+=1
+		return cameraid
 		
 func _ready() -> void:
 	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

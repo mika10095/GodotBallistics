@@ -31,5 +31,5 @@ func _on_use_camera(currentid: String) -> void:
 		camera.clear_current()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

@@ -24,11 +24,12 @@ FollowObjectManager="*res://Resources/Scripts/Camera/follow_object_manager.gd"
 
 [display]
 
+window/size/always_on_top=true
 window/vsync/vsync_mode=2
 
 [dotnet]
 
-project/assembly_name="Projects"
+project/assembly_name="NCBS"
 
 [editor_plugins]
 
@@ -64,9 +65,14 @@ FireCurrent={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method.mobile="forward_plus"
+global_illumination/gi/use_half_resolution=true
 shading/overrides/force_vertex_shading=true
-anti_aliasing/quality/msaa_2d=1
-anti_aliasing/quality/msaa_3d=1
+textures/default_filters/anisotropic_filtering_level=1
+environment/ssao/quality=1
+environment/ssil/quality=1
+environment/glow/upscale_mode=0
 anti_aliasing/quality/screen_space_aa=1
 anti_aliasing/quality/use_debanding=true
 occlusion_culling/use_occlusion_culling=true
