@@ -32,8 +32,7 @@ func on_resource_saved(resource: Resource):
 
 			# Run gdformat
 			var exit_code = OS.execute(
-				"C:/Godot/Projects/GodotBallistics/GodotBallistics/ExternalTools/gdformat",
-				[filepath]
+				"C:/Godot/Projects/GodotBallistics/ExternalTools/gdformat", [filepath]
 			)
 
 			# Replace source_code with formatted source_code

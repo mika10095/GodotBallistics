@@ -8,5 +8,5 @@ master_audio = 1.0
 music_audio = 1.0
 effect_audio = 1.0
 ui_audio = 1.0
-window_setting = 1
+window_setting = 0
 fps_counter = false
