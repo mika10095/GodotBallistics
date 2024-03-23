@@ -16,7 +16,7 @@ func _ready() -> void:
 		camera.set_process(true)
 		camera.make_current()
 func _on_clear_cameras():
-	if id != 1:
+	if get_parent_node_3d().name != "Player":
 		print_debug("old" + str(id))
 		id = FollowObjectManager.register_camera()
 		print_debug("new" + str(id))

@@ -10,14 +10,22 @@ extends Camera3D
 @export var max_fov: float = 90
 @onready var current_speed = default_speed
 @onready var current_fov = default_camera_fov
+@onready var freelook_enabled: bool = false
+
+
+func Reset():
+	self.transform = Transform3D.IDENTITY
+	var current_speed = default_speed
+	var current_fov = default_camera_fov
 
 
 func _input(event):
-	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		if event is InputEventMouseMotion:
-			rotation.y -= event.relative.x / 1000 * sensitivity
-			rotation.x -= event.relative.y / 1000 * sensitivity
-			rotation.x = clamp(rotation.x, PI / -2, PI / 2)
+	if freelook_enabled:
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			if event is InputEventMouseMotion:
+				rotation.y -= event.relative.x / 1000 * sensitivity
+				rotation.x -= event.relative.y / 1000 * sensitivity
+				rotation.x = clamp(rotation.x, PI / -2, PI / 2)
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if Input.is_action_pressed("ZoomPos"):
@@ -40,13 +48,13 @@ func _input(event):
 
 
 func _process(delta):
-	var movedir = (
-		Vector3(
-			Input.get_axis("Left", "Right"),
-			Input.get_axis("Crouch", "Jump"),
-			Input.get_axis("Forward", "Backward")
+	if freelook_enabled:
+		var movedir = (
+			Vector3(
+				Input.get_axis("Left", "Right"),
+				Input.get_axis("Crouch", "Jump"),
+				Input.get_axis("Forward", "Backward")
+			)
+			. normalized()
 		)
-		. normalized()
-	)
-
-	translate(movedir * current_speed * delta)
+		translate(movedir * current_speed * delta)
