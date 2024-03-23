@@ -3,9 +3,13 @@ extends Camera3D
 @export_range(0, 10, 0.01) var sensitivity: float = 3
 @export_range(0, 1000, 0.1) var default_speed: float = 5
 @export_range(0, 10, 0.01) var speed_scale: float = 1.1
-@export var max_speed: float = 250
+@export_range(0, 10, 0.01) var default_camera_fov: float = 60
 @export var min_speed: float = 0.1
+@export var max_speed: float = 250
+@export var min_fov: float = 10
+@export var max_fov: float = 90
 @onready var current_speed = default_speed
+@onready var current_fov = default_camera_fov
 
 
 func _input(event):
@@ -14,16 +18,24 @@ func _input(event):
 			rotation.y -= event.relative.x / 1000 * sensitivity
 			rotation.x -= event.relative.y / 1000 * sensitivity
 			rotation.x = clamp(rotation.x, PI / -2, PI / 2)
-	if event is InputEventMouseButton:
-		match event.button_index:
-			MOUSE_BUTTON_RIGHT:
-				Input.set_mouse_mode(
-					Input.MOUSE_MODE_CAPTURED if event.pressed else Input.MOUSE_MODE_VISIBLE
-				)
 
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if Input.is_action_pressed("ZoomPos"):
+		current_fov = clamp(current_fov / speed_scale, min_fov, max_fov)
+		self.fov = current_fov
+	elif Input.is_action_pressed("TimeScaleUp"):
+		TimeManager.set_time_scale(TimeManager.time_scale * speed_scale)
+		print_debug(Engine.time_scale)
+	elif Input.is_action_pressed("SpeedUp"):
 		current_speed = clamp(current_speed * speed_scale, min_speed, max_speed)
+
 	if Input.is_action_pressed("ZoomNeg"):
+		current_fov = clamp(current_fov * speed_scale, min_fov, max_fov)
+		self.fov = current_fov
+	elif Input.is_action_pressed("TimeScaleDown"):
+		TimeManager.set_time_scale(TimeManager.time_scale / speed_scale)
+		print_debug(Engine.time_scale)
+	elif Input.is_action_pressed("SpeedDown"):
 		current_speed = clamp(current_speed / speed_scale, min_speed, max_speed)
 
 
