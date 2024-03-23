@@ -9,3 +9,4 @@ music_audio = 1.0
 effect_audio = 1.0
 ui_audio = 1.0
 window_setting = 1
+fps_counter = false
