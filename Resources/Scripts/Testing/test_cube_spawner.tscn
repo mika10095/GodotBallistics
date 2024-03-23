@@ -5,7 +5,7 @@ resource_name = "TestCubeSpawner"
 script/source = "##Ez egy kalap kaga ami csak kockákat spawnol
 extends Node3D
 ##ez egy kocka
-var cube = preload(\"tescube.tscn\")
+var cube = preload(\"res://Resources/Scripts/Testing/tescube.tscn\")
 ##ez hogy ne spameld
 var semiauto = true;
 # Called when the node enters the scene tree for the first time.

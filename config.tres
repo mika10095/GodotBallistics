@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SaveConfig" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Resources/CustomRes/SaveConfig/save_config.gd" id="1_7f7qm"]
+
+[resource]
+script = ExtResource("1_7f7qm")
+master_audio = 1.0
+music_audio = 1.0
+effect_audio = 1.0
+ui_audio = 1.0
+window_setting = 1

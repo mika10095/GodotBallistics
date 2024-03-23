@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ballistics"
-config/version="0.3"
+config/version="0.3.1"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 boot_splash/bg_color=Color(0.407843, 0.462745, 0.470588, 1)
@@ -24,7 +24,8 @@ FollowObjectManager="*res://Resources/Scripts/Camera/follow_object_manager.gd"
 
 [display]
 
-window/vsync/vsync_mode=2
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [dotnet]
 
