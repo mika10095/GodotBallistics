@@ -523,8 +523,8 @@ bones/3/name = "EmptyCartridge"
 bones/3/parent = 0
 bones/3/rest = Transform3D(0, 1, 0, -1, 0, -4.37114e-08, -4.37114e-08, 0, 1, 0.157877, 0.0480869, 5.12227e-09)
 bones/3/enabled = true
-bones/3/position = Vector3(-0.372608, -2.36235, 0.0681626)
-bones/3/rotation = Quaternion(0, 0, 0, 1)
+bones/3/position = Vector3(0.157877, 0.0480869, 5.06815e-09)
+bones/3/rotation = Quaternion(1.54543e-08, 1.54543e-08, -0.707107, 0.707107)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "Cartridge Casing.001"
 bones/4/parent = 3
@@ -605,7 +605,7 @@ bones/14/rotation = Quaternion(0, 0, 0, 1)
 bones/14/scale = Vector3(1, 1, 1)
 
 [node name="bolt_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 1.34111e-22, 1.77636e-15, 0, 1, -1.19209e-07, 1.77636e-15, 1.19209e-07, 1, -0.0347912, 0.0155332, 0.0107881)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, -0.0347912, 0.0155332, 0.0107881)
 bone_name = "bolt.001"
 bone_idx = 2
 
@@ -615,7 +615,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_8aolp")
 
 [node name="Cartridge Casing_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(0, -1, 7.54978e-08, 1, 0, 0, 0, 7.54978e-08, 1, -0.431118, -2.38173, 0.06703)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, 0.105386, 0.0223995, -0.00113257)
 bone_name = "Cartridge Casing.001"
 bone_idx = 4
 
@@ -625,7 +625,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_45yon")
 
 [node name="Cartridge Mag_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 1.34111e-22, 1.77636e-15, 0, 1, -1.19209e-07, 1.77636e-15, 1.19209e-07, 1, 0.0295631, 0.0117826, 0.00403037)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, 0.0295631, 0.0117826, 0.00403037)
 bone_name = "Cartridge Mag.001"
 bone_idx = 6
 
@@ -679,7 +679,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_45yon")
 
 [node name="trigger_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 2.98023e-08, 0, 2.98023e-08, 1, 2.98023e-08, 0, 2.98023e-08, 1, -0.0658704, -0.0484704, -0.000516457)
+transform = Transform3D(1, 2.98023e-08, 0, 2.98023e-08, 1, 2.98023e-08, 1.06569e-07, -3.13706e-08, 1, -0.0658704, -0.0484704, -0.000516458)
 bone_name = "trigger.001"
 bone_idx = 8
 
