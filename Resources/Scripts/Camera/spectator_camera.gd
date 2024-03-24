@@ -7,7 +7,7 @@ extends Camera3D
 @export var min_speed: float = 0.1
 @export var max_speed: float = 250
 @export var min_fov: float = 10
-@export var max_fov: float = 90
+@export var max_fov: float = 60
 @onready var current_speed = default_speed
 @onready var current_fov = default_camera_fov
 @onready var freelook_enabled: bool = false
@@ -15,8 +15,8 @@ extends Camera3D
 
 func Reset():
 	self.transform = Transform3D.IDENTITY
-	var current_speed = default_speed
-	var current_fov = default_camera_fov
+	current_speed = default_speed
+	current_fov = default_camera_fov
 
 
 func _input(event):

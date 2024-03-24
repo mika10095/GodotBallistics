@@ -1,9 +1,9 @@
 extends Node
 signal use_camera
 signal clear_cameras
-var cameraid: int = 1
+var cameraid: int = 0
 var cameras = []
-var currentcamera: int = 1
+var currentcamera: int = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,8 +30,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		else:
 			print_debug("invalid camera id")
 	if Input.is_action_just_pressed("ClearCameras"):
-		cameras.clear
-		cameraid = 1
+		cameras.clear()
+		cameraid = 0
 		clear_cameras.emit()
 
 
@@ -43,13 +43,4 @@ func set_current_camera(cameraID: int):
 func register_camera() -> int:
 	cameras.push_front(cameraid)
 	cameraid += 1
-	return cameraid
-
-
-func _ready() -> void:
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+	return cameraid - 1
