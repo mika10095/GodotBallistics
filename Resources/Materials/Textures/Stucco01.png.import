@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5ddjenoi7jk8"
 path.s3tc="res://.godot/imported/Stucco01.png-00e40fc79ac3fbefedfca84f495f4f18.s3tc.ctex"
+path.etc2="res://.godot/imported/Stucco01.png-00e40fc79ac3fbefedfca84f495f4f18.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Resources/Materials/Textures/Stucco01.png"
-dest_files=["res://.godot/imported/Stucco01.png-00e40fc79ac3fbefedfca84f495f4f18.s3tc.ctex"]
+dest_files=["res://.godot/imported/Stucco01.png-00e40fc79ac3fbefedfca84f495f4f18.s3tc.ctex", "res://.godot/imported/Stucco01.png-00e40fc79ac3fbefedfca84f495f4f18.etc2.ctex"]
 
 [params]
 

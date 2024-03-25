@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://3lbwm6xmltux"
 path.s3tc="res://.godot/imported/koporso_Material.png-d062b1f07de336da02c12330862e0504.s3tc.ctex"
+path.etc2="res://.godot/imported/koporso_Material.png-d062b1f07de336da02c12330862e0504.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={}
@@ -13,7 +14,7 @@ generator_parameters={}
 [deps]
 
 source_file="res://Resources/Models/Koporso/koporso_Material.png"
-dest_files=["res://.godot/imported/koporso_Material.png-d062b1f07de336da02c12330862e0504.s3tc.ctex"]
+dest_files=["res://.godot/imported/koporso_Material.png-d062b1f07de336da02c12330862e0504.s3tc.ctex", "res://.godot/imported/koporso_Material.png-d062b1f07de336da02c12330862e0504.etc2.ctex"]
 
 [params]
 
