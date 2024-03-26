@@ -1,30 +1,41 @@
-extends CharacterBody3D
+class_name Player extends CharacterBody3D
 
 @export_range(0, 10, 0.01) var sensitivity: float = 3
 @export_range(0, 10, 0.01) var aim_sens: float = 1
 @export_range(0, 10, 0.01) var default_sens: float = 3
+
+@export var speed = 5.0
+@export var default_speed = 5.0
+@export var aim_speed = 1.0
+@export var jump_velocity = 2.5
+
 @onready var spectator_cam = %PlayerCamera.get_node("Camera3D")
 @onready var camera_pivot = %PlayerCamera
 @onready var headbob_pivot = $HeadbobPivot
+
 @onready var freelook_enabled: bool = !spectator_cam.freelook_enabled
-const speed = 5.0
-const jump_velocity = 4.5
+
+
 @export var lerp_speed = 10
 var direction = Vector3.ZERO
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+var input_dir = Vector2.ZERO
+
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+
 var bob_speed = 10
-var bob_dist = 0.05
+var bob_dist = 0.01
 var bob_index = 0.5
 var bob_vector = Vector2.ZERO
-var input_dir = Vector2.ZERO
+
 
 
 func _input(event):
 	if Input.is_action_pressed("ADS"):
 		sensitivity = aim_sens
+		speed = aim_speed
 	else:
 		sensitivity = default_sens
+		speed = default_speed
 	if Input.is_action_just_pressed("ChangeCameraMode"):
 		if freelook_enabled:
 			print_debug("freelook enabled!")
@@ -78,10 +89,10 @@ func _physics_process(delta):
 			bob_vector.x = sin(bob_index / 2) + 0.5
 
 			headbob_pivot.position.y = lerp(
-				headbob_pivot.position.y, bob_vector.y * bob_dist / 2, delta * lerp_speed
+				headbob_pivot.position.y, bob_vector.y * bob_dist / 2 * speed, delta * lerp_speed
 			)
 			headbob_pivot.position.x = lerp(
-				headbob_pivot.position.x, bob_vector.x * bob_dist, delta * lerp_speed
+				headbob_pivot.position.x, bob_vector.x * bob_dist * speed, delta * lerp_speed
 			)
 		else:
 			headbob_pivot.position.y = lerp(headbob_pivot.position.y, 0.0, delta * lerp_speed)

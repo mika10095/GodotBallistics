@@ -16,7 +16,7 @@ func _ready():
 
 func add_sound_players(node: Node):
 	for i in node.get_children():
-		print_debug(i)
+		#print_debug(i)
 		if i is Button:
 			i.pressed.connect(play_sound.bind(&"UI_click"))
 			i.mouse_entered.connect(play_sound.bind(&"UI_click_soft"))

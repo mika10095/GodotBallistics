@@ -741,8 +741,8 @@ bones/3/name = "EmptyCartridge"
 bones/3/parent = 0
 bones/3/rest = Transform3D(0, 1, 0, -1, 0, -4.37114e-08, -4.37114e-08, 0, 1, 0.157877, 0.0480869, 5.12227e-09)
 bones/3/enabled = true
-bones/3/position = Vector3(0, 0, 0)
-bones/3/rotation = Quaternion(-0.263096, 0.568763, 0.470444, 0.621266)
+bones/3/position = Vector3(0.157877, 0.0480869, 5.06815e-09)
+bones/3/rotation = Quaternion(1.54543e-08, 1.54543e-08, -0.707107, 0.707107)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "Cartridge Casing.001"
 bones/4/parent = 3
@@ -823,7 +823,7 @@ bones/14/rotation = Quaternion(0, 0, 0, 1)
 bones/14/scale = Vector3(1, 1, 1)
 
 [node name="bolt_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 1.34111e-22, 1.77636e-15, 0, 1, -1.19209e-07, 1.77636e-15, 1.19209e-07, 1, -0.0347912, 0.0155332, 0.0107881)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, -0.0347912, 0.0155332, 0.0107881)
 bone_name = "bolt.001"
 bone_idx = 2
 
@@ -833,18 +833,17 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_8aolp")
 
 [node name="Cartridge Casing_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(-0.88382, 0.089618, 0.459162, 0.418926, -0.285263, 0.862048, 0.208237, 0.95425, 0.214578, -0.064116, -0.0229189, 1.27271e-05)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, 0.105386, 0.0223995, -0.00113257)
 bone_name = "Cartridge Casing.001"
 bone_idx = 4
 
 [node name="Cartridge Casing_002" type="MeshInstance3D" parent="Armature/Skeleton3D/Cartridge Casing_001"]
-transform = Transform3D(0.000999987, 0, 0, 0, 0.000999987, 0, 0, 0, 0.000999987, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ypumj")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_45yon")
 
 [node name="Cartridge Mag_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 1.34111e-22, 1.77636e-15, 0, 1, -1.19209e-07, 1.77636e-15, 1.19209e-07, 1, 0.0295631, 0.0117826, 0.00403037)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, 0.0295631, 0.0117826, 0.00403037)
 bone_name = "Cartridge Mag.001"
 bone_idx = 6
 
@@ -898,7 +897,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_45yon")
 
 [node name="trigger_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 2.98023e-08, 0, 2.98023e-08, 1, 2.98023e-08, 0, 2.98023e-08, 1, -0.0658704, -0.0484704, -0.000516457)
+transform = Transform3D(1, 2.98023e-08, 0, 2.98023e-08, 1, 2.98023e-08, 1.06569e-07, -3.13706e-08, 1, -0.0658704, -0.0484704, -0.000516458)
 bone_name = "trigger.001"
 bone_idx = 8
 
@@ -927,28 +926,29 @@ mesh = SubResource("ArrayMesh_n5amv")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("4_6ttvc")
 
-[node name="golojavkeszlet" type="Node3D" parent="Armature"]
-
 [node name="tavcso" type="Node3D" parent="."]
 
 [node name="lens" type="MeshInstance3D" parent="tavcso"]
 transform = Transform3D(-1.5299e-09, 0.002, 0, -0.035, -8.74228e-11, 0, 0, 0, 0.035, -0.127902, 0.0614562, 0)
+layers = 524288
 mesh = SubResource("CylinderMesh_xnkgq")
 surface_material_override/0 = ExtResource("7_1ibfk")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="tavcso/lens"]
+[node name="Crosshair1" type="MeshInstance3D" parent="tavcso/lens"]
 transform = Transform3D(-0.005, 1.50996e-07, 2.75727e-22, -7.54979e-10, -1, 0, 2.75727e-24, -8.32671e-29, 0.5, 0, -1.1, 0)
+layers = 524288
 mesh = SubResource("PlaneMesh_tngya")
 surface_material_override/0 = ExtResource("7_rmdbc")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="tavcso/lens"]
+[node name="Crosshair2" type="MeshInstance3D" parent="tavcso/lens"]
 transform = Transform3D(-0.5, 1.50996e-07, 4.19323e-24, -7.54979e-08, -1, 0, 4.19323e-22, -1.26632e-28, 0.005, 0, -1.1, -1.42109e-14)
+layers = 524288
 mesh = SubResource("PlaneMesh_tngya")
-skeleton = NodePath("../MeshInstance3D")
+skeleton = NodePath("../Crosshair1")
 surface_material_override/0 = ExtResource("7_rmdbc")
 
 [node name="Marker3D" type="Marker3D" parent="tavcso"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.165969, 0.0629211, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.130309, 0.0629211, -1.29507e-08)
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="tavcso/Marker3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
@@ -956,43 +956,51 @@ remote_path = NodePath("../../SubViewport/SubCam")
 
 [node name="SubViewport" type="SubViewport" parent="tavcso"]
 handle_input_locally = false
+canvas_cull_mask = 4294443007
 
 [node name="SubCam" type="Camera3D" parent="tavcso/SubViewport"]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -7.25474e-09, 0.0629211, -0.165969)
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -7.25474e-09, 0.0629211, 0.130309)
+cull_mask = 524287
 fov = 10.0
 
 [node name="torony" type="MeshInstance3D" parent="tavcso"]
 transform = Transform3D(0.00957917, 0, 0, 0, 0.0115921, 0, 0, 0, 0.0118571, 0.00979546, 0.0615477, 0)
+layers = 524288
 mesh = SubResource("ArrayMesh_duml7")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("4_6ttvc")
 
 [node name="scope" type="MeshInstance3D" parent="tavcso"]
 transform = Transform3D(0, 0.00999999, 0, -0.02, 0, 0, 0, 0, 0.02, -0.1, 0.075, 0)
+layers = 524288
 mesh = SubResource("ArrayMesh_2wj6l")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("4_6ttvc")
 
 [node name="scope_top" type="MeshInstance3D" parent="tavcso"]
 transform = Transform3D(0, 0.0135031, 0, -0.0135031, 0, 0, 0, 0, 0.0135031, -0.0523139, 0.061678, 0)
+layers = 524288
 mesh = SubResource("ArrayMesh_njasc")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_5sdeo")
 
 [node name="scope_bottom" type="MeshInstance3D" parent="tavcso"]
 transform = Transform3D(0, 0.01243, 0, -0.0188748, 0, 0, 0, 0, 0.00791824, -0.0523139, 0.0338399, 0)
+layers = 524288
 mesh = SubResource("ArrayMesh_qgs8i")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_5sdeo")
 
 [node name="scope_001" type="MeshInstance3D" parent="tavcso"]
 transform = Transform3D(0, 0.0135031, 0, -0.0135031, 0, 0, 0, 0, 0.0135031, 0.0738418, 0.061678, 0)
+layers = 524288
 mesh = SubResource("ArrayMesh_qtqv6")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_5sdeo")
 
 [node name="scope_bottom_001" type="MeshInstance3D" parent="tavcso"]
 transform = Transform3D(0, 0.01243, 0, -0.0188748, 0, 0, 0, 0, 0.00791824, 0.0738418, 0.0338399, 0)
+layers = 524288
 mesh = SubResource("ArrayMesh_lnthr")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("5_5sdeo")
@@ -1004,4 +1012,5 @@ libraries = {
 speed_scale = 1.5
 
 [node name="FirePoint" type="Marker3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.657131, 0.0236358, 2.87241e-08)

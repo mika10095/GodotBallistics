@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://du567shjx5247"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/2D/slider_selector.gd" id="1_liios"]
+
+[node name="Slider Selector" type="HBoxContainer"]
+script = ExtResource("1_liios")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Master Audio
+"
+
+[node name="HSlider" type="HSlider" parent="."]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+max_value = 1.0
+step = 0.01
+ticks_on_borders = true
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 2

@@ -9,7 +9,7 @@
 [sub_resource type="GDScript" id="GDScript_w22cg"]
 resource_name = "rayfiretest"
 script/source = "extends Node3D
-@export var fire_point: Node3D
+
 @export var is_semi_auto: bool = true
 var semi_auto_reset = true
 var is_current_weapon: bool = true
@@ -29,7 +29,7 @@ func _ready() -> void:
 	
 
 func anim_end(anim_name: String):
-	print_debug(\"Animation over: \"+anim_name)
+	print(\"Animation over: \"+anim_name)
 	if(anim_name == animation_name):
 		is_action_animation_over = true
 	elif(anim_name == gun_model.name + \"_Aim\"):
@@ -38,7 +38,7 @@ func anim_end(anim_name: String):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if (Input.is_action_pressed(\"ADS\") and !ADS):
-		print_debug(\"Aimed playing: \"+ fps_rig.weapon.name + \"_Aim\")
+		print(\"Aimed playing: \"+ fps_rig.weapon.name + \"_Aim\")
 		fps_rig.anim.play(fps_rig.weapon.name + \"_Aim\")
 		is_animation_over = false
 		ADS = true
@@ -73,16 +73,33 @@ func fire_round():
 	else:
 		fps_rig.anim.play(fps_rig.weapon.name + \"_Equip_Fire\")
 	var space = get_world_3d().direct_space_state
-	var end = fire_point.position + Vector3(100,0,0)
-	var query = PhysicsRayQueryParameters3D.create(fire_point.position, end)
+	var end = fps_rig.weapon.find_child(\"FirePoint\").global_transform.basis
+	print(str(fps_rig.weapon.find_child(\"FirePoint\").global_position) + \"/t\" + str(end))
+	#var query = PhysicsRayQueryParameters3D.create(fps_rig.weapon.find_child(\"FirePoint\").global_transform.basis, end)
 	
-	var result = space.intersect_ray(query)
-	if result:
-		print_debug(result.collider.name)
+	#var result = space.intersect_ray(query)
+	#if result:
+	#	print_debug(result.collider.name)
 
-	if (%testcast.is_colliding()):
-		print_debug(%testcast.get_collider())
 "
+
+[sub_resource type="Animation" id="Animation_5wq6n"]
+resource_name = "puska_Aim"
+length = 0.4
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GunbobPivot/puska")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.113, -0.081, 0.117, 0.4, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GunbobPivot/puska")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.707107, 0, 0.707107)
 
 [sub_resource type="Animation" id="Animation_bvop5"]
 resource_name = "puska_Aim_Fire"
@@ -137,24 +154,6 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.707107, 0, 0.707107, 0.1, 1, 0.0149989, 0.696825, 0.0145782, 0.716936, 0.4, 1, 0, 0.707107, 0, 0.707107)
 
-[sub_resource type="Animation" id="Animation_5wq6n"]
-resource_name = "puska_Aim"
-length = 0.4
-tracks/0/type = "position_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GunbobPivot/puska")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0.113, -0.081, 0.117, 0.4, 1, 0, 0, 0)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GunbobPivot/puska")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.707107, 0, 0.707107)
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m24km"]
 _data = {
 "puska_Aim": SubResource("Animation_5wq6n"),
@@ -190,19 +189,9 @@ script = ExtResource("4_qduko")
 [node name="puska" parent="HeadbobPivot/PlayerCamera/fps_rig/GunbobPivot" instance=ExtResource("4_u0tfo")]
 transform = Transform3D(-2.8213e-07, 0, 1, 0, 1, 0, -1, 0, -2.8213e-07, 0, 0, 0)
 
-[node name="firepointtest" type="Node3D" parent="HeadbobPivot/PlayerCamera/fps_rig/GunbobPivot/puska"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.086, 0, 0.01)
-
-[node name="testcast" type="RayCast3D" parent="HeadbobPivot/PlayerCamera/fps_rig/GunbobPivot/puska/firepointtest"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, -7.10543e-15, 0, 1, 0, 7.10543e-15, 0, 1, -0.0295064, 0.0258399, -0.01)
-visible = false
-target_position = Vector3(100, 0, 0)
-
-[node name="rayfiretest" type="Node3D" parent="HeadbobPivot/PlayerCamera/fps_rig/GunbobPivot/puska" node_paths=PackedStringArray("fire_point", "gun_model")]
+[node name="rayfiretest" type="Node3D" parent="HeadbobPivot/PlayerCamera/fps_rig/GunbobPivot/puska" node_paths=PackedStringArray("gun_model")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0564936, 0.0258399, 2.46941e-09)
 script = SubResource("GDScript_w22cg")
-fire_point = NodePath("../firepointtest")
 gun_model = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HeadbobPivot/PlayerCamera/fps_rig"]

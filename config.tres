@@ -4,9 +4,12 @@
 
 [resource]
 script = ExtResource("1_7f7qm")
-master_audio = 1.0
-music_audio = 1.0
-effect_audio = 1.0
-ui_audio = 1.0
+slider_settings = {
+"base_sens": 3.0,
+"effect_audio": 0.39,
+"master_audio": 0.5,
+"music_audio": 1.0,
+"ui_audio": 1.0
+}
 window_setting = 0
 fps_counter = false

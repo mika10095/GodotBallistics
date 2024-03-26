@@ -251,22 +251,29 @@ shadow_mesh = SubResource("ArrayMesh_5n33s")
 [node name="t34" type="Node3D"]
 script = SubResource("GDScript_rhvva")
 
-[node name="turret" type="MeshInstance3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="turret" type="MeshInstance3D" parent="StaticBody3D"]
 unique_name_in_owner = true
 material_override = ExtResource("2_sqnd7")
 mesh = SubResource("ArrayMesh_l8p2p")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_sqnd7")
 
-[node name="barrel_root" type="Node3D" parent="turret"]
+[node name="barrel_root" type="Node3D" parent="StaticBody3D/turret"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00101, 1.40539)
 
-[node name="Barrel2" type="MeshInstance3D" parent="turret/barrel_root"]
+[node name="Barrel2" type="MeshInstance3D" parent="StaticBody3D/turret/barrel_root"]
 transform = Transform3D(0.176473, 0, 0, 0, 0.176473, 0, 0, 0, 0.176473, 0, 0.0156851, 0.0277758)
 mesh = SubResource("ArrayMesh_yttn3")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_sqnd7")
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.73192, 0.101376)
+depth = 1.5
+polygon = PackedVector2Array(1.04261, -0.20607, 0.462812, 1.1933, -0.462577, 1.13775, -0.880117, 0.0319564, -0.542987, -1.39894, 0.649582, -1.38452)
 
 [node name="hull" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_7s4qt")
