@@ -5,9 +5,9 @@ resource_name = "TestCubeSpawner"
 script/source = "##Ez egy kalap kaga ami csak kockákat spawnol
 extends Node3D
 ##ez egy kocka
-var cube = preload(\"res://Resources/Scripts/Testing/tescube.tscn\")
+var cube: Resource = preload(\"res://Resources/Scripts/Testing/tescube.tscn\")
 ##ez hogy ne spameld
-var semiauto = true;
+var semiauto: bool = true;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -16,7 +16,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_ENTER) and semiauto		:
-		var newcube = cube.instantiate()
+		var newcube: Node = cube.instantiate()
 		self.add_child(newcube)
 		semiauto = false
 	if not Input.is_key_pressed(KEY_ENTER):

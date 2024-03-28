@@ -11,24 +11,24 @@ resource_name = "rayfiretest"
 script/source = "extends Node3D
 
 @export var is_semi_auto: bool = true
-var semi_auto_reset = true
+var semi_auto_reset: bool = true
 var is_current_weapon: bool = true
 var is_animation_over: bool = true
 var is_action_animation_over: bool = true
-@export var ADS = false
+@export var ADS: bool = false
 @export var animation_name: String = \"Action\"
 @export var gun_model: Node3D
-@onready var anim = gun_model.get_node(\"AnimationPlayer\")
-@export var ray_length = 1000
+@onready var anim: AnimationPlayer = gun_model.get_node(\"AnimationPlayer\")
+@export var ray_length: float = 1000
 var ready_to_fire: bool
-@onready var fps_rig = %fps_rig
+@onready var fps_rig: Node = %fps_rig
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	anim.animation_finished.connect(anim_end)
 	
 	
 
-func anim_end(anim_name: String):
+func anim_end(anim_name: String) -> void:
 	print(\"Animation over: \"+anim_name)
 	if(anim_name == animation_name):
 		is_action_animation_over = true
@@ -58,12 +58,12 @@ func _process(_delta: float) -> void:
 	if(Input.is_action_just_released(\"FireCurrent\")):
 		semi_auto_reset = true
 
-func _physics_process(_delta):
+func _physics_process(_delta: float) -> void:
 	
 	if (Input.is_action_pressed(\"FireCurrent\") and ready_to_fire):
 		fire_round()
 
-func fire_round():
+func fire_round() -> void:
 	ready_to_fire = false
 	is_action_animation_over = false
 	anim.play(\"Action\")
@@ -72,8 +72,8 @@ func fire_round():
 			fps_rig.anim.play(fps_rig.weapon.name + \"_Aim_Fire\")
 	else:
 		fps_rig.anim.play(fps_rig.weapon.name + \"_Equip_Fire\")
-	var space = get_world_3d().direct_space_state
-	var end = fps_rig.weapon.find_child(\"FirePoint\").global_transform.basis
+	var space: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
+	var end: Basis = fps_rig.weapon.find_child(\"FirePoint\").global_transform.basis
 	print(str(fps_rig.weapon.find_child(\"FirePoint\").global_position) + \"/t\" + str(end))
 	#var query = PhysicsRayQueryParameters3D.create(fps_rig.weapon.find_child(\"FirePoint\").global_transform.basis, end)
 	

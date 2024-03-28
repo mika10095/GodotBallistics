@@ -1,20 +1,20 @@
 extends Node
 @export var UI_root: NodePath
-@onready var sound_dictionary = {
+@onready var sound_dictionary: Dictionary = {
 	&"UI_click": AudioStreamPlayer.new(), &"UI_click_soft": AudioStreamPlayer.new()
 }
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	for sound in sound_dictionary.keys():
+func _ready() -> void:
+	for sound:StringName in sound_dictionary.keys():
 		sound_dictionary[sound].stream = load("res://Resources/Audio/SFX/" + str(sound) + ".wav")
 		sound_dictionary[sound].bus = "UI"
 		add_child(sound_dictionary[sound])
 	add_sound_players(get_node(UI_root))
 
 
-func add_sound_players(node: Node):
+func add_sound_players(node: Node) -> void:
 	for i in node.get_children():
 		#print_debug(i)
 		if i is Button:
@@ -27,5 +27,5 @@ func add_sound_players(node: Node):
 		add_sound_players(i)
 
 
-func play_sound(sound: StringName):
+func play_sound(sound: StringName) -> void:
 	sound_dictionary[sound].play()

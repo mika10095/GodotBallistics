@@ -1,14 +1,14 @@
 extends Control
 
-@onready var menu = %PauseMenu
-@onready var new_new_world = $"../.."
+@onready var menu: Node = %PauseMenu
+@onready var new_new_world: Node = $"../.."
 
 
-func _ready():
+func _ready() -> void:
 	%PauseMenu/BackButton.pressed.connect(on_menu_button)
 
 
-func _input(_event):
+func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("MenuButton"):
 		menu.visible = !menu.visible
 	if menu.visible:
@@ -19,7 +19,7 @@ func _input(_event):
 		get_tree().paused = false
 
 
-func on_menu_button():
+func on_menu_button() -> void:
 	new_new_world.queue_free()
 	get_tree().root.add_child(load("res://Scenes/menu.tscn").instantiate())
 	get_tree().paused = false

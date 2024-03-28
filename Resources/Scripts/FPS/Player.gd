@@ -4,32 +4,32 @@ class_name Player extends CharacterBody3D
 @export_range(0, 10, 0.01) var aim_sens: float = 1
 @export_range(0, 10, 0.01) var default_sens: float = 3
 
-@export var speed = 5.0
-@export var default_speed = 5.0
-@export var aim_speed = 1.0
-@export var jump_velocity = 2.5
+@export var speed: float = 5.0
+@export var default_speed: float = 5.0
+@export var aim_speed: float = 1.0
+@export var jump_velocity: float = 2.5
 
-@onready var spectator_cam = %PlayerCamera.get_node("Camera3D")
-@onready var camera_pivot = %PlayerCamera
-@onready var headbob_pivot = $HeadbobPivot
+@onready var spectator_cam: Node = %PlayerCamera.get_node("Camera3D")
+@onready var camera_pivot: Node = %PlayerCamera
+@onready var headbob_pivot: Node = $HeadbobPivot
 
 @onready var freelook_enabled: bool = !spectator_cam.freelook_enabled
 
 
-@export var lerp_speed = 10
-var direction = Vector3.ZERO
-var input_dir = Vector2.ZERO
+@export var lerp_speed: float = 10
+var direction: Vector3 = Vector3.ZERO
+var input_dir: Vector2 = Vector2.ZERO
 
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var bob_speed = 10
-var bob_dist = 0.01
-var bob_index = 0.5
-var bob_vector = Vector2.ZERO
+var bob_speed: float = 10
+var bob_dist: float = 0.01
+var bob_index: float = 0.5
+var bob_vector: Vector2 = Vector2.ZERO
 
 
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("ADS"):
 		sensitivity = aim_sens
 		speed = aim_speed
@@ -59,7 +59,7 @@ func _input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
-func _physics_process(delta):
+func _physics_process(delta:float) -> void:
 	if freelook_enabled:
 		# Add the gravity.
 

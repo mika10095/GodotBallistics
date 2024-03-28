@@ -1,19 +1,19 @@
 extends Node3D
-var bob_speed = 5
-var bob_dist = 0.002
-var bob_index = 0.5
-var bob_vector = Vector2.ZERO
+var bob_speed: float = 5
+var bob_dist: float = 0.002
+var bob_index: float = 0.5
+var bob_vector: Vector2 = Vector2.ZERO
 @onready var pivot: Node3D = self
-@onready var player = $"../../../.."
-@export var lerp_speed = 10
+@onready var player: Node = $"../../../.."
+@export var lerp_speed: float = 10
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	pass  # Replace with function body.
 
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	if player.input_dir != Vector2.ZERO:
 		bob_index += bob_speed * delta
 		bob_vector.y = sin(bob_index)

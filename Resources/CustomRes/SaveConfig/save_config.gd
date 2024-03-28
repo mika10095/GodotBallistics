@@ -1,6 +1,6 @@
 class_name SaveConfig extends Resource
 
-@export var slider_settings = {"master_audio":1.0,"music_audio":1.0,"effect_audio":1.0,"ui_audio":1.0,"base_sens":3.0}
+@export var slider_settings: Dictionary = {"master_audio":1.0,"music_audio":1.0,"effect_audio":1.0,"ui_audio":1.0,"base_sens":3.0}
 @export var window_setting: int = 0
 @export var fps_counter: bool = false
 

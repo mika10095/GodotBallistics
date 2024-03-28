@@ -8,18 +8,18 @@ extends Camera3D
 @export var max_speed: float = 250
 @export var min_fov: float = 10
 @export var max_fov: float = 60
-@onready var current_speed = default_speed
-@onready var current_fov = default_camera_fov
+@onready var current_speed: float = default_speed
+@onready var current_fov: float = default_camera_fov
 @onready var freelook_enabled: bool = false
 
 
-func Reset():
+func Reset() -> void:
 	self.transform = Transform3D.IDENTITY
 	current_speed = default_speed
 	current_fov = default_camera_fov
 
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	if freelook_enabled:
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			if event is InputEventMouseMotion:
@@ -47,9 +47,9 @@ func _input(event):
 		current_speed = clamp(current_speed / speed_scale, min_speed, max_speed)
 
 
-func _process(delta):
+func _process(delta: float) -> void:
 	if freelook_enabled:
-		var movedir = (
+		var movedir: Vector3 = (
 			Vector3(
 				Input.get_axis("Left", "Right"),
 				Input.get_axis("Crouch", "Jump"),

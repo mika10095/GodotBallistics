@@ -4,11 +4,11 @@ extends Node
 @export var max_scale: float = 1.0
 
 
-func set_time_scale(scale: float):
+func set_time_scale(scale: float) -> void:
 	time_scale = scale
 	Engine.time_scale = clamp(time_scale, min_scale, max_scale)
 
 
-func reset_time_scale():
+func reset_time_scale() -> void:
 	Engine.time_scale = 1.0
 	time_scale = 1.0

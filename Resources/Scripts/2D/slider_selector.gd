@@ -4,7 +4,7 @@ extends HBoxContainer
 @onready var label: Label = $Label
 @export var slider_setting_name:String
 @export var multiplier:float = 100
-var config = SaveConfig.load()
+var config: SaveConfig = SaveConfig.load()
 @onready var Menu: Node = %Menu
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

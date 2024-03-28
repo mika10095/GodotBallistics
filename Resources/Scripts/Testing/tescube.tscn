@@ -7,9 +7,9 @@
 [sub_resource type="GDScript" id="GDScript_hyshj"]
 resource_name = "simplemove"
 script/source = "extends Node3D
-var x = randf_range(-0.01,0.01)
-var z = randf_range(-0.01,0.01)
-var timer
+var x: float = randf_range(-0.01,0.01)
+var z: float = randf_range(-0.01,0.01)
+var timer: Timer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	timer = Timer.new()
@@ -18,7 +18,7 @@ func _ready() -> void:
 	timer.set_wait_time(randf_range(10,60))
 	timer.timeout.connect(end_timer)
 	add_child(timer)
-func end_timer():
+func end_timer() -> void:
 	queue_free()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

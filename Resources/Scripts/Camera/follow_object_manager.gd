@@ -2,13 +2,13 @@ extends Node
 signal use_camera
 signal clear_cameras
 var cameraid: int = 0
-var cameras = []
+var cameras: Array = []
 var currentcamera: int = 0
 
 
 # Called when the node enters the scene tree for the first time.
 func _unhandled_key_input(event: InputEvent) -> void:
-	var key = event.as_text()
+	var key: String = event.as_text()
 	if key.length() > 1:
 		if key.begins_with("F"):
 			if cameras.has(int(key)):
@@ -35,7 +35,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		clear_cameras.emit()
 
 
-func set_current_camera(cameraID: int):
+func set_current_camera(cameraID: int) -> void:
 	currentcamera = cameraID
 	print_debug("cameraid= " + str(currentcamera))
 

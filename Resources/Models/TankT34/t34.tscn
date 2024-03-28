@@ -6,12 +6,12 @@
 [sub_resource type="GDScript" id="GDScript_rhvva"]
 resource_name = "tank_cannon_angle"
 script/source = "extends Node3D
-@onready var turret = %turret
-@onready var barrel = %barrel_root
+@onready var turret: Node = %turret
+@onready var barrel: Node = %barrel_root
 @export_range(-180,180,0.1) var turret_angle: float = 0
 @export_range(-5,22,0.1) var barrel_angle: float = 0
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	turret.rotate(Vector3(0,1,0),deg_to_rad(turret_angle))
 	barrel.rotate(Vector3(-1,0,0),deg_to_rad(barrel_angle))
 
