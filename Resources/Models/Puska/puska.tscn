@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bi31d28g7bwot"]
+[gd_scene load_steps=66 format=3 uid="uid://bi31d28g7bwot"]
 
 [ext_resource type="Material" uid="uid://umrreal78sb8" path="res://Resources/Models/Puska/Materials/ftzar.tres" id="1_8aolp"]
 [ext_resource type="Material" uid="uid://f7p1y0km3qci" path="res://Resources/Models/Puska/Materials/golyo.tres" id="2_45yon"]
@@ -8,6 +8,7 @@
 [ext_resource type="Material" uid="uid://b0fjxav306hur" path="res://Resources/Models/Puska/Materials/cso2.tres" id="5_5sdeo"]
 [ext_resource type="Material" uid="uid://b8c010ygfs43" path="res://Resources/Models/Puska/Materials/PIP.tres" id="7_1ibfk"]
 [ext_resource type="Material" uid="uid://cgi8jv41tw00g" path="res://Resources/Models/Puska/Materials/crosshair.tres" id="7_rmdbc"]
+[ext_resource type="AudioStream" uid="uid://bovcpe06ras8d" path="res://Resources/Audio/GunSounds/Rifle/Rifle_Action.wav" id="9_esat0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewhj8"]
 
@@ -741,8 +742,8 @@ bones/3/name = "EmptyCartridge"
 bones/3/parent = 0
 bones/3/rest = Transform3D(0, 1, 0, -1, 0, -4.37114e-08, -4.37114e-08, 0, 1, 0.157877, 0.0480869, 5.12227e-09)
 bones/3/enabled = true
-bones/3/position = Vector3(0.157877, 0.0480869, 5.06815e-09)
-bones/3/rotation = Quaternion(1.54543e-08, 1.54543e-08, -0.707107, 0.707107)
+bones/3/position = Vector3(0, 0, 0)
+bones/3/rotation = Quaternion(-0.263096, 0.568763, 0.470444, 0.621266)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "Cartridge Casing.001"
 bones/4/parent = 3
@@ -823,7 +824,7 @@ bones/14/rotation = Quaternion(0, 0, 0, 1)
 bones/14/scale = Vector3(1, 1, 1)
 
 [node name="bolt_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 1.34111e-22, 1.77636e-15, 0, 1, -1.19209e-07, 1.77636e-15, 1.19209e-07, 1, -0.0347912, 0.0155332, 0.0107881)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, -0.0347912, 0.0155332, 0.0107881)
 bone_name = "bolt.001"
 bone_idx = 2
 
@@ -833,17 +834,18 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_8aolp")
 
 [node name="Cartridge Casing_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 1.34111e-22, 1.77636e-15, 0, 1, -1.19209e-07, 1.77636e-15, 1.19209e-07, 1, 0.105386, 0.0223995, -0.00113257)
+transform = Transform3D(-0.88382, 0.0896181, 0.459163, 0.418926, -0.285263, 0.862048, 0.208237, 0.95425, 0.214578, -0.064116, -0.0229189, 1.27271e-05)
 bone_name = "Cartridge Casing.001"
 bone_idx = 4
 
 [node name="Cartridge Casing_002" type="MeshInstance3D" parent="Armature/Skeleton3D/Cartridge Casing_001"]
+transform = Transform3D(0.000999987, 0, 0, 0, 0.000999987, 0, 0, 0, 0.000999987, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ypumj")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_45yon")
 
 [node name="Cartridge Mag_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 1.34111e-22, 1.77636e-15, 0, 1, -1.19209e-07, 1.77636e-15, 1.19209e-07, 1, 0.0295631, 0.0117826, 0.00403037)
+transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, 0.0295631, 0.0117826, 0.00403037)
 bone_name = "Cartridge Mag.001"
 bone_idx = 6
 
@@ -897,7 +899,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_45yon")
 
 [node name="trigger_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 2.98023e-08, 0, 2.98023e-08, 1, 2.98023e-08, 0, 2.98023e-08, 1, -0.0658704, -0.0484704, -0.000516457)
+transform = Transform3D(1, 2.98023e-08, 0, 2.98023e-08, 1, 2.98023e-08, 1.06569e-07, -3.13706e-08, 1, -0.0658704, -0.0484704, -0.000516458)
 bone_name = "trigger.001"
 bone_idx = 8
 
@@ -1014,3 +1016,7 @@ speed_scale = 1.5
 [node name="FirePoint" type="Marker3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.657131, 0.0236358, 2.87241e-08)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.667229, 0.0221782, 2.91655e-08)
+stream = ExtResource("9_esat0")

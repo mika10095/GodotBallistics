@@ -22,6 +22,7 @@ script/source = "extends Node3D
 @export var ray_length: float = 1000
 @export var ready_to_fire: bool
 @onready var fps_rig: Node = %fps_rig
+@onready var weapon_sound: AudioStreamPlayer3D = gun_model.get_node(\"AudioStreamPlayer3D\")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	anim.animation_finished.connect(anim_end)
@@ -72,7 +73,7 @@ func fire_round() -> void:
 	if is_semi_auto:
 		semi_auto_reset = false
 	anim.play(\"Action\")
-	
+	weapon_sound.play()
 	if(ADS):
 		fps_rig.anim.play(fps_rig.weapon.name + \"_Aim_Fire\")
 	else:
