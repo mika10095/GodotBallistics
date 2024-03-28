@@ -11,6 +11,13 @@ extends Camera3D
 @onready var current_speed: float = default_speed
 @onready var current_fov: float = default_camera_fov
 @onready var freelook_enabled: bool = false
+var config: SettingsManager = SettingsManager
+
+
+func _ready() -> void:
+	min_fov = config.get_var("min_fov") * 100
+	max_fov = config.get_var("max_fov") * 100
+	default_camera_fov = max_fov
 
 
 func Reset() -> void:

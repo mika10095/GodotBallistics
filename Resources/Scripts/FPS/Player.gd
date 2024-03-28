@@ -1,8 +1,8 @@
 class_name Player extends CharacterBody3D
 
-@export_range(0, 10, 0.01) var sensitivity: float = 3
+@export_range(0, 10, 0.01) var sensitivity: float
 @export_range(0, 10, 0.01) var aim_sens: float = 1
-@export_range(0, 10, 0.01) var default_sens: float = 3
+@export_range(0, 10, 0.01) var base_sens: float = 3
 
 @export var speed: float = 5.0
 @export var default_speed: float = 5.0
@@ -15,7 +15,6 @@ class_name Player extends CharacterBody3D
 
 @onready var freelook_enabled: bool = !spectator_cam.freelook_enabled
 
-
 @export var lerp_speed: float = 10
 var direction: Vector3 = Vector3.ZERO
 var input_dir: Vector2 = Vector2.ZERO
@@ -27,6 +26,13 @@ var bob_dist: float = 0.01
 var bob_index: float = 0.5
 var bob_vector: Vector2 = Vector2.ZERO
 
+var config: SettingsManager = SettingsManager
+
+
+func _ready() -> void:
+	base_sens = config.get_var("base_sens") * 10
+	aim_sens = config.get_var("aim_sens") * 10
+	sensitivity = base_sens
 
 
 func _input(event: InputEvent) -> void:
@@ -34,7 +40,7 @@ func _input(event: InputEvent) -> void:
 		sensitivity = aim_sens
 		speed = aim_speed
 	else:
-		sensitivity = default_sens
+		sensitivity = base_sens
 		speed = default_speed
 	if Input.is_action_just_pressed("ChangeCameraMode"):
 		if freelook_enabled:
@@ -59,7 +65,7 @@ func _input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
-func _physics_process(delta:float) -> void:
+func _physics_process(delta: float) -> void:
 	if freelook_enabled:
 		# Add the gravity.
 

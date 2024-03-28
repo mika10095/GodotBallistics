@@ -1,15 +1,18 @@
 [gd_resource type="Resource" script_class="SaveConfig" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Resources/CustomRes/SaveConfig/save_config.gd" id="1_7f7qm"]
+[ext_resource type="Script" path="res://Resources/CustomRes/SaveConfig/save_config.gd" id="1_n18j7"]
 
 [resource]
-script = ExtResource("1_7f7qm")
-slider_settings = {
-"base_sens": 3.0,
-"effect_audio": 0.39,
-"master_audio": 0.5,
+script = ExtResource("1_n18j7")
+settings = {
+"aim_sens": 0.1,
+"base_sens": 0.3,
+"effect_audio": 1.0,
+"fps_counter": true,
+"master_audio": 0.96,
+"max_fov": 0.6,
+"min_fov": 0.1,
 "music_audio": 1.0,
-"ui_audio": 1.0
+"ui_audio": 1.0,
+"window_setting": 0
 }
-window_setting = 0
-fps_counter = false

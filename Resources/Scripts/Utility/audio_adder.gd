@@ -7,9 +7,9 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for sound:StringName in sound_dictionary.keys():
+	for sound: StringName in sound_dictionary.keys():
 		sound_dictionary[sound].stream = load("res://Resources/Audio/SFX/" + str(sound) + ".wav")
-		sound_dictionary[sound].bus = "UI"
+		sound_dictionary[sound].bus = "Ui"
 		add_child(sound_dictionary[sound])
 	add_sound_players(get_node(UI_root))
 
