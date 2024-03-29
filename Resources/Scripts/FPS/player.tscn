@@ -200,6 +200,7 @@ transform = Transform3D(-2.8213e-07, 0, 1, 0, 1, 0, -1, 0, -2.8213e-07, 0, 0, 0)
 [node name="rayfiretest" type="Node3D" parent="HeadbobPivot/PlayerCamera/fps_rig/GunbobPivot/puska" node_paths=PackedStringArray("gun_model")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0564936, 0.0258399, 2.46941e-09)
 script = SubResource("GDScript_w22cg")
+is_animation_over = false
 gun_model = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HeadbobPivot/PlayerCamera/fps_rig"]

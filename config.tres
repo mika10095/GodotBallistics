@@ -5,13 +5,13 @@
 [resource]
 script = ExtResource("1_n18j7")
 settings = {
-"aim_sens": 0.1,
+"aim_sens": 0.05,
 "base_sens": 0.3,
 "effect_audio": 1.0,
 "fps_counter": true,
 "master_audio": 0.51,
 "max_fov": 0.6,
-"min_fov": 0.1,
+"min_fov": 0.0,
 "music_audio": 1.0,
 "ui_audio": 1.0,
 "window_setting": 1

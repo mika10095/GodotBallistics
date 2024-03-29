@@ -824,7 +824,7 @@ bones/14/rotation = Quaternion(0, 0, 0, 1)
 bones/14/scale = Vector3(1, 1, 1)
 
 [node name="bolt_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, -0.0347912, 0.0155332, 0.0107881)
+transform = Transform3D(1, 1.34111e-22, 1.77636e-15, 0, 1, -1.19209e-07, 1.77636e-15, 1.19209e-07, 1, -0.0347912, 0.0155332, 0.0107881)
 bone_name = "bolt.001"
 bone_idx = 2
 
@@ -834,7 +834,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_8aolp")
 
 [node name="Cartridge Casing_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(-0.88382, 0.0896181, 0.459163, 0.418926, -0.285263, 0.862048, 0.208237, 0.95425, 0.214578, -0.064116, -0.0229189, 1.27271e-05)
+transform = Transform3D(-0.88382, 0.089618, 0.459162, 0.418926, -0.285263, 0.862048, 0.208237, 0.95425, 0.214578, -0.064116, -0.0229189, 1.27271e-05)
 bone_name = "Cartridge Casing.001"
 bone_idx = 4
 
@@ -845,7 +845,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_45yon")
 
 [node name="Cartridge Mag_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, -1.34111e-22, -1.77636e-15, 0, 1, -1.19209e-07, -1.77636e-15, 1.19209e-07, 1, 0.0295631, 0.0117826, 0.00403037)
+transform = Transform3D(1, 1.34111e-22, 1.77636e-15, 0, 1, -1.19209e-07, 1.77636e-15, 1.19209e-07, 1, 0.0295631, 0.0117826, 0.00403037)
 bone_name = "Cartridge Mag.001"
 bone_idx = 6
 
@@ -899,7 +899,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_45yon")
 
 [node name="trigger_001" type="BoneAttachment3D" parent="Armature/Skeleton3D"]
-transform = Transform3D(1, 2.98023e-08, 0, 2.98023e-08, 1, 2.98023e-08, 1.06569e-07, -3.13706e-08, 1, -0.0658704, -0.0484704, -0.000516458)
+transform = Transform3D(1, 2.98023e-08, 0, 2.98023e-08, 1, 2.98023e-08, 0, 2.98023e-08, 1, -0.0658704, -0.0484704, -0.000516457)
 bone_name = "trigger.001"
 bone_idx = 8
 

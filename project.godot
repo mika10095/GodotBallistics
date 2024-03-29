@@ -15,8 +15,8 @@ config/version="0.7.1"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 boot_splash/bg_color=Color(0.407843, 0.462745, 0.470588, 1)
-boot_splash/image="res://icon.png"
-config/icon="res://icon.png"
+boot_splash/image="res://addons/NCBS/icon.png"
+config/icon="res://addons/NCBS/icon.png"
 
 [autoload]
 
@@ -25,6 +25,8 @@ TimeManager="*res://Resources/Scripts/Utility/time_manager.gd"
 SettingsManager="*res://Resources/Scripts/Utility/settings_manager.gd"
 DebugTools="*res://Resources/Scripts/Utility/debug_tools.gd"
 AudioMixer="*res://Resources/Scripts/Utility/audio_mixer.gd"
+NCBSWorldVariable="*res://addons/NCBS/NCBS_world.gd"
+NCBSWorld="*res://addons/NCBS/NCBS_world.gd"
 
 [debug]
 
@@ -41,7 +43,7 @@ project/assembly_name="NCBS"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/MonoBuildToggler/plugin.cfg", "res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/format_on_save/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/timer/plugin.cfg")
+enabled=PackedStringArray("res://addons/MonoBuildToggler/plugin.cfg", "res://addons/NCBS/plugin.cfg", "res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/format_on_save/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/timer/plugin.cfg")
 
 [filesystem]
 
