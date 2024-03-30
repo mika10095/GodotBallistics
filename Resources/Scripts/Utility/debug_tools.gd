@@ -1,4 +1,4 @@
-extends Node
+class_name DebugTool extends Node
 
 
 func drawline3D(start: Vector3, end: Vector3) -> void:

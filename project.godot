@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ballistics"
-config/version="0.7.1"
+config/version="0.8"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 boot_splash/bg_color=Color(0.407843, 0.462745, 0.470588, 1)
@@ -25,8 +25,7 @@ TimeManager="*res://Resources/Scripts/Utility/time_manager.gd"
 SettingsManager="*res://Resources/Scripts/Utility/settings_manager.gd"
 DebugTools="*res://Resources/Scripts/Utility/debug_tools.gd"
 AudioMixer="*res://Resources/Scripts/Utility/audio_mixer.gd"
-NCBSWorldVariable="*res://addons/NCBS/NCBS_world.gd"
-NCBSWorld="*res://addons/NCBS/NCBS_world.gd"
+NCBS="*res://addons/NCBS/NCBS.cs"
 
 [debug]
 
@@ -43,7 +42,7 @@ project/assembly_name="NCBS"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/MonoBuildToggler/plugin.cfg", "res://addons/NCBS/plugin.cfg", "res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/format_on_save/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/timer/plugin.cfg")
+enabled=PackedStringArray("res://addons/NCBS/plugin.cfg", "res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/format_on_save/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/timer/plugin.cfg")
 
 [filesystem]
 
