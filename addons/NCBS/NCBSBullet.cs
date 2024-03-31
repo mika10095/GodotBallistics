@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public partial class NCBSBullet : Node
 {
-
+	public Node BulletNode;
 	public NCBSBulletRes Data;
 	public Transform3D StartPosition;
 	public Transform3D CurrentPosition;
@@ -13,6 +13,7 @@ public partial class NCBSBullet : Node
 	public uint LastDelta;
 	public ulong StartTime;
 	public ulong CurrentTime{get {return StartTime + LastDelta;}}
+	public ulong StartPhysicsStep;
 	public Queue<BulletState> Positions = new Queue<BulletState>();
 	public bool Hit = false;
 	public bool Initialized = false;
