@@ -12,8 +12,7 @@ public partial class NCBSBullet : Node
 	public Vector3 CurrentVelocity;
 	public uint LastDelta;
 	public ulong StartTime;
-	public ulong CurrentTime;
-	public ulong StepDelta{get {return CurrentTime-StartTime;}}
+	public ulong CurrentTime{get {return StartTime + LastDelta;}}
 	public Queue<BulletState> Positions = new Queue<BulletState>();
 	public bool Hit = false;
 	public bool Initialized = false;

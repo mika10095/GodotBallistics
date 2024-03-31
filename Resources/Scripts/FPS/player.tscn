@@ -88,11 +88,10 @@ func fire_round() -> void:
 	var end: Vector3 = firepoint.origin + firepoint.basis.x * 100
 	print(str(start) + \" \" + str(end))
 	var query: = PhysicsRayQueryParameters3D.create(start, end)
-	DebugTools.drawline3D(start,end)
+	DebugTools.draw_line_color(start,end,Color.RED)
 	var result: = space.intersect_ray(query)
 	if result:
 		print_debug(result.collider.name)
-	
 	NCBS.AddBullet(firepoint, NCBS_bullet)
 
 "
