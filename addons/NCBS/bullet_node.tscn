@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://bc3kfxjtufepp"]
+[gd_scene load_steps=3 format=3 uid="uid://bc3kfxjtufepp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yaxv"]
+shading_mode = 0
+albedo_color = Color(0.992157, 0, 0.992157, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7tddj"]
+material = SubResource("StandardMaterial3D_6yaxv")
 
 [node name="BulletNode" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-10, 0.01, 0, -0.01, -4.37114e-10, 0, 0, 0, 0.01, 0, 0, 0)
+mesh = SubResource("CylinderMesh_7tddj")

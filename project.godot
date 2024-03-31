@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ballistics"
-config/version="0.8"
+config/version="0.9"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 boot_splash/bg_color=Color(0.407843, 0.462745, 0.470588, 1)
@@ -42,7 +42,7 @@ project/assembly_name="NCBS"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/NCBS/plugin.cfg", "res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/format_on_save/plugin.cfg", "res://addons/gdLinter/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/timer/plugin.cfg")
+enabled=PackedStringArray("res://addons/NCBS/plugin.cfg", "res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/format_on_save/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/timer/plugin.cfg")
 
 [filesystem]
 

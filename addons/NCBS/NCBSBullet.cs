@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public partial class NCBSBullet : Node
 {
-	public Node BulletNode;
+	public Node3D BulletNode;
 	public NCBSBulletRes Data;
 	public Transform3D StartPosition;
 	public Transform3D CurrentPosition;

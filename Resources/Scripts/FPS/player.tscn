@@ -88,7 +88,7 @@ func fire_round() -> void:
 	var end: Vector3 = firepoint.origin + firepoint.basis.x * 100
 	print(str(start) + \" \" + str(end))
 	var query: = PhysicsRayQueryParameters3D.create(start, end)
-	DebugTools.draw_line_color(start,end,Color.RED)
+	#DebugTools.draw_line_color(start,end,Color.RED)
 	var result: = space.intersect_ray(query)
 	if result:
 		print_debug(result.collider.name)
@@ -106,7 +106,7 @@ Intertia = 0.0
 
 [sub_resource type="Resource" id="Resource_1sgk3"]
 script = ExtResource("6_v5kus")
-MuzzleVelocity = 1000.0
+MuzzleVelocity = 25.0
 MuzzleTwist = 100.0
 BulletMass = 0.335
 Diameter = 0.63

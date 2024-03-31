@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Linq;
 
+
 namespace NCBS
 {
 	public partial class NCBS : Node
@@ -29,6 +30,7 @@ namespace NCBS
 		{
 			base._PhysicsProcess(delta);
 			CurrentTime = Engine.GetPhysicsFrames() * 16;
+			//Debug.Print((Engine.GetPhysicsFrames() * 16).ToString());
 			//Debug.Print(bullets.Count() + " bullets");
 
 			foreach (var bullet in bullets)
@@ -83,11 +85,10 @@ namespace NCBS
 					bullet.Positions.Enqueue(NewState);
 					Debug.Print(NewState.Position.ToString() + " " + NewState.Velocity.ToString());
 					bullet.LastDelta = 0;
-					bullet.BulletNode = new Node3D();
-					bullet.BulletNode.AddChild(new MeshInstance3D());
-					bullet.BulletNode.GetChild(0).Set("mesh",new BoxMesh());
-					bullet.BulletNode.Set("scale", new Vector3(0.01f,0.01f,0.01f));
-					bullet.BulletNode.Set("global_position",NewState.Position);
+					PackedScene bulletscene = GD.Load<PackedScene>("addons/NCBS/bullet_node.tscn");
+					bullet.BulletNode = bulletscene.Instantiate<Node3D>();
+					GetTree().Root.AddChild(bullet.BulletNode);
+					bullet.BulletNode.Set("global_transform",bullet.CurrentPosition);
 					for (int i = 0; i < 100; i++)
 					{
 						bullet.LastDelta += TimeStepTime;
@@ -97,13 +98,24 @@ namespace NCBS
 						//debugTools.Call("draw_line",oldpos,bullet.CurrentPosition.Origin);
 						NewState = new BulletState(bullet.LastDelta, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
 						bullet.Positions.Enqueue(NewState);
-						Debug.Print(bullet.LastDelta.ToString() + "\t" + NewState.Position.ToString() + "\t" + NewState.Velocity.ToString());
+						//Debug.Print(bullet.LastDelta.ToString() + "\t" + NewState.Position.ToString() + "\t" + NewState.Velocity.ToString());
 					}
 
 					bullet.Initialized = true;
 				}
 				//Bullet must be ready by now
-
+				
+				
+				int skipped = 0;
+				BulletState current;
+				do {current = bullet.Positions.Dequeue(); skipped++;}
+				while(current.Delta + bullet.StartTime !=  CurrentTime);
+				if (skipped != 16){Debug.Print("Found the current one! Skipped: " + skipped);}
+				GD.Print(current.Position);
+				debugTools.Call("draw_line",current.Position,bullet.Positions.Peek().Position);
+				
+				bullet.BulletNode.Set("global_position",current.Position);
+				//Debug.Print(bullet.BulletNode.Position.ToString());
 			}
 		}
 		public void AddBullet(Transform3D firepoint, Vector3 rotation_offset, float rotation_amount, NCBSBulletRes bulletres)
