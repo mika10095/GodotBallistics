@@ -16,6 +16,7 @@ public partial class NCBSBullet : Node
 	public ulong StartPhysicsStep;
 	public Queue<BulletState> Positions = new Queue<BulletState>();
 	public bool Hit = false;
+	public int HitCode = 0;
 	public bool Initialized = false;
 	public override void _Ready()
 	{

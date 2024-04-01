@@ -35,7 +35,7 @@ namespace NCBS
 
 			foreach (var bullet in bullets)
 			{
-				if (bullet.Hit) { Debug.Print("Implement hitting stuff!"); }
+				if (bullet.Hit != 0) { Debug.Print("Implement hitting stuff!"); }
 				else if (bullet.Initialized)
 				{
 					if (CurrentTime > bullet.CurrentTime)
