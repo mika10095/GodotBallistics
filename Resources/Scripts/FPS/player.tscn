@@ -106,7 +106,7 @@ Intertia = 0.0
 
 [sub_resource type="Resource" id="Resource_1sgk3"]
 script = ExtResource("6_v5kus")
-MuzzleVelocity = 800.0
+MuzzleVelocity = 200.0
 MuzzleTwist = 100.0
 BulletMass = 0.011
 Diameter = 0.63

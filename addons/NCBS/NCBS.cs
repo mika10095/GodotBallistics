@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace NCBS
 {
-	public partial class NCBS : Node
+	public partial class NCBS : Node3D
 	{
 		Node debugTools;
 		public ulong CurrentTime;
@@ -17,6 +17,8 @@ namespace NCBS
 		public ulong CatchUpTime = 100;
 		public NCBSWorldRes WorldRes;
 		private List<NCBSBullet> bullets = new List<NCBSBullet>();
+
+		public List<NCBSBullet> hits = new List<NCBSBullet>();
 		public override void _Ready()
 		{
 			Debug.Print("Its alive!");
@@ -30,102 +32,113 @@ namespace NCBS
 		{
 			base._PhysicsProcess(delta);
 			CurrentTime = Engine.GetPhysicsFrames() * 16;
+			PhysicsDirectSpaceState3D Space = GetWorld3D().DirectSpaceState;
 			//Debug.Print((Engine.GetPhysicsFrames() * 16).ToString());
 			//Debug.Print(bullets.Count() + " bullets");
 
 			foreach (var bullet in bullets)
 			{
-				if (bullet.Hit != 0) { Debug.Print("Implement hitting stuff!"); }
-				else if (bullet.Initialized)
-				{
-					if (CurrentTime > bullet.CurrentTime)
-					{
-						Debug.Print("CurrentTime is over bullet max time! " + CurrentTime + "\t" + bullet.CurrentTime);
-						while (CurrentTime + CatchUpTime > bullet.CurrentTime)
-						{
-							BulletState NewState = new BulletState(0, bullet.StartPosition.Origin, bullet.CurrentVelocity);
-							bullet.LastDelta += TimeStepTime;
-							Vector3 oldpos = bullet.CurrentPosition.Origin;
-							bullet.CurrentVelocity.Y += -9.8f / 1000 / TimeStepTime;
-							bullet.CurrentPosition.Origin = bullet.CurrentPosition.Origin + bullet.CurrentPosition.Basis.X * bullet.CurrentVelocity.X / 1000 / TimeStepTime + bullet.CurrentPosition.Basis.Y * bullet.CurrentVelocity.Y / 1000 / TimeStepTime;
-							//debugTools.Call("draw_line",oldpos,bullet.CurrentPosition.Origin);
-							NewState = new BulletState(bullet.LastDelta, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
-							bullet.Positions.Enqueue(NewState);
-						}
-						Debug.Print(CurrentTime + "\t" + bullet.CurrentTime);
-					}
 
-					else if (bullet.CurrentTime - CurrentTime < 20)
+				if (bullet.Hit) { Debug.Print("Implement hitting stuff!"); hits.Add(bullet); bullets.Remove(bullet); }
+				if (!bullet.Initialized)
+				{
+					Initialize(bullet);
+				}
+				if (CurrentTime > bullet.CurrentTime)
+				{
+					Debug.Print("CurrentTime is over bullet max time! " + CurrentTime + "\t" + bullet.CurrentTime);
+					BulletState NewState = new BulletState(bullet.LastDelta, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
+					while (CurrentTime + CatchUpTime > bullet.CurrentTime)
 					{
-						for (int i = 0; i < PreCalcSteps; i++)
-						{
-							BulletState NewState = new BulletState(0, bullet.StartPosition.Origin, bullet.CurrentVelocity);
-							bullet.LastDelta += TimeStepTime;
-							Vector3 oldpos = bullet.CurrentPosition.Origin;
-							bullet.CurrentVelocity.Y += -9.8f / 1000 / TimeStepTime;
-							bullet.CurrentPosition.Origin = bullet.CurrentPosition.Origin + bullet.CurrentPosition.Basis.X * bullet.CurrentVelocity.X / 1000 / TimeStepTime + bullet.CurrentPosition.Basis.Y * bullet.CurrentVelocity.Y / 1000 / TimeStepTime;
-							//debugTools.Call("draw_line",oldpos,bullet.CurrentPosition.Origin);
-							NewState = new BulletState(bullet.LastDelta, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
-							bullet.Positions.Enqueue(NewState);
-							/*if (i == 0 || i == PreCalcSteps)
-							{
-								Debug.Print(CurrentTime + "\t" + bullet.LastDelta.ToString() + "\t" + NewState.Position.ToString() + "\t" + NewState.Velocity.ToString());
-							}*/
-						}
+						bullet.CalculateStep(TimeStepTime);
 					}
+					bullet.LastPosition = NewState;
+					Debug.Print(CurrentTime + "\t" + bullet.CurrentTime);
+				}
+
+				else if (bullet.CurrentTime - CurrentTime < 20)
+				{
+					for (int i = 0; i < PreCalcSteps; i++)
+					{
+						bullet.CalculateStep(TimeStepTime);
+					}
+				}
+
+
+				//Bullet must be ready by now
+
+
+				int skipped = 0;
+				BulletState current;
+				do { current = bullet.Positions.Dequeue(); skipped++; }
+				while (current.Delta + bullet.StartTime != CurrentTime);
+				if (skipped != 16) { Debug.Print("Found the current one! Skipped: " + skipped); }
+				//Raycast!
+				Vector3 Start = bullet.LastPosition.Position;
+				Vector3 End = current.Position;
+				debugTools.Call("draw_line_color", Start, End, Color.FromHtml("0000FF"));
+				Godot.Collections.Dictionary hit = Space.IntersectRay(PhysicsRayQueryParameters3D.Create(Start, End));
+				if (hit.Count != 0)
+				{
+					bullet.HitDict = hit;
+					GD.Print(hit["position"]);
+					debugTools.Call("draw_line_color", current.Position, hit["position"], Color.FromHtml("FF0000"));
+					bullet.BulletNode.Set("global_position", hit["position"]);
+					bullet.Hit = true;
+					bullet.HitCode = 1;
 				}
 				else
 				{
-					
-					bullet.StartPhysicsStep = Engine.GetPhysicsFrames();
-					bullet.CurrentVelocity = new Vector3(bullet.Data.MuzzleVelocity, 0, 0);
-					bullet.StartTime = CurrentTime;
-					bullet.CurrentPosition = bullet.StartPosition;
-					BulletState NewState = new BulletState(0, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
-					bullet.Positions.Enqueue(NewState);
-					Debug.Print(NewState.Position.ToString() + " " + NewState.Velocity.ToString());
-					bullet.LastDelta = 0;
-					PackedScene bulletscene = GD.Load<PackedScene>("addons/NCBS/bullet_node.tscn");
-					bullet.BulletNode = bulletscene.Instantiate<Node3D>();
-					GetTree().Root.AddChild(bullet.BulletNode);
-					bullet.BulletNode.Set("global_transform",bullet.CurrentPosition);
-					for (int i = 0; i < 100; i++)
-					{
-						bullet.LastDelta += TimeStepTime;
-						Vector3 oldpos = bullet.CurrentPosition.Origin;
-						bullet.CurrentVelocity.Y += -9.8f / 1000 / TimeStepTime;
-						bullet.CurrentPosition.Origin = bullet.CurrentPosition.Origin + bullet.CurrentPosition.Basis.X * bullet.CurrentVelocity.X / 1000 / TimeStepTime + bullet.CurrentPosition.Basis.Y * bullet.CurrentVelocity.Y / 1000 / TimeStepTime;
-						//debugTools.Call("draw_line",oldpos,bullet.CurrentPosition.Origin);
-						NewState = new BulletState(bullet.LastDelta, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
-						bullet.Positions.Enqueue(NewState);
-						//Debug.Print(bullet.LastDelta.ToString() + "\t" + NewState.Position.ToString() + "\t" + NewState.Velocity.ToString());
-					}
 
-					bullet.Initialized = true;
+					//GD.Print(current.Position);
+					debugTools.Call("draw_line_color", current.Position, bullet.Positions.Peek().Position, Color.FromHtml("FFFF66"));
+					//debugTools.Call("draw_line", current.Position, bullet.LastPosition.Position);
+					bullet.LastPosition = current;
+					bullet.BulletNode.Set("global_position", current.Position);
+					if (current.Position.Y <= -100)
+					{	
+						GD.Print("Bullet out of bounds " + current.Position);
+						bullet.Hit = true;
+						bullet.HitCode = 0;
+					}
+					//Debug.Print(bullet.BulletNode.Position.ToString());
 				}
-				//Bullet must be ready by now
 				
-				
-				int skipped = 0;
-				BulletState current;
-				do {current = bullet.Positions.Dequeue(); skipped++;}
-				while(current.Delta + bullet.StartTime !=  CurrentTime);
-				if (skipped != 16){Debug.Print("Found the current one! Skipped: " + skipped);}
-				GD.Print(current.Position);
-				debugTools.Call("draw_line",current.Position,bullet.Positions.Peek().Position);
-				
-				bullet.BulletNode.Set("global_position",current.Position);
-				//Debug.Print(bullet.BulletNode.Position.ToString());
+
+
 			}
+		}
+		public void Initialize(NCBSBullet bullet)
+		{
+			bullet.LastDelta = 0;
+			bullet.StartPhysicsStep = Engine.GetPhysicsFrames();
+			bullet.CurrentVelocity = new Vector3(bullet.Data.MuzzleVelocity, 0, 0);
+			bullet.StartTime = CurrentTime;
+			bullet.CurrentPosition = bullet.StartPosition;
+			BulletState NewState = new BulletState(0, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
+			bullet.Positions.Enqueue(NewState);
+			GD.Print(NewState.Position.ToString() + " " + NewState.Velocity.ToString());
+			PackedScene bulletscene = GD.Load<PackedScene>("addons/NCBS/bullet_node.tscn");
+			bullet.BulletNode = bulletscene.Instantiate<Node3D>();
+			GetTree().Root.AddChild(bullet.BulletNode);
+			bullet.BulletNode.Set("global_transform", bullet.CurrentPosition);
+			for (int i = 0; i < PreCalcSteps; i++)
+			{
+				bullet.CalculateStep(TimeStepTime);
+			}
+			bullet.LastPosition = NewState;
+			bullet.Initialized = true;
 		}
 		public void AddBullet(Transform3D firepoint, Vector3 rotation_offset, float rotation_amount, NCBSBulletRes bulletres)
 		{
 			firepoint.Basis = firepoint.Basis.Rotated(rotation_offset, rotation_amount);
-			bullets.Add(new NCBSBullet(firepoint, bulletres));
+			bullets.Add(new NCBSBullet(firepoint, bulletres, TimeStepTime, PreCalcSteps));
+
 		}
 		public void AddBullet(Transform3D firepoint, NCBSBulletRes bulletres)
 		{
-			bullets.Add(new NCBSBullet(firepoint, bulletres));
+			bullets.Add(new NCBSBullet(firepoint, bulletres, TimeStepTime, PreCalcSteps));
+
 		}
 		public void SetTimeStepTime(uint step_time)
 		{
