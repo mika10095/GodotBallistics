@@ -13,6 +13,7 @@ namespace NCBS
 		Node debugTools;
 		public ulong CurrentTime;
 		public uint TimeStepTime = 1;
+		public uint TimeStepTimeSeconds {get {return TimeStepTime * 1000;}}
 		public uint PreCalcSteps = 40;
 		public ulong CatchUpTime = 100;
 		public NCBSWorldRes WorldRes;
@@ -50,7 +51,7 @@ namespace NCBS
 					BulletState NewState = new BulletState(bullet.LastDelta, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
 					while (CurrentTime + CatchUpTime > bullet.CurrentTime)
 					{
-						bullet.CalculateStep(TimeStepTime);
+						bullet.CalculateStep(TimeStepTimeSeconds);
 					}
 					bullet.LastPosition = NewState;
 					Debug.Print(CurrentTime + "\t" + bullet.CurrentTime);
@@ -60,7 +61,7 @@ namespace NCBS
 				{
 					for (int i = 0; i < PreCalcSteps; i++)
 					{
-						bullet.CalculateStep(TimeStepTime);
+						bullet.CalculateStep(TimeStepTimeSeconds);
 					}
 				}
 
@@ -73,6 +74,7 @@ namespace NCBS
 				do { current = bullet.Positions.Dequeue(); skipped++; }
 				while (current.Delta + bullet.StartTime != CurrentTime);
 				if (skipped != 16) { Debug.Print("Found the current one! Skipped: " + skipped); }
+				GD.Print($"{current.Velocity}\t{0.5f*bullet.Data.BulletMass*Math.Pow(current.Velocity.X+current.Velocity.Z,2)} Joules of energy\t{bullet.TestString}");
 				//Raycast!
 				Vector3 Start = bullet.LastPosition.Position;
 				Vector3 End = current.Position;
@@ -124,7 +126,7 @@ namespace NCBS
 			bullet.BulletNode.Set("global_transform", bullet.CurrentPosition);
 			for (int i = 0; i < PreCalcSteps; i++)
 			{
-				bullet.CalculateStep(TimeStepTime);
+				bullet.CalculateStep(TimeStepTimeSeconds);
 			}
 			bullet.LastPosition = NewState;
 			bullet.Initialized = true;
@@ -132,12 +134,12 @@ namespace NCBS
 		public void AddBullet(Transform3D firepoint, Vector3 rotation_offset, float rotation_amount, NCBSBulletRes bulletres)
 		{
 			firepoint.Basis = firepoint.Basis.Rotated(rotation_offset, rotation_amount);
-			bullets.Add(new NCBSBullet(firepoint, bulletres, TimeStepTime, PreCalcSteps));
+			bullets.Add(new NCBSBullet(firepoint, bulletres, WorldRes));
 
 		}
 		public void AddBullet(Transform3D firepoint, NCBSBulletRes bulletres)
 		{
-			bullets.Add(new NCBSBullet(firepoint, bulletres, TimeStepTime, PreCalcSteps));
+			bullets.Add(new NCBSBullet(firepoint, bulletres, WorldRes));
 
 		}
 		public void SetTimeStepTime(uint step_time)
