@@ -38,8 +38,9 @@ namespace NCBS
 			CurrentVelocity.Y += WorldRes.GravityConstant / TimeStepTimeSeconds;
 			float DragForceNewtons = 0.5f*WorldRes.AirDensity*(float)Math.Pow(Data.Diameter,2f)*(float)Math.PI*1*Data.DragCurve.SampleBaked(CurrentVelocity.X+CurrentVelocity.Z/WorldRes.SpeedOfSound/10)*CurrentVelocity.X;
 			//CurrentVelocity.Z -= 0.5f*WorldRes.AirDensity*(float)Math.Pow(Data.Diameter,2f)*(float)Math.PI*1*Data.DragCurve.SampleBaked(CurrentVelocity.X+CurrentVelocity.Z/WorldRes.SpeedOfSound/10)*CurrentVelocity.X;
-			TestString = DragForceNewtons.ToString();
-			CurrentVelocity.X = CurrentVelocity.X - DragForceNewtons*Data.BulletMass * TimeStepTimeSeconds;
+			TestString = $"{DragForceNewtons} \t {Data.BulletMass} \t {Data.BulletMass/DragForceNewtons} \t {DragForceNewtons/Data.BulletMass}";
+			//					0,0026674385 	 0,011 	 				4,1238065 								 0,2424944
+			CurrentVelocity.X -= DragForceNewtons/Data.BulletMass /TimeStepTimeSeconds;
 			CurrentPosition.Origin = CurrentPosition.Origin + CurrentPosition.Basis.X * CurrentVelocity.X / TimeStepTimeSeconds + this.Transform.Basis.Y * CurrentVelocity.Y / TimeStepTimeSeconds + CurrentPosition.Basis.X * CurrentVelocity.Z / TimeStepTimeSeconds;
 			
 
