@@ -8,6 +8,6 @@ namespace NCBS
 {
     public partial class NCBSTrajectory : Node
     {
-        
+
     }
 }

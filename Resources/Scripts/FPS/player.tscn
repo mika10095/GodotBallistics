@@ -71,7 +71,7 @@ func _physics_process(_delta: float) -> void:
 		fire_round()
 
 func fire_round() -> void:
-	ready_to_fire = false
+	#ready_to_fire = false
 	is_action_animation_over = false
 	if is_semi_auto:
 		semi_auto_reset = false

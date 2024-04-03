@@ -5,7 +5,7 @@ namespace NCBS
     [GlobalClass]
     public partial class NCBSBulletAeroRes : Resource
     {
-        
+
         /*[Export]
         public Curve DragCurve {get; set;}
         public NCBSBulletAeroRes() {
