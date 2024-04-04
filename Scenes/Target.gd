@@ -14,3 +14,4 @@ func _process(delta):
 func handle_hit(bullet: NCBSHitRes):
 	#apply_impulse()
 	print("hitpos " + str(bullet.HitDict.position))
+	var hit_vector = (bullet.HitDict.position - bullet.LastBulletPos.origin).normalized()

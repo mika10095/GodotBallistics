@@ -86,7 +86,7 @@ namespace NCBS
 				Godot.Collections.Dictionary hit = Space.IntersectRay(PhysicsRayQueryParameters3D.Create(Start, End));
 				if (hit.Count != 0)
 				{
-					bullet.HitRes = new NCBSHitRes(1,hit,getJoules(bullet,current));
+					bullet.HitRes = new NCBSHitRes(1,hit,getJoules(bullet,current),bullet.BulletNode.Transform);
 					
 					
 					debugTools.Call("draw_line_color", current.Position, hit["position"], Color.FromHtml("FF0000"));
@@ -111,7 +111,7 @@ namespace NCBS
 					bullet.BulletNode.Set("global_position", current.Position);
 					if (current.Position.Y <= -100)
 					{
-						bullet.HitRes = new NCBSHitRes(0,null,0);
+						bullet.HitRes = new NCBSHitRes(0,null,0,bullet.BulletNode.Transform);
 						bullet.Clear();
 						Hits.Add(bullet);
 						Bullets.Remove(bullet);
