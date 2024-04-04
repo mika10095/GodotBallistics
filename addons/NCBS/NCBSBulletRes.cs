@@ -15,8 +15,6 @@ namespace NCBS
         public float Diameter { get; set; }
         [Export]
         public float Intertia { get; set; }
-        //[Export]
-        //public NCBSBulletAeroRes AeroResource {get; set;}
         [Export]
         public Curve DragCurve { get; set; }
         public NCBSBulletRes()
@@ -26,16 +24,14 @@ namespace NCBS
             BulletMass = 0f;
             Diameter = 0f;
             Intertia = 0f;
-            //AeroResource = null;
         }
-        public NCBSBulletRes(float muzzle_velocity, float muzzle_twist, float bullet_mass, float diameter, float inertia, NCBSBulletAeroRes res)
+        public NCBSBulletRes(float muzzle_velocity, float muzzle_twist, float bullet_mass, float diameter, float inertia)
         {
             MuzzleVelocity = muzzle_velocity;
             MuzzleTwist = muzzle_twist;
             BulletMass = bullet_mass;
             Diameter = diameter;
             Intertia = inertia;
-            //AeroResource = res;
         }
     }
 }

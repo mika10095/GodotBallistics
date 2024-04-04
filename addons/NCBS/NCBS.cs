@@ -22,7 +22,7 @@ namespace NCBS
         public List<NCBSBullet> hits = new List<NCBSBullet>();
         public override void _Ready()
         {
-            Debug.Print("Its alive!");
+            GD.Print("Its alive!");
         }
 
         public override void _Process(double delta)
@@ -34,27 +34,27 @@ namespace NCBS
             base._PhysicsProcess(delta);
             CurrentTime = Engine.GetPhysicsFrames() * 16;
             PhysicsDirectSpaceState3D Space = GetWorld3D().DirectSpaceState;
-            //Debug.Print((Engine.GetPhysicsFrames() * 16).ToString());
-            //Debug.Print(bullets.Count() + " bullets");
+            //GD.Print((Engine.GetPhysicsFrames() * 16).ToString());
+            GD.Print(bullets.Count() + " bullets");
 
             foreach (var bullet in bullets)
             {
 
-                if (bullet.Hit) { Debug.Print("Implement hitting stuff!"); hits.Add(bullet); bullets.Remove(bullet); }
+                if (bullet.Hit) { GD.Print("Implement hitting stuff!"); hits.Add(bullet); bullets.Remove(bullet); }
                 if (!bullet.Initialized)
                 {
                     Initialize(bullet);
                 }
                 if (CurrentTime > bullet.CurrentTime)
                 {
-                    Debug.Print("CurrentTime is over bullet max time! " + CurrentTime + "\t" + bullet.CurrentTime);
+                    //GD.Print("CurrentTime is over bullet max time! " + CurrentTime + "\t" + bullet.CurrentTime);
                     BulletState NewState = new BulletState(bullet.LastDelta, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
                     while (CurrentTime + CatchUpTime > bullet.CurrentTime)
                     {
                         bullet.CalculateStep(TimeStepTimeSeconds);
                     }
                     bullet.LastPosition = NewState;
-                    Debug.Print(CurrentTime + "\t" + bullet.CurrentTime);
+                    //GD.Print(CurrentTime + "\t" + bullet.CurrentTime);
                 }
 
                 else if (bullet.CurrentTime - CurrentTime < 20)
@@ -73,7 +73,7 @@ namespace NCBS
                 BulletState current;
                 do { current = bullet.Positions.Dequeue(); skipped++; }
                 while (current.Delta + bullet.StartTime != CurrentTime);
-                if (skipped != 16) { Debug.Print("Found the current one! Skipped: " + skipped); }
+                //if (skipped != 16) { GD.Print("Found the current one! Skipped: " + skipped); }
                 //GD.Print($"{current.Velocity}\t{0.5f*bullet.Data.BulletMass*Math.Pow(current.Velocity.X+current.Velocity.Z,2)} Joules of energy\t{bullet.TestString}");
                 //Raycast!
                 Vector3 Start = bullet.LastPosition.Position;
@@ -103,7 +103,7 @@ namespace NCBS
                         bullet.Hit = true;
                         bullet.HitCode = 0;
                     }
-                    //Debug.Print(bullet.BulletNode.Position.ToString());
+                    //GD.Print(bullet.BulletNode.Position.ToString());
                 }
 
 
