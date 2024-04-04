@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace NCBS
 {
+	
 	public partial class NCBSBullet : Node3D
 	{
 		public bool Initialized = false;
@@ -25,11 +26,8 @@ namespace NCBS
 
 		public Transform3D CurrentPosition;
 		public Vector3 CurrentVelocity;
-
-		//Storing hit information
-		public bool Hit = false;
-		public int HitCode = 0;
-		public Dictionary HitDict;
+		public NCBSHitRes HitRes;
+		
 
 		public override void _Ready()
 		{
@@ -46,6 +44,12 @@ namespace NCBS
 			CurrentPosition.Origin = CurrentPosition.Origin + CurrentPosition.Basis.X * CurrentVelocity.X / TimeStepTimeSeconds + this.Transform.Basis.Y * CurrentVelocity.Y / TimeStepTimeSeconds + CurrentPosition.Basis.X * CurrentVelocity.Z / TimeStepTimeSeconds;
 			BulletState NewState = new BulletState(LastDelta, CurrentPosition.Origin, CurrentVelocity);
 			Positions.Enqueue(NewState);
+		}
+		public void Clear()
+		{
+			Initialized = false;
+			Positions.Clear();
+			BulletNode.QueueFree();
 		}
 
 		public NCBSBullet(Transform3D start_position, NCBSBulletRes bullet_data, NCBSWorldRes world_res)

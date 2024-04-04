@@ -4,155 +4,173 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using System.Threading;
 using System.Linq;
+using Godot.Collections;
 
 
 namespace NCBS
 {
-    public partial class NCBS : Node3D
-    {
-        Node debugTools;
-        public ulong CurrentTime;
-        public uint TimeStepTime = 1;
-        public uint TimeStepTimeSeconds { get { return TimeStepTime * 1000; } }
-        public uint PreCalcSteps = 40;
-        public ulong CatchUpTime = 100;
-        public NCBSWorldRes WorldRes;
-        private List<NCBSBullet> bullets = new List<NCBSBullet>();
+	interface ITarget
+	{
+		void handle_hit(NCBSHitRes bullet);
+	}
 
-        public List<NCBSBullet> hits = new List<NCBSBullet>();
-        public override void _Ready()
-        {
-            GD.Print("Its alive!");
-        }
+	public partial class NCBS : Node3D
+	{
+		Node debugTools;
+		public ulong CurrentTime;
+		public uint TimeStepTime = 1;
+		public uint TimeStepTimeSeconds { get { return TimeStepTime * 1000; } }
+		public uint PreCalcSteps = 40;
+		public ulong CatchUpTime = 100;
+		public NCBSWorldRes WorldRes;
+		private List<NCBSBullet> Bullets = new List<NCBSBullet>();
 
-        public override void _Process(double delta)
-        {
-            debugTools = GetNode("/root/DebugTools");
-        }
-        public override void _PhysicsProcess(double delta)
-        {
-            base._PhysicsProcess(delta);
-            CurrentTime = Engine.GetPhysicsFrames() * 16;
-            PhysicsDirectSpaceState3D Space = GetWorld3D().DirectSpaceState;
-            //GD.Print((Engine.GetPhysicsFrames() * 16).ToString());
-            GD.Print(bullets.Count() + " bullets");
+		public List<NCBSBullet> Hits = new List<NCBSBullet>();
+		public List<NCBSBullet> Saved = new List<NCBSBullet>();
+		public override void _Ready()
+		{
+			GD.Print("Its alive!");
+		}
 
-            foreach (var bullet in bullets)
-            {
+		public override void _Process(double delta)
+		{
+			debugTools = GetNode("/root/DebugTools");
+		}
+		public override void _PhysicsProcess(double delta)
+		{
+			base._PhysicsProcess(delta);
+			CurrentTime = Engine.GetPhysicsFrames() * 16;
+			PhysicsDirectSpaceState3D Space = GetWorld3D().DirectSpaceState;
+			//GD.Print((Engine.GetPhysicsFrames() * 16).ToString());
+			//GD.Print(bullets.Count() + " bullets");
 
-                if (bullet.Hit) { GD.Print("Implement hitting stuff!"); hits.Add(bullet); bullets.Remove(bullet); }
-                if (!bullet.Initialized)
-                {
-                    Initialize(bullet);
-                }
-                if (CurrentTime > bullet.CurrentTime)
-                {
-                    //GD.Print("CurrentTime is over bullet max time! " + CurrentTime + "\t" + bullet.CurrentTime);
-                    BulletState NewState = new BulletState(bullet.LastDelta, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
-                    while (CurrentTime + CatchUpTime > bullet.CurrentTime)
-                    {
-                        bullet.CalculateStep(TimeStepTimeSeconds);
-                    }
-                    bullet.LastPosition = NewState;
-                    //GD.Print(CurrentTime + "\t" + bullet.CurrentTime);
-                }
+			foreach (var bullet in Bullets)
+			{
+				if (!bullet.Initialized)
+				{
+					Initialize(bullet);
+				}
+				if (CurrentTime > bullet.CurrentTime)
+				{
+					//GD.Print("CurrentTime is over bullet max time! " + CurrentTime + "\t" + bullet.CurrentTime);
+					BulletState NewState = new BulletState(bullet.LastDelta, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
+					while (CurrentTime + CatchUpTime > bullet.CurrentTime)
+					{
+						bullet.CalculateStep(TimeStepTimeSeconds);
+					}
+					bullet.LastPosition = NewState;
+					//GD.Print(CurrentTime + "\t" + bullet.CurrentTime);
+				}
 
-                else if (bullet.CurrentTime - CurrentTime < 20)
-                {
-                    for (int i = 0; i < PreCalcSteps; i++)
-                    {
-                        bullet.CalculateStep(TimeStepTimeSeconds);
-                    }
-                }
-
-
-                //Bullet must be ready by now
-
-
-                int skipped = 0;
-                BulletState current;
-                do { current = bullet.Positions.Dequeue(); skipped++; }
-                while (current.Delta + bullet.StartTime != CurrentTime);
-                //if (skipped != 16) { GD.Print("Found the current one! Skipped: " + skipped); }
-                //GD.Print($"{current.Velocity}\t{0.5f*bullet.Data.BulletMass*Math.Pow(current.Velocity.X+current.Velocity.Z,2)} Joules of energy\t{bullet.TestString}");
-                //Raycast!
-                Vector3 Start = bullet.LastPosition.Position;
-                Vector3 End = current.Position;
-                debugTools.Call("draw_line_color", Start, End, Color.FromHtml("0000FF"));
-                Godot.Collections.Dictionary hit = Space.IntersectRay(PhysicsRayQueryParameters3D.Create(Start, End));
-                if (hit.Count != 0)
-                {
-                    bullet.HitDict = hit;
-                    GD.Print(hit["position"]);
-                    debugTools.Call("draw_line_color", current.Position, hit["position"], Color.FromHtml("FF0000"));
-                    bullet.BulletNode.Set("global_position", hit["position"]);
-                    bullet.Hit = true;
-                    bullet.HitCode = 1;
-                }
-                else
-                {
-
-                    //GD.Print(current.Position);
-                    debugTools.Call("draw_line_color", current.Position, bullet.Positions.Peek().Position, Color.FromHtml("FFFF66"));
-                    //debugTools.Call("draw_line", current.Position, bullet.LastPosition.Position);
-                    bullet.LastPosition = current;
-                    bullet.BulletNode.Set("global_position", current.Position);
-                    if (current.Position.Y <= -100)
-                    {
-                        GD.Print("Bullet out of bounds " + current.Position);
-                        bullet.Hit = true;
-                        bullet.HitCode = 0;
-                    }
-                    //GD.Print(bullet.BulletNode.Position.ToString());
-                }
+				else if (bullet.CurrentTime - CurrentTime < 20)
+				{
+					for (int i = 0; i < PreCalcSteps; i++)
+					{
+						bullet.CalculateStep(TimeStepTimeSeconds);
+					}
+				}
 
 
+				//Bullet must be ready by now
 
-            }
-        }
-        public void Initialize(NCBSBullet bullet)
-        {
-            bullet.LastDelta = 0;
-            bullet.StartPhysicsStep = Engine.GetPhysicsFrames();
-            bullet.CurrentVelocity = new Vector3(bullet.Data.MuzzleVelocity, 0, 0);
-            bullet.StartTime = CurrentTime;
-            bullet.CurrentPosition = bullet.StartPosition;
-            BulletState NewState = new BulletState(0, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
-            bullet.Positions.Enqueue(NewState);
-            GD.Print(NewState.Position.ToString() + " " + NewState.Velocity.ToString());
-            PackedScene bulletscene = GD.Load<PackedScene>("addons/NCBS/bullet_node.tscn");
-            bullet.BulletNode = bulletscene.Instantiate<Node3D>();
-            GetTree().Root.AddChild(bullet.BulletNode);
-            bullet.BulletNode.Set("global_transform", bullet.CurrentPosition);
-            for (int i = 0; i < PreCalcSteps; i++)
-            {
-                bullet.CalculateStep(TimeStepTimeSeconds);
-            }
-            bullet.LastPosition = NewState;
-            bullet.Initialized = true;
-        }
-        public void AddBullet(Transform3D firepoint, Vector3 rotation_offset, float rotation_amount, NCBSBulletRes bulletres)
-        {
-            firepoint.Basis = firepoint.Basis.Rotated(rotation_offset, rotation_amount);
-            bullets.Add(new NCBSBullet(firepoint, bulletres, WorldRes));
 
-        }
-        public void AddBullet(Transform3D firepoint, NCBSBulletRes bulletres)
-        {
-            bullets.Add(new NCBSBullet(firepoint, bulletres, WorldRes));
+				int skipped = 0;
+				BulletState current;
+				do { current = bullet.Positions.Dequeue(); skipped++; }
+				while (current.Delta + bullet.StartTime != CurrentTime);
+				//if (skipped != 16) { GD.Print("Found the current one! Skipped: " + skipped); }
+				//Raycast!
+				Vector3 Start = bullet.LastPosition.Position;
+				Vector3 End = current.Position;
+				debugTools.Call("draw_line_color", Start, End, Color.FromHtml("0000FF"));
+				Godot.Collections.Dictionary hit = Space.IntersectRay(PhysicsRayQueryParameters3D.Create(Start, End));
+				if (hit.Count != 0)
+				{
+					bullet.HitRes = new NCBSHitRes(1,hit,getJoules(bullet,current));
+					
+					
+					debugTools.Call("draw_line_color", current.Position, hit["position"], Color.FromHtml("FF0000"));
+					bullet.BulletNode.Set("global_position", hit["position"]);
+					Node3D hitnode = hit["collider"].Obj as Node3D;
+					if(hitnode.HasMethod("handle_hit"))
+					{	
+						bullet.HitRes.HitCode = 2;
+						hitnode.Call("handle_hit",bullet.HitRes);
+					}
+					bullet.Clear();
+					Hits.Add(bullet);
+					Bullets.Remove(bullet);
+				}
+				else
+				{
 
-        }
-        public void SetTimeStepTime(uint step_time)
-        {
-            TimeStepTime = step_time;
-        }
-        public void SetWorld(NCBSWorldRes world_res)
-        {
-            WorldRes = world_res;
-        }
-        public void SetPreCalcSteps(uint steps)
-        {
-            PreCalcSteps = steps;
-        }
-    }
+					//GD.Print(current.Position);
+					debugTools.Call("draw_line_color", current.Position, bullet.Positions.Peek().Position, Color.FromHtml("FFFF66"));
+					//debugTools.Call("draw_line", current.Position, bullet.LastPosition.Position);
+					bullet.LastPosition = current;
+					bullet.BulletNode.Set("global_position", current.Position);
+					if (current.Position.Y <= -100)
+					{
+						bullet.HitRes = new NCBSHitRes(0,null,0);
+						bullet.Clear();
+						Hits.Add(bullet);
+						Bullets.Remove(bullet);
+						
+					}
+					//GD.Print(bullet.BulletNode.Position.ToString());
+				}
+
+
+
+			}
+		}
+		public float getJoules(NCBSBullet bullet, BulletState current)
+		{
+			return 0.5f*bullet.Data.BulletMass*(float)Math.Pow(current.Velocity.X+current.Velocity.Z,2);
+		}
+		public void Initialize(NCBSBullet bullet)
+		{
+			bullet.LastDelta = 0;
+			bullet.StartPhysicsStep = Engine.GetPhysicsFrames();
+			bullet.CurrentVelocity = new Vector3(bullet.Data.MuzzleVelocity, 0, 0);
+			bullet.StartTime = CurrentTime;
+			bullet.CurrentPosition = bullet.StartPosition;
+			BulletState NewState = new BulletState(0, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
+			bullet.Positions.Enqueue(NewState);
+			GD.Print(NewState.Position.ToString() + " " + NewState.Velocity.ToString());
+			PackedScene bulletscene = GD.Load<PackedScene>("addons/NCBS/bullet_node.tscn");
+			bullet.BulletNode = bulletscene.Instantiate<Node3D>();
+			GetTree().Root.AddChild(bullet.BulletNode);
+			bullet.BulletNode.Set("global_transform", bullet.CurrentPosition);
+			for (int i = 0; i < PreCalcSteps; i++)
+			{
+				bullet.CalculateStep(TimeStepTimeSeconds);
+			}
+			bullet.LastPosition = NewState;
+			bullet.Initialized = true;
+		}
+		public void AddBullet(Transform3D firepoint, Vector3 rotation_offset, float rotation_amount, NCBSBulletRes bulletres)
+		{
+			firepoint.Basis = firepoint.Basis.Rotated(rotation_offset, rotation_amount);
+			Bullets.Add(new NCBSBullet(firepoint, bulletres, WorldRes));
+
+		}
+		public void AddBullet(Transform3D firepoint, NCBSBulletRes bulletres)
+		{
+			Bullets.Add(new NCBSBullet(firepoint, bulletres, WorldRes));
+
+		}
+		public void SetTimeStepTime(uint step_time)
+		{
+			TimeStepTime = step_time;
+		}
+		public void SetWorld(NCBSWorldRes world_res)
+		{
+			WorldRes = world_res;
+		}
+		public void SetPreCalcSteps(uint steps)
+		{
+			PreCalcSteps = steps;
+		}
+	}
 }
