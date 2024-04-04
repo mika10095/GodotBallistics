@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace NCBS
 {
-	
+
 	public partial class NCBSBullet : Node3D
 	{
 		public bool Initialized = false;
@@ -26,8 +26,18 @@ namespace NCBS
 
 		public Transform3D CurrentPosition;
 		public Vector3 CurrentVelocity;
+		public BulletState CurrentState;
 		public NCBSHitRes HitRes;
-		
+		public float getJoules
+		{
+			get
+			{
+				float joules = 0.5f * Data.BulletMass * (float)Math.Pow(CurrentState.Velocity.X + CurrentState.Velocity.Z, 2);
+				GD.Print(joules);
+				return joules;
+			}
+
+		}
 
 		public override void _Ready()
 		{
