@@ -1,18 +1,17 @@
 extends StaticBody3D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass  # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+var decal_s = preload("res://Resources/Models/Universal/bullet_decal.tscn")
 
 
 func handle_hit(bullet: NCBSHitRes):
-	var bullet_res: NCBSBulletRes = bullet.BulletRes
-	print("hitpos " + str(bullet.HitDict.position))
-	var hit_vector = bullet.HitDict.position.direction_to(bullet.LastBulletPos.origin)
-	#apply_impulse(hit_vector * 10, bullet.HitDict.position)
+	var hit_position: Vector3 = bullet.HitDict.position
+
+	DebugTools.draw_sphere(hit_position)
+	var decal = decal_s.instantiate()
+	var decal_normal = bullet.HitDict.normal
+	bullet.HitDict.collider.add_child(decal)
+	decal.global_transform.origin = hit_position
+	if decal_normal == Vector3.DOWN:
+		decal.rotation_degrees.x = 90
+	elif decal_normal != Vector3.UP:
+		decal.look_at(hit_position - decal_normal, Vector3(0, 1, 0))

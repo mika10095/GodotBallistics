@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://3dn42phe5qiq"]
+
+[ext_resource type="Texture2D" uid="uid://bvivx0ttcxr8c" path="res://Resources/Models/Universal/bullet_decal.png" id="1_m612e"]
+
+[sub_resource type="GDScript" id="GDScript_u1ieg"]
+resource_name = "decal"
+script/source = "extends Node3D
+@onready var timer = $Timer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	timer.timeout.connect(free)
+
+func free():
+	queue_free()
+
+"
+
+[node name="BulletDecal" type="Node3D"]
+script = SubResource("GDScript_u1ieg")
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+size = Vector3(0.1, 0.1, 0.1)
+texture_albedo = ExtResource("1_m612e")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 60.0
+one_shot = true
+autostart = true

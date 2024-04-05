@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://8rn6wvskgc38"
-path="res://.godot/imported/signsmall.glb-fda413f30b5d7588694165bd5e610f29.scn"
+path="res://.godot/imported/signsmall.glb-ca307c2d8d34f3b499de85a19a0b114e.scn"
 
 [deps]
 
-source_file="res://Resources/Models/Tablak/models/signsmall.glb"
-dest_files=["res://.godot/imported/signsmall.glb-fda413f30b5d7588694165bd5e610f29.scn"]
+source_file="res://Resources/Models/Tablak/Models/signsmall.glb"
+dest_files=["res://.godot/imported/signsmall.glb-ca307c2d8d34f3b499de85a19a0b114e.scn"]
 
 [params]
 

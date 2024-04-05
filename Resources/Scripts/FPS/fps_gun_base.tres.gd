@@ -16,6 +16,7 @@ extends Node3D
 @export var NCBS_bullet: NCBSBulletRes
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	anim.animation_finished.connect(anim_end)

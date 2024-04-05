@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cp7igbdb161rk"
-path="res://.godot/imported/signmed.glb-1fe62605da0ca142858379349e5f18fe.scn"
+path="res://.godot/imported/signmed.glb-1abce5971317cf4b4514718d0e679959.scn"
 
 [deps]
 
-source_file="res://Resources/Models/Tablak/models/signmed.glb"
-dest_files=["res://.godot/imported/signmed.glb-1fe62605da0ca142858379349e5f18fe.scn"]
+source_file="res://Resources/Models/Tablak/Models/signmed.glb"
+dest_files=["res://.godot/imported/signmed.glb-1abce5971317cf4b4514718d0e679959.scn"]
 
 [params]
 

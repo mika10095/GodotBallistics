@@ -32,7 +32,7 @@ namespace NCBS
 		{
 			get
 			{
-				float joules = 0.5f * Data.BulletMass * (float)Math.Pow(CurrentState.Velocity.X + CurrentState.Velocity.Z, 2);
+				float joules = 0.5f * Data.BulletMass * (float)Math.Pow(CurrentState.Velocity.X + CurrentState.Velocity.Z + CurrentState.Velocity.Y, 2);
 				GD.Print(joules);
 				return joules;
 			}
