@@ -6,11 +6,8 @@ var bob_vector: Vector2 = Vector2.ZERO
 @onready var pivot: Node3D = self
 @onready var player: Node = $"../../../.."
 @export var lerp_speed: float = 10
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass  # Replace with function body.
+@onready var fps_rig: Node3D = %fps_rig
+var offset: Transform3D
 
 
 func _physics_process(delta: float) -> void:
