@@ -8,6 +8,12 @@ var bob_vector: Vector2 = Vector2.ZERO
 @export var lerp_speed: float = 10
 @onready var fps_rig: Node3D = %fps_rig
 var offset: Transform3D
+var mouse_input: Vector2 = Vector2.ZERO
+
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		mouse_input = event.relative
 
 
 func _physics_process(delta: float) -> void:
@@ -19,7 +25,7 @@ func _physics_process(delta: float) -> void:
 			pivot.rotation.z, bob_vector.x * bob_dist * player.speed, delta * lerp_speed
 		)
 		pivot.rotation.x = lerp(
-			pivot.rotation.x, bob_vector.x * bob_dist * player.speed * 2, delta * lerp_speed
+			pivot.rotation.x, bob_vector.x * bob_dist * player.speed, delta * lerp_speed
 		)
 		pivot.rotation.y = lerp(
 			pivot.rotation.y, bob_vector.x * bob_dist * player.speed, delta * lerp_speed
@@ -29,6 +35,17 @@ func _physics_process(delta: float) -> void:
 		)
 		pivot.position.x = lerp(
 			pivot.position.x, bob_vector.x * bob_dist * player.speed, delta * lerp_speed
+		)
+	elif mouse_input:
+		pivot.rotation.x = lerp(
+			pivot.rotation.x,
+			bob_vector.x * bob_dist * mouse_input.y * player.speed / 2,
+			delta * lerp_speed
+		)
+		pivot.rotation.y = lerp(
+			pivot.rotation.y,
+			bob_vector.y * bob_dist * mouse_input.x * player.speed / 2,
+			delta * lerp_speed
 		)
 	else:
 		pivot.rotation.y = lerp(pivot.rotation.y, 0.0, delta * lerp_speed)

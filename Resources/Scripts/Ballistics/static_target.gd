@@ -1,9 +1,19 @@
 extends StaticBody3D
 
 var decal_s = preload("res://Resources/Models/Universal/bullet_decal.tscn")
+const sound = preload("res://Resources/Audio/MetalHitSounds/MetalHit3.wav")
+var audio: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	audio.bus = "Effect"
+	audio.stream = sound
+	add_child(audio)
 
 
 func handle_hit(bullet: NCBSHitRes):
+	audio.play()
 	var hit_position: Vector3 = bullet.HitDict.position
 
 	DebugTools.draw_sphere(hit_position)

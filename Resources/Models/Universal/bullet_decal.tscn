@@ -13,7 +13,7 @@ func _ready():
 	timer.timeout.connect(free)
 
 func free():
-	queue_free()
+	self.queue_free()
 
 "
 
@@ -26,7 +26,6 @@ size = Vector3(0.1, 0.1, 0.1)
 texture_albedo = ExtResource("1_m612e")
 
 [node name="Timer" type="Timer" parent="."]
-process_callback = 0
-wait_time = 60.0
+wait_time = 10.0
 one_shot = true
 autostart = true

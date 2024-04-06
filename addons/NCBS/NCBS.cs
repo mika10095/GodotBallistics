@@ -42,7 +42,7 @@ namespace NCBS
             CurrentTime = Engine.GetPhysicsFrames() * 16;
             PhysicsDirectSpaceState3D Space = GetWorld3D().DirectSpaceState;
             //GD.Print((Engine.GetPhysicsFrames() * 16).ToString());
-            //GD.Print(bullets.Count() + " bullets");
+            //GD.Print(Bullets.Count() + " bullets");
 
             foreach (var bullet in Bullets)
             {
@@ -82,14 +82,14 @@ namespace NCBS
                 //Raycast!
                 Vector3 Start = bullet.LastPosition.Position;
                 Vector3 End = bullet.CurrentState.Position;
-                //debugTools.Call("draw_line_color", Start, End, Color.FromHtml("0000FF"));
+                
                 Dictionary hit = Space.IntersectRay(PhysicsRayQueryParameters3D.Create(Start, End));
                 if (hit.Count != 0)
                 {
                     bullet.HitRes = new NCBSHitRes(1, hit,bullet.getJoules, new Transform3D(bullet.Basis,bullet.LastPosition.Position), bullet.Data);
 
 
-                    //debugTools.Call("draw_line_color", bullet.CurrentState.Position, hit["position"], Color.FromHtml("FF0000"));
+                    debugTools.Call("draw_line_color", bullet.CurrentState.Position, hit["position"], Color.FromHtml("FF0000"));
                     bullet.BulletNode.Set("global_position", hit["position"]);
                     Node3D hitnode = hit["collider"].Obj as Node3D;
                     if (hitnode.HasMethod("handle_hit"))
@@ -103,7 +103,7 @@ namespace NCBS
                 }
                 else
                 {
-
+                    debugTools.Call("draw_line_color", Start, End, Color.FromHtml("0000FF"));
                     //GD.Print(current.Position);
                     //debugTools.Call("draw_line_color", bullet.CurrentState.Position, bullet.Positions.Peek().Position, Color.FromHtml("FFFF66"));
                     //debugTools.Call("draw_line", current.Position, bullet.LastPosition.Position);

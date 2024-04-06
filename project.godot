@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ballistics"
-config/version="1.2"
+config/version="1.3"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 boot_splash/bg_color=Color(0.407843, 0.462745, 0.470588, 1)
@@ -166,7 +166,6 @@ MenuButton={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
 renderer/rendering_method.mobile="forward_plus"
 textures/vram_compression/import_s3tc_bptc=true
 textures/vram_compression/import_etc2_astc=true

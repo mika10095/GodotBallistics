@@ -14,7 +14,7 @@ extends Node3D
 @onready var fps_rig: Node = %fps_rig
 @onready var weapon_sound: AudioStreamPlayer3D = gun_model.get_node("AudioStreamPlayer3D")
 @export var NCBS_bullet: NCBSBulletRes
-
+const muzzle_flash_prefab = preload("res://Resources/Models/Puska/muzzle_flash.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -75,6 +75,7 @@ func fire_round() -> void:
 	else:
 		fps_rig.anim.play(fps_rig.weapon.name + "_Equip_Fire")
 	var firepoint: Transform3D = fps_rig.weapon.find_child("FirePoint").global_transform
+
 	var space: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
 	var start: Vector3 = firepoint.origin
 	var end: Vector3 = firepoint.origin + firepoint.basis.x * 100
@@ -84,4 +85,9 @@ func fire_round() -> void:
 	var result := space.intersect_ray(query)
 	if result:
 		print_debug(result.collider.name)
+
+	var flash = muzzle_flash_prefab.instantiate()
+	flash.global_position = firepoint.origin
+	get_tree().root.add_child(flash)
+
 	NCBS.AddBullet(firepoint, NCBS_bullet)

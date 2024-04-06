@@ -2,11 +2,15 @@ extends RigidBody3D
 @export var force_multiplier: float = 1
 @export var flip_force: bool = false
 var decal_s = preload("res://Resources/Models/Universal/bullet_decal.tscn")
+var audio: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
+const sound = preload("res://Resources/Audio/MetalHitSounds/MetalHit3.wav")
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass  # Replace with function body.
+	audio.bus = "Effect"
+	audio.stream = sound
+	add_child(audio)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,6 +19,7 @@ func _process(delta):
 
 
 func handle_hit(bullet: NCBSHitRes):
+	audio.play()
 	var bullet_res: NCBSBulletRes = bullet.BulletRes
 	var hit_position: Vector3 = bullet.HitDict.position
 	var bullet_direction = (hit_position - bullet.LastBulletPos.origin).normalized()
@@ -27,6 +32,7 @@ func handle_hit(bullet: NCBSHitRes):
 	print("hitpos " + str(hit_position) + "\n" + "hit vector: " + str(bullet_direction))
 
 	#var speed = joule_to_meters(bullet.HitPowerJoules, bullet_res)
+	#play sound
 
 	#bullet decals
 	var decal_normal = bullet.HitDict.normal
