@@ -29,6 +29,8 @@ var bob_vector: Vector2 = Vector2.ZERO
 var config: SettingsManager = SettingsManager
 
 
+
+
 func _ready() -> void:
 	base_sens = config.get_var("base_sens") * 10
 	aim_sens = config.get_var("aim_sens") * 10

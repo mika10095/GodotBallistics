@@ -36,7 +36,21 @@ func _physics_process(delta: float) -> void:
 		pivot.position.x = lerp(
 			pivot.position.x, bob_vector.x * bob_dist * player.speed, delta * lerp_speed
 		)
-	elif mouse_input:
+	if Input.is_action_pressed("ADS"):
+		pivot.rotation.x = lerp(
+			pivot.rotation.x,
+			bob_vector.x * bob_dist * mouse_input.y * player.speed / 10,
+			delta * lerp_speed
+		)
+		pivot.rotation.y = lerp(
+			pivot.rotation.y,
+			bob_vector.y * bob_dist * mouse_input.x * player.speed / 10,
+			delta * lerp_speed
+		)
+		pivot.rotation.z = lerp(pivot.rotation.z, 0.0, delta * lerp_speed / 5)
+		pivot.position.z = lerp(pivot.position.z, 0.0, delta * lerp_speed / 5)
+		pivot.position.x = lerp(pivot.position.x, 0.0, delta * lerp_speed / 5)
+	else:
 		pivot.rotation.x = lerp(
 			pivot.rotation.x,
 			bob_vector.x * bob_dist * mouse_input.y * player.speed / 2,
@@ -47,10 +61,3 @@ func _physics_process(delta: float) -> void:
 			bob_vector.y * bob_dist * mouse_input.x * player.speed / 2,
 			delta * lerp_speed
 		)
-	else:
-		pivot.rotation.y = lerp(pivot.rotation.y, 0.0, delta * lerp_speed)
-		pivot.rotation.x = lerp(pivot.rotation.x, 0.0, delta * lerp_speed)
-		pivot.rotation.z = lerp(pivot.rotation.z, 0.0, delta * lerp_speed)
-		pivot.position.z = lerp(pivot.position.z, 0.0, delta * lerp_speed)
-		pivot.position.x = lerp(pivot.position.x, 0.0, delta * lerp_speed)
-		bob_index = 0.5

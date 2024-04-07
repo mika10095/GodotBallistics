@@ -1,13 +1,17 @@
 extends RigidBody3D
+signal target_hit
 @export var force_multiplier: float = 1
 @export var flip_force: bool = false
 var decal_s = preload("res://Resources/Models/Universal/bullet_decal.tscn")
 var audio: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
-const sound = preload("res://Resources/Audio/MetalHitSounds/MetalHit3.wav")
+var sound = preload("res://Resources/Audio/MetalHitSounds/MetalHit3.wav")
+@export var sound_override: AudioStreamWAV
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if sound_override:
+		sound = sound_override
 	audio.bus = "Effect"
 	audio.stream = sound
 	add_child(audio)
@@ -19,6 +23,7 @@ func _process(delta):
 
 
 func handle_hit(bullet: NCBSHitRes):
+	emit_signal("target_hit")
 	audio.play()
 	var bullet_res: NCBSBulletRes = bullet.BulletRes
 	var hit_position: Vector3 = bullet.HitDict.position

@@ -937,31 +937,50 @@ mesh = SubResource("CylinderMesh_xnkgq")
 surface_material_override/0 = ExtResource("7_1ibfk")
 
 [node name="Crosshair1" type="MeshInstance3D" parent="tavcso/lens"]
-transform = Transform3D(-0.005, 1.50996e-07, 2.75727e-22, -7.54979e-10, -1, 0, 2.75727e-24, -8.32671e-29, 0.5, 0, -1.1, 0)
+transform = Transform3D(-0.003, 1.50996e-07, 4.9741e-22, -4.52987e-10, -1, -5.55112e-16, 2.48154e-24, -1.11022e-15, 0.5, 0, -1.1, 0)
+layers = 524288
+mesh = SubResource("PlaneMesh_tngya")
+surface_material_override/0 = ExtResource("7_rmdbc")
+
+[node name="200" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.001, 1.50996e-07, 2.30534e-23, -1.50996e-10, -1, -4.996e-17, 1.03398e-24, -3.33067e-15, 0.015, 0.011, -1.1, 0)
+layers = 524288
+mesh = SubResource("PlaneMesh_tngya")
+surface_material_override/0 = ExtResource("7_rmdbc")
+
+[node name="300" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.001, 1.50996e-07, 3.07379e-23, -1.50996e-10, -1, -6.66134e-17, 1.03398e-24, -3.33067e-15, 0.02, 0.025, -1.1, 0)
+layers = 524288
+mesh = SubResource("PlaneMesh_tngya")
+surface_material_override/0 = ExtResource("7_rmdbc")
+
+[node name="400" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.001, 1.50996e-07, 2.30534e-23, -1.50996e-10, -1, -4.996e-17, 1.03398e-24, -3.33067e-15, 0.015, 0.041, -1.1, 0)
 layers = 524288
 mesh = SubResource("PlaneMesh_tngya")
 surface_material_override/0 = ExtResource("7_rmdbc")
 
 [node name="Crosshair2" type="MeshInstance3D" parent="tavcso/lens"]
-transform = Transform3D(-0.5, 1.50996e-07, 4.19323e-24, -7.54979e-08, -1, 0, 4.19323e-22, -1.26632e-28, 0.005, 0, -1.1, -1.42109e-14)
+transform = Transform3D(-0.5, 1.50996e-07, 4.1981e-24, -7.54979e-08, -1, -4.66294e-18, 5.82335e-22, -1.55431e-15, 0.003, 0, -1.1, -1.42109e-14)
 layers = 524288
 mesh = SubResource("PlaneMesh_tngya")
 skeleton = NodePath("../Crosshair1")
 surface_material_override/0 = ExtResource("7_rmdbc")
 
 [node name="Marker3D" type="Marker3D" parent="tavcso"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.130309, 0.0629211, -1.29507e-08)
+transform = Transform3D(0.999998, 0.00174533, -7.62907e-11, 0, -4.37114e-08, -1, -0.00174533, 0.999998, -4.37113e-08, -0.130309, 0.0629211, -1.29507e-08)
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="tavcso/Marker3D"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(-0.0034906, 0, -0.999994, 0, 1, 0, 0.999994, 0, -0.0034906, 0, 0, 0)
 remote_path = NodePath("../../SubViewport/SubCam")
 
 [node name="SubViewport" type="SubViewport" parent="tavcso"]
 handle_input_locally = false
 canvas_cull_mask = 4294443007
+size = Vector2i(2048, 2048)
 
 [node name="SubCam" type="Camera3D" parent="tavcso/SubViewport"]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -7.25471e-09, 0.0629211, 0.130309)
+transform = Transform3D(6.04869e-06, 0.999998, 0.00174536, -0.999994, -4.37114e-08, 0.0034906, 0.00349059, -0.00174537, 0.999992, -7.25471e-09, 0.0629211, 0.130309)
 cull_mask = 524287
 fov = 10.0
 

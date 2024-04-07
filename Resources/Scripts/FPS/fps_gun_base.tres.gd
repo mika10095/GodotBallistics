@@ -16,6 +16,8 @@ extends Node3D
 @export var NCBS_bullet: NCBSBulletRes
 const muzzle_flash_prefab = preload("res://Resources/Models/Puska/muzzle_flash.tscn")
 
+@export var accuracy_moa: float = 1
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -90,4 +92,15 @@ func fire_round() -> void:
 	flash.global_position = firepoint.origin
 	get_tree().root.add_child(flash)
 
+	NCBS.AddBullet(add_innacuracy_moa(firepoint, accuracy_moa), NCBS_bullet)
 	NCBS.AddBullet(firepoint, NCBS_bullet)
+
+
+func add_innacuracy_moa(transform: Transform3D, innacuracy: float) -> Transform3D:
+	var transformnew = transform.rotated(
+		Vector3(1, 0, 0), randf_range(-0.0003 * accuracy_moa, 0.0003 * accuracy_moa)
+	)
+	transformnew = transformnew.rotated(
+		Vector3(0, 1, 0), randf_range(-0.0003 * accuracy_moa, 0.0003 * accuracy_moa)
+	)
+	return transformnew
