@@ -7,7 +7,7 @@ extends Node
 func set_time_scale(scale: float) -> void:
 	time_scale = scale
 	Engine.time_scale = clamp(time_scale, min_scale, max_scale)
-	Engine.physics_ticks_per_second = 60 * time_scale
+	Engine.physics_ticks_per_second = 60 * clamp(time_scale, min_scale, max_scale)
 
 
 func reset_time_scale() -> void:

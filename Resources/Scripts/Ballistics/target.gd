@@ -2,7 +2,7 @@ extends RigidBody3D
 signal target_hit
 @export var force_multiplier: float = 1
 @export var flip_force: bool = false
-var decal_s = preload("res://Resources/Models/Universal/bullet_decal.tscn")
+var decal_s = load("res://Resources/Models/Universal/bullet_decal.tscn")
 var audio: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 var sound = preload("res://Resources/Audio/MetalHitSounds/MetalHit3.wav")
 @export var sound_override: AudioStreamWAV
@@ -23,6 +23,8 @@ func _process(delta):
 
 
 func handle_hit(bullet: NCBSHitRes):
+	print_debug("Target hit")
+	print_debug(bullet.HitID)
 	emit_signal("target_hit")
 	audio.play()
 	var bullet_res: NCBSBulletRes = bullet.BulletRes

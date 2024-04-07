@@ -2,6 +2,7 @@ extends Node3D
 signal register_camera
 var id: int
 var camera: Camera3D
+@export var fixed_free: bool = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -28,6 +29,8 @@ func _on_clear_cameras() -> void:
 
 func _on_use_camera(currentid: String) -> void:
 	if currentid == "F" + str(id):
+		camera.freelook_enabled = fixed_free
+		camera.freelook_fixed = fixed_free
 		print_debug("I am current " + str(id))
 		FollowObjectManager.set_current_camera(id)
 		camera.set_process(true)
@@ -35,8 +38,3 @@ func _on_use_camera(currentid: String) -> void:
 	else:
 		camera.set_process(false)
 		camera.clear_current()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass

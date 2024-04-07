@@ -9,13 +9,10 @@ using Godot.Collections;
 
 namespace NCBS
 {
-    interface ITarget
-    {
-        void handle_hit(NCBSHitRes bullet);
-    }
 
     public partial class NCBS : Node3D
     {
+        int CurrentHitID = 1;
         Node debugTools;
         public ulong CurrentTime;
         public uint TimeStepTime = 1;
@@ -49,6 +46,7 @@ namespace NCBS
                 if (!bullet.Initialized)
                 {
                     Initialize(bullet);
+                    Debug.Print("Bullet Initialized!");
                 }
                 if (CurrentTime > bullet.CurrentTime)
                 {
@@ -82,23 +80,23 @@ namespace NCBS
                 //Raycast!
                 Vector3 Start = bullet.LastPosition.Position;
                 Vector3 End = bullet.CurrentState.Position;
-                
+
                 Dictionary hit = Space.IntersectRay(PhysicsRayQueryParameters3D.Create(Start, End));
                 if (hit.Count != 0)
                 {
-                    bullet.HitRes = new NCBSHitRes(1, hit,bullet.getJoules, new Transform3D(bullet.Basis,bullet.LastPosition.Position), bullet.Data);
-
+                    bullet.HitRes = new NCBSHitRes(CurrentHitID, 1, hit, bullet.getJoules, new Transform3D(bullet.Basis, bullet.LastPosition.Position), bullet.Data);
+                    CurrentHitID++;
 
                     debugTools.Call("draw_line_color", bullet.CurrentState.Position, hit["position"], Color.FromHtml("FF0000"));
                     bullet.BulletNode.Set("global_position", hit["position"]);
                     Node3D hitnode = hit["collider"].Obj as Node3D;
-                    if (hitnode.HasMethod("handle_hit"))
+                    if (hitnode.HasMethod("handle_hit") && bullet.HitRes.HitCode != 0)
                     {
                         bullet.HitRes.HitCode = 2;
                         hitnode.Call("handle_hit", bullet.HitRes);
                     }
                     bullet.Clear();
-                    Hits.Add(bullet);
+                    //Hits.Add(bullet);
                     Bullets.Remove(bullet);
                 }
                 else
@@ -111,7 +109,7 @@ namespace NCBS
                     bullet.BulletNode.Set("global_position", bullet.CurrentState.Position);
                     if (bullet.CurrentState.Position.Y <= -100)
                     {
-                        bullet.HitRes = new NCBSHitRes(0, null, 0,bullet.CurrentPosition, bullet.Data);
+                        bullet.HitRes = new NCBSHitRes(0,0, null, 0, bullet.CurrentPosition, bullet.Data);
                         bullet.Clear();
                         Hits.Add(bullet);
                         Bullets.Remove(bullet);
@@ -130,6 +128,15 @@ namespace NCBS
         }
         public void Initialize(NCBSBullet bullet)
         {
+            PackedScene bulletscene = GD.Load<PackedScene>("addons/NCBS/bullet_node.tscn");
+            if(bullet.Data.BulletMesh != null)
+            {
+                 bullet.BulletNode = bullet.Data.BulletMesh.Instantiate<Node3D>();
+            }
+            else{
+            bullet.BulletNode = bulletscene.Instantiate<Node3D>();
+            }
+            GetTree().Root.AddChild(bullet.BulletNode);
             bullet.LastDelta = 0;
             bullet.StartPhysicsStep = Engine.GetPhysicsFrames();
             bullet.CurrentVelocity = new Vector3(bullet.Data.MuzzleVelocity, 0, 0);
@@ -138,16 +145,18 @@ namespace NCBS
             BulletState NewState = new BulletState(0, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
             bullet.Positions.Enqueue(NewState);
             GD.Print(NewState.Position.ToString() + " " + NewState.Velocity.ToString());
-            PackedScene bulletscene = GD.Load<PackedScene>("addons/NCBS/bullet_node.tscn");
-            bullet.BulletNode = bulletscene.Instantiate<Node3D>();
-            GetTree().Root.AddChild(bullet.BulletNode);
-            bullet.BulletNode.Set("global_transform", bullet.CurrentPosition);
+            
+            
+            
+            
             for (int i = 0; i < PreCalcSteps; i++)
             {
                 bullet.CalculateStep(TimeStepTimeSeconds);
             }
             bullet.LastPosition = NewState;
             bullet.Initialized = true;
+            
+            
         }
         public void AddBullet(Transform3D firepoint, Vector3 rotation_offset, float rotation_amount, NCBSBulletRes bulletres)
         {

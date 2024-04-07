@@ -29,8 +29,6 @@ var bob_vector: Vector2 = Vector2.ZERO
 var config: SettingsManager = SettingsManager
 
 
-
-
 func _ready() -> void:
 	base_sens = config.get_var("base_sens") * 10
 	aim_sens = config.get_var("aim_sens") * 10
@@ -44,7 +42,7 @@ func _input(event: InputEvent) -> void:
 	else:
 		sensitivity = base_sens
 		speed = default_speed
-	if Input.is_action_just_pressed("ChangeCameraMode"):
+	if Input.is_action_just_pressed("ChangeCameraMode") and spectator_cam.current:
 		if freelook_enabled:
 			print_debug("freelook enabled!")
 			spectator_cam.global_transform.origin = Vector3(0, 0, 0)
@@ -56,7 +54,7 @@ func _input(event: InputEvent) -> void:
 		freelook_enabled = !freelook_enabled
 		spectator_cam.Reset()
 
-	if freelook_enabled:
+	if freelook_enabled and spectator_cam.current:
 		if event is InputEventMouseMotion:
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 				if event is InputEventMouseMotion:
@@ -68,15 +66,9 @@ func _input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if freelook_enabled:
-		# Add the gravity.
-
-		# Handle jump.
+	if freelook_enabled and spectator_cam.current:
 		if Input.is_action_just_pressed("Jump") and is_on_floor():
 			velocity.y = jump_velocity
-
-		# Get the input direction and handle the movement/deceleration.
-		# As good practice, you should replace UI actions with custom gameplay actions.
 		input_dir = Input.get_vector("Left", "Right", "Forward", "Backward")
 		direction = (lerp(
 			direction,

@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://ufrk77ecrxdx"]
+[gd_scene load_steps=29 format=3 uid="uid://ufrk77ecrxdx"]
 
 [ext_resource type="Material" uid="uid://bplo413af54o4" path="res://Resources/Models/Tablak/Materials/spray_black.tres" id="1_r7cqw"]
 [ext_resource type="Script" path="res://Resources/Scripts/Ballistics/static_target.gd" id="2_64177"]
 [ext_resource type="Material" uid="uid://bnv36skbuhbou" path="res://Resources/Models/Tablak/Materials/spray_color.tres" id="3_temx7"]
+[ext_resource type="Material" uid="uid://c4l85xgs81uqa" path="res://Resources/Models/Tablak/Materials/spray_white.tres" id="4_4mwui"]
 [ext_resource type="Script" path="res://Resources/Scripts/Ballistics/target.gd" id="4_mlq7t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hc76"]
@@ -228,6 +229,7 @@ script = ExtResource("4_mlq7t")
 force_multiplier = 0.01
 
 [node name="Cube_002" type="MeshInstance3D" parent="starfix"]
+material_override = ExtResource("4_4mwui")
 mesh = SubResource("ArrayMesh_oe14f")
 skeleton = NodePath("")
 

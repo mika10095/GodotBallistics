@@ -93,7 +93,7 @@ func fire_round() -> void:
 	get_tree().root.add_child(flash)
 
 	NCBS.AddBullet(add_innacuracy_moa(firepoint, accuracy_moa), NCBS_bullet)
-	NCBS.AddBullet(firepoint, NCBS_bullet)
+	#NCBS.AddBullet(firepoint, NCBS_bullet)
 
 
 func add_innacuracy_moa(transform: Transform3D, innacuracy: float) -> Transform3D:

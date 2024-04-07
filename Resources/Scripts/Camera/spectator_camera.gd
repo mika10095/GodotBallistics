@@ -10,11 +10,13 @@ extends Camera3D
 @export var max_fov: float = 60
 @onready var current_speed: float = default_speed
 @onready var current_fov: float = default_camera_fov
-@onready var freelook_enabled: bool = false
+@export var freelook_enabled: bool = false
+@export var freelook_fixed: bool = false
 var config: SettingsManager = SettingsManager
 
 
 func _ready() -> void:
+	freelook_enabled = freelook_fixed
 	min_fov = config.get_var("min_fov") * 100
 	max_fov = config.get_var("max_fov") * 100
 	default_camera_fov = max_fov
@@ -34,7 +36,6 @@ func _input(event: InputEvent) -> void:
 				rotation.x -= event.relative.y / 1000 * sensitivity
 				rotation.x = clamp(rotation.x, PI / -2, PI / 2)
 
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if Input.is_action_pressed("ZoomPos"):
 		current_fov = clamp(current_fov / speed_scale, min_fov, max_fov)
 		self.fov = current_fov

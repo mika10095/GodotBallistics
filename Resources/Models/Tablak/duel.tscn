@@ -173,7 +173,7 @@ physics_material_override = SubResource("PhysicsMaterial_guqvv")
 angular_damp_mode = 1
 angular_damp = 20.0
 script = ExtResource("2_b7hd5")
-force_multiplier = 0.01
+force_multiplier = 0.015
 
 [node name="RoundPlate1Tri_012" type="MeshInstance3D" parent="xsmallbeam_072/HingeJoint3D/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.114098, 0, 0)
@@ -200,7 +200,7 @@ physics_material_override = SubResource("PhysicsMaterial_guqvv")
 angular_damp_mode = 1
 angular_damp = 20.0
 script = ExtResource("2_b7hd5")
-force_multiplier = 0.01
+force_multiplier = 0.015
 
 [node name="RoundPlate1Tri_012" type="MeshInstance3D" parent="xsmallbeam_072/HingeJoint3D2/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.114098, 0, 0)
@@ -227,7 +227,7 @@ physics_material_override = SubResource("PhysicsMaterial_guqvv")
 angular_damp_mode = 1
 angular_damp = 20.0
 script = ExtResource("2_b7hd5")
-force_multiplier = 0.01
+force_multiplier = 0.015
 
 [node name="RoundPlate1Tri_012" type="MeshInstance3D" parent="xsmallbeam_072/HingeJoint3D3/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.114098, 0, 0)
@@ -254,7 +254,7 @@ physics_material_override = SubResource("PhysicsMaterial_guqvv")
 angular_damp_mode = 1
 angular_damp = 20.0
 script = ExtResource("2_b7hd5")
-force_multiplier = 0.01
+force_multiplier = 0.015
 
 [node name="RoundPlate1Tri_012" type="MeshInstance3D" parent="xsmallbeam_072/HingeJoint3D4/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.114098, 0, 0)
@@ -281,7 +281,7 @@ physics_material_override = SubResource("PhysicsMaterial_guqvv")
 angular_damp_mode = 1
 angular_damp = 20.0
 script = ExtResource("2_b7hd5")
-force_multiplier = 0.01
+force_multiplier = 0.015
 
 [node name="RoundPlate1Tri_012" type="MeshInstance3D" parent="xsmallbeam_072/HingeJoint3D5/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.114098, 0, 0)
@@ -306,7 +306,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 mass = 5.0
 physics_material_override = SubResource("PhysicsMaterial_guqvv")
 script = ExtResource("2_b7hd5")
-force_multiplier = 0.025
+force_multiplier = 0.015
 
 [node name="RoundPlate1Tri_012" type="MeshInstance3D" parent="xsmallbeam_072/HingeJoint3D6/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.114098, 0, 0)

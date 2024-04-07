@@ -289,7 +289,7 @@ script = SubResource("GDScript_aukwq")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0517385, -0.0161448, 2.26156e-09)
 mass = 5.0
 script = ExtResource("1_eutip")
-force_multiplier = -0.2
+force_multiplier = -0.25
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="JoltHingeJoint3D/RigidBody3D"]
 transform = Transform3D(0.999999, -7.67947e-08, -1.62538e-07, 1.84145e-05, 0.999998, 8.50608e-08, 2.60189e-05, -2.506e-07, 0.999999, 8.56274e-08, 0.529783, 0.0446337)

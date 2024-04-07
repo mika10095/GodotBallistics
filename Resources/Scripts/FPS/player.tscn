@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://le4jqcaav038"]
+[gd_scene load_steps=17 format=3 uid="uid://le4jqcaav038"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/FPS/freecam.gd" id="1_trpew"]
 [ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://Resources/Scripts/Camera/camera_follow.tscn" id="2_mg8l0"]
@@ -8,14 +8,16 @@
 [ext_resource type="Script" path="res://Resources/Scripts/FPS/fps_gun_base.tres.gd" id="6_2mn6c"]
 [ext_resource type="Curve" uid="uid://ba8nkmb73vpyj" path="res://addons/NCBS/DragCurves/G5_projectile_curve.tres" id="6_g7wik"]
 [ext_resource type="Script" path="res://addons/NCBS/NCBSBulletRes.cs" id="6_v5kus"]
+[ext_resource type="PackedScene" uid="uid://caarwi6um75oi" path="res://Resources/Models/Puska/bullet.tscn" id="7_wma8o"]
 
 [sub_resource type="Resource" id="Resource_1sgk3"]
 script = ExtResource("6_v5kus")
 MuzzleVelocity = 800.0
-MuzzleTwist = 100.0
+MuzzleTwist = 30.0
 BulletMass = 0.011
 Diameter = 0.076
-Intertia = 1.285
+Intertia = 1.0
+BulletMesh = ExtResource("7_wma8o")
 DragCurve = ExtResource("6_g7wik")
 
 [sub_resource type="Animation" id="Animation_5wq6n"]
