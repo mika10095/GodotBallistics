@@ -133,6 +133,7 @@ mesh = SubResource("ArrayMesh_d2wac")
 skeleton = NodePath("")
 
 [node name="humantorso_004" type="MeshInstance3D" parent="xsmallbeam_025"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0416442)
 material_override = ExtResource("2_i6f02")
 mesh = SubResource("ArrayMesh_ncpw3")
 skeleton = NodePath("")

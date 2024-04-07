@@ -21,7 +21,7 @@ func handle_hit(bullet: NCBSHitRes):
 		hit_position - global_position
 	)
 
-	DebugTools.draw_sphere(hit_position)
+	#DebugTools.draw_sphere(hit_position)
 	print("hitpos " + str(hit_position) + "\n" + "hit vector: " + str(bullet_direction))
 
 	#var speed = joule_to_meters(bullet.HitPowerJoules, bullet_res)

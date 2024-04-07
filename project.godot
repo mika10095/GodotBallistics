@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Ballistics"
-config/version="1.4.1"
+config/version="1.5"
 run/main_scene="res://Scenes/menu.tscn"
-config/features=PackedStringArray("4.2", "Mobile")
+config/features=PackedStringArray("4.2", "C#", "Mobile")
 boot_splash/bg_color=Color(0.407843, 0.462745, 0.470588, 1)
 boot_splash/image="res://addons/NCBS/icon.png"
 config/icon="res://addons/NCBS/icon.png"
@@ -42,7 +42,7 @@ project/assembly_name="NCBS"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/NCBS/plugin.cfg", "res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/format_on_save/plugin.cfg", "res://addons/timer/plugin.cfg")
+enabled=PackedStringArray("res://addons/NCBS/plugin.cfg", "res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/format_on_save/plugin.cfg", "res://addons/terrain_3d/plugin.cfg", "res://addons/timer/plugin.cfg")
 
 [filesystem]
 
@@ -176,6 +176,6 @@ environment/ssil/quality=1
 textures/decals/filter=0
 textures/light_projectors/filter=0
 environment/glow/upscale_mode=0
-anti_aliasing/quality/msaa_3d=1
+anti_aliasing/quality/msaa_3d=2
 anti_aliasing/quality/use_debanding=true
 occlusion_culling/use_occlusion_culling=true

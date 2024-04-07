@@ -2,7 +2,7 @@ extends Camera3D
 
 @export_range(0, 10, 0.01) var sensitivity: float = 3
 @export_range(0, 1000, 0.1) var default_speed: float = 5
-@export_range(0, 10, 0.01) var speed_scale: float = 1.1
+@export_range(0, 10, 0.01) var speed_scale: float = 1.01
 @export_range(0, 10, 0.01) var default_camera_fov: float = 60
 @export var min_speed: float = 0.1
 @export var max_speed: float = 250
@@ -40,7 +40,7 @@ func _input(event: InputEvent) -> void:
 		current_fov = clamp(current_fov / speed_scale, min_fov, max_fov)
 		self.fov = current_fov
 		print_debug(current_fov)
-	if Input.is_action_pressed("ZoomNeg"):
+	elif Input.is_action_pressed("ZoomNeg"):
 		current_fov = clamp(current_fov * speed_scale, min_fov, max_fov)
 		self.fov = current_fov
 		print_debug(current_fov)
@@ -52,10 +52,9 @@ func _input(event: InputEvent) -> void:
 		print_debug(Engine.time_scale)
 	elif Input.is_action_pressed("SpeedUp"):
 		current_speed = clamp(current_speed * speed_scale, min_speed, max_speed)
-		print_debug(current_speed)
+
 	elif Input.is_action_pressed("SpeedDown"):
 		current_speed = clamp(current_speed / speed_scale, min_speed, max_speed)
-		print_debug(current_speed)
 
 
 func _process(delta: float) -> void:

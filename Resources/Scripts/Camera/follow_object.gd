@@ -17,14 +17,14 @@ func _ready() -> void:
 	camera.set_process(false)
 	if get_parent_node_3d().get_parent_node_3d().name == "Player":
 		camera.set_process(true)
+		id = 1
 		camera.make_current()
 
 
 func _on_clear_cameras() -> void:
-	if get_parent_node_3d().get_parent_node_3d().name != "Player":
-		print_debug("old" + str(id))
-		id = FollowObjectManager.register_camera()
-		print_debug("new" + str(id))
+	print_debug("old" + str(id))
+	id = FollowObjectManager.register_camera()
+	print_debug("new" + str(id))
 
 
 func _on_use_camera(currentid: String) -> void:

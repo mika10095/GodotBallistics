@@ -90,6 +90,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_svr2n")
 
 [node name="humantorso_003" type="MeshInstance3D" parent="xsmallbeam_073"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0461735)
 material_override = ExtResource("2_8lald")
 mesh = SubResource("ArrayMesh_graex")
 skeleton = NodePath("")

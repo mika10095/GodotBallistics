@@ -11,7 +11,8 @@ class_name SaveConfig extends Resource
 	"max_fov": 0.6,
 	"min_fov": 0.15,
 	"window_setting": 0,
-	"fps_counter": false
+	"fps_counter": false,
+	"debug_lines": true
 }  ##ezek a változók amiket a menüben a saját slidereimmel csapok ki
 
 

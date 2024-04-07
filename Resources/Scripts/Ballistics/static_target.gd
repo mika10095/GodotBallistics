@@ -19,7 +19,7 @@ func handle_hit(bullet: NCBSHitRes):
 	audio.play()
 	var hit_position: Vector3 = bullet.HitDict.position
 
-	DebugTools.draw_sphere(hit_position)
+	#DebugTools.draw_sphere(hit_position)
 	var decal = decal_s.instantiate()
 	var decal_normal = bullet.HitDict.normal
 	bullet.HitDict.collider.add_child(decal)

@@ -50,8 +50,9 @@ namespace NCBS
 
             LastDelta += TimeStepTimeSeconds / 1000;
             CurrentVelocity.Y += WorldRes.GravityConstant / TimeStepTimeSeconds;
-            float DragForceNewtons = 0.5f * WorldRes.AirDensity * (float)Math.Pow(Data.Diameter, 2f) * (float)Math.PI * 1 * Data.DragCurve.SampleBaked(CurrentVelocity.X + CurrentVelocity.Z / WorldRes.SpeedOfSound / 10) * CurrentVelocity.X;
-            CurrentVelocity.X -= DragForceNewtons / Data.BulletMass / TimeStepTimeSeconds;
+            float DragForceNewtons = 0.5f * WorldRes.AirDensity * (float)Math.Pow(Data.Diameter, 2f) * (float)Math.PI * 1 * Data.DragCurve.SampleBaked((CurrentVelocity.X + CurrentVelocity.Z) / WorldRes.SpeedOfSound / 10) * CurrentVelocity.X;
+			//GD.Print((CurrentVelocity.X + CurrentVelocity.Z) / WorldRes.SpeedOfSound / 10 + "\t" + Data.DragCurve.Sample((CurrentVelocity.X + CurrentVelocity.Z) / WorldRes.SpeedOfSound / 10));
+		    CurrentVelocity.X -= DragForceNewtons / Data.BulletMass / TimeStepTimeSeconds;
             CurrentPosition.Origin = CurrentPosition.Origin + CurrentPosition.Basis.X * CurrentVelocity.X / TimeStepTimeSeconds + this.Transform.Basis.Y * CurrentVelocity.Y / TimeStepTimeSeconds + CurrentPosition.Basis.X * CurrentVelocity.Z / TimeStepTimeSeconds;
             BulletState NewState = new BulletState(LastDelta, CurrentPosition.Origin, CurrentVelocity);
             Positions.Enqueue(NewState);

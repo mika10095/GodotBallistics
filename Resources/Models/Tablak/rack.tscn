@@ -193,7 +193,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -0.15, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -0.15, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D3"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -221,7 +221,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -0.45, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -0.45, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D5"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -249,7 +249,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -0.75, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -0.75, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D6"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -277,7 +277,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -1.05, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -1.05, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D7"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -305,7 +305,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -1.35, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, -1.35, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D8"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -333,7 +333,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 0.15, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 0.15, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D4"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -361,7 +361,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 0.45, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 0.45, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D9"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -389,7 +389,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 0.75, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 0.75, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D10"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -417,7 +417,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 1.05, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 1.05, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D11"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -445,7 +445,7 @@ angular_limit_z/lower = -1.39626
 angular_spring_z/frequency = 1000.0
 angular_spring_z/damping = 1.0
 node_a = NodePath("RigidBody3D")
-transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 1.35, 0.36581, -0.0523843)
+transform = Transform3D(-8.74228e-08, 8.74228e-08, -2, 2, 3.82137e-15, -8.74228e-08, 0, -2, -8.74228e-08, 1.35, 0.36581, -0.091005)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="HingeJoint3D12"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

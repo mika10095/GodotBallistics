@@ -43,16 +43,14 @@ func _input(event: InputEvent) -> void:
 		sensitivity = base_sens
 		speed = default_speed
 	if Input.is_action_just_pressed("ChangeCameraMode") and spectator_cam.current:
-		if freelook_enabled:
-			print_debug("freelook enabled!")
-			spectator_cam.global_transform.origin = Vector3(0, 0, 0)
-			camera_pivot.rotation.x = 0
-			camera_pivot.rotation.z = 0
-		else:
-			pass
-		spectator_cam.freelook_enabled = !spectator_cam.freelook_enabled
-		freelook_enabled = !freelook_enabled
-		spectator_cam.Reset()
+		#if freelook_enabled:
+		#print_debug("freelook enabled!")
+		#spectator_cam.global_transform.origin = Vector3(0, 0, 0)
+		#camera_pivot.rotation.x = 0
+		#camera_pivot.rotation.z = 0
+		spectator_cam.freelook_enabled = !freelook_enabled
+		freelook_enabled = !spectator_cam.freelook_enabled
+		#spectator_cam.Reset()
 
 	if freelook_enabled and spectator_cam.current:
 		if event is InputEventMouseMotion:
@@ -108,7 +106,7 @@ func _physics_process(delta: float) -> void:
 			headbob_pivot.position.y = lerp(headbob_pivot.position.y, 0.0, delta * lerp_speed)
 			headbob_pivot.position.x = lerp(headbob_pivot.position.x, 0.0, delta * lerp_speed)
 			bob_index = 0.5
-	if !freelook_enabled:
+	if !spectator_cam.current:
 		velocity = Vector3(0, velocity.y, 0)
 	if not is_on_floor():
 		velocity.y -= gravity * delta

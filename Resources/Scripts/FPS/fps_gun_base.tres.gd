@@ -103,4 +103,7 @@ func add_innacuracy_moa(transform: Transform3D, innacuracy: float) -> Transform3
 	transformnew = transformnew.rotated(
 		Vector3(0, 1, 0), randf_range(-0.0003 * accuracy_moa, 0.0003 * accuracy_moa)
 	)
+	transformnew = transformnew.rotated(
+		Vector3(1, 0, 0), randf_range(-0.0003 * accuracy_moa, 0.0003 * accuracy_moa)
+	)
 	return transformnew
