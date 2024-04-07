@@ -39,20 +39,23 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_pressed("ZoomPos"):
 		current_fov = clamp(current_fov / speed_scale, min_fov, max_fov)
 		self.fov = current_fov
-	elif Input.is_action_pressed("TimeScaleUp"):
-		TimeManager.set_time_scale(TimeManager.time_scale * speed_scale)
-		print_debug(Engine.time_scale)
-	elif Input.is_action_pressed("SpeedUp"):
-		current_speed = clamp(current_speed * speed_scale, min_speed, max_speed)
-
+		print_debug(current_fov)
 	if Input.is_action_pressed("ZoomNeg"):
 		current_fov = clamp(current_fov * speed_scale, min_fov, max_fov)
 		self.fov = current_fov
+		print_debug(current_fov)
+	elif Input.is_action_pressed("TimeScaleUp"):
+		TimeManager.set_time_scale(TimeManager.time_scale * speed_scale)
+		print_debug(Engine.time_scale)
 	elif Input.is_action_pressed("TimeScaleDown"):
 		TimeManager.set_time_scale(TimeManager.time_scale / speed_scale)
 		print_debug(Engine.time_scale)
+	elif Input.is_action_pressed("SpeedUp"):
+		current_speed = clamp(current_speed * speed_scale, min_speed, max_speed)
+		print_debug(current_speed)
 	elif Input.is_action_pressed("SpeedDown"):
 		current_speed = clamp(current_speed / speed_scale, min_speed, max_speed)
+		print_debug(current_speed)
 
 
 func _process(delta: float) -> void:

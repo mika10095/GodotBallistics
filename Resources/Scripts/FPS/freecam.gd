@@ -58,8 +58,18 @@ func _input(event: InputEvent) -> void:
 		if event is InputEventMouseMotion:
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 				if event is InputEventMouseMotion:
-					rotation.y -= event.relative.x / 1000 * sensitivity
-					camera_pivot.rotation.x -= event.relative.y / 1000 * sensitivity
+					rotation.y -= (
+						event.relative.x
+						/ 1000
+						* sensitivity
+						* (spectator_cam.current_fov / spectator_cam.max_fov)
+					)
+					camera_pivot.rotation.x -= (
+						event.relative.y
+						/ 1000
+						* sensitivity
+						* (spectator_cam.current_fov / spectator_cam.max_fov)
+					)
 					camera_pivot.rotation.x = clamp(camera_pivot.rotation.x, PI / -2, PI / 2)
 
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

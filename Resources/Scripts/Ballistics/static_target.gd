@@ -1,12 +1,15 @@
 extends StaticBody3D
 
 var decal_s = preload("res://Resources/Models/Universal/bullet_decal.tscn")
-const sound = preload("res://Resources/Audio/MetalHitSounds/MetalHit3.wav")
+var sound = preload("res://Resources/Audio/MetalHitSounds/MetalHit3.wav")
 var audio: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
+@export var sound_override: AudioStreamWAV
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if sound_override:
+		sound = sound_override
 	audio.bus = "Effect"
 	audio.stream = sound
 	add_child(audio)

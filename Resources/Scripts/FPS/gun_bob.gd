@@ -39,12 +39,26 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ADS"):
 		pivot.rotation.x = lerp(
 			pivot.rotation.x,
-			bob_vector.x * bob_dist * mouse_input.y * player.speed / 10,
+			(
+				bob_vector.x
+				* bob_dist
+				* mouse_input.y
+				* player.speed
+				* (player.spectator_cam.current_fov / player.spectator_cam.max_fov)
+				/ 10
+			),
 			delta * lerp_speed
 		)
 		pivot.rotation.y = lerp(
 			pivot.rotation.y,
-			bob_vector.y * bob_dist * mouse_input.x * player.speed / 10,
+			(
+				bob_vector.y
+				* bob_dist
+				* mouse_input.x
+				* (player.spectator_cam.current_fov / player.spectator_cam.max_fov)
+				* player.speed
+				/ 10
+			),
 			delta * lerp_speed
 		)
 		pivot.rotation.z = lerp(pivot.rotation.z, 0.0, delta * lerp_speed / 5)

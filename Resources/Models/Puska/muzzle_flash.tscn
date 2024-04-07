@@ -25,8 +25,8 @@ size = Vector2(0.3, 0.3)
 
 [node name="Flash" type="GPUParticles3D" parent="."]
 emitting = false
-amount = 5
-lifetime = 0.05
+amount = 1
+lifetime = 0.01
 one_shot = true
 process_material = SubResource("ParticleProcessMaterial_gi1fp")
 draw_pass_1 = SubResource("QuadMesh_27jqd")

@@ -7,9 +7,9 @@ class_name SaveConfig extends Resource
 	"effect_audio": 1.0,
 	"ui_audio": 1.0,
 	"base_sens": 0.3,
-	"aim_sens": 0.1,
+	"aim_sens": 0.05,
 	"max_fov": 0.6,
-	"min_fov": 0.1,
+	"min_fov": 0.15,
 	"window_setting": 0,
 	"fps_counter": false
 }  ##ezek a változók amiket a menüben a saját slidereimmel csapok ki

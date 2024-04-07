@@ -1,16 +1,15 @@
 extends RigidBody3D
 @export var force_multiplier: float = 1
 @export var flip_force: bool = false
+var audio: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
+var sound = preload("res://Resources/Audio/SFX/ClayPigeon.wav")
+@export var sound_override: AudioStreamWAV
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass  # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	if sound_override:
+		sound = sound_override
 
 
 func handle_hit(bullet: NCBSHitRes):
