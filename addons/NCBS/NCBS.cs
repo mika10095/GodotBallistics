@@ -23,6 +23,7 @@ namespace NCBS
 		public ulong CatchUpTime = 100;
 		public NCBSWorldRes WorldRes;
 		private List<NCBSBullet> Bullets = new List<NCBSBullet>();
+		bool hit_pending = false;
 
 		public List<NCBSBullet> Hits = new List<NCBSBullet>();
 		public List<NCBSBullet> Saved = new List<NCBSBullet>();
@@ -98,12 +99,16 @@ namespace NCBS
 					Node3D hitnode = hit["collider"].Obj as Node3D;
 					if (hitnode.HasMethod("handle_hit") && bullet.HitRes.HitCode != 0)
 					{
-						bullet.HitRes.HitCode = 2;
+						bullet.HitRes.HitCode = 3;
 						hitnode.Call("handle_hit", bullet.HitRes);
+						
+						
 					}
+					bullet.HitRes.HitCode = 2;
 					bullet.Clear();
+					hit_pending = true;
 					//Hits.Add(bullet);
-					Bullets.Remove(bullet);
+					//Bullets.Remove(bullet);
 				}
 				else
 				{
@@ -119,17 +124,30 @@ namespace NCBS
 					if (bullet.CurrentState.Position.Y <= -100)
 					{
 						bullet.HitRes = new NCBSHitRes(0,0, null, 0, bullet.CurrentPosition, bullet.Data);
+						bullet.HitRes.HitCode = 1;
 						bullet.Clear();
-						Hits.Add(bullet);
-						Bullets.Remove(bullet);
+						hit_pending = true;
+						//Hits.Add(bullet);
+						//Bullets.Remove(bullet);
 
 					}
 					//GD.Print(bullet.BulletNode.Position.ToString());
 				}
-
+				
 
 
 			}
+			if (hit_pending)
+			{
+				GD.Print("Hit pending");
+			for (int i = 0; i < Bullets.Count; i++)
+			{
+				if (Bullets[i].HitRes.HitCode != 0)
+					{Bullets.Remove(Bullets[i]);}
+			}
+			hit_pending = false;
+			}
+			
 		}
 		public float getJoules(NCBSBullet bullet, BulletState current)
 		{
