@@ -15,5 +15,5 @@ settings = {
 "min_fov": 0.15,
 "music_audio": 1.0,
 "ui_audio": 1.0,
-"window_setting": 2
+"window_setting": 0
 }

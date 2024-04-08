@@ -91,7 +91,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, speed)
 			velocity.z = move_toward(velocity.z, 0, speed)
 
-		if is_on_floor() and input_dir != Vector2.ZERO:
+		if is_on_floor() and input_dir != Vector2.ZERO and spectator_cam.current:
 			bob_index += bob_speed * delta
 			bob_vector.y = sin(bob_index)
 			bob_vector.x = sin(bob_index / 2) + 0.5
