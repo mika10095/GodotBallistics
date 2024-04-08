@@ -1,0 +1,132 @@
+Godot Engine v4.2.1.stable.mono.official.b09f793f5 - https://godotengine.org
+Vulkan API 1.2.194 - Forward+ - Using Vulkan Device #0: NVIDIA - NVIDIA GeForce MX230
+ 
+USER ERROR: Viewport Texture must be set to use it.
+   at: get_height (scene/main/viewport.cpp:137)
+USER ERROR: Viewport Texture must be set to use it.
+   at: get_width (scene/main/viewport.cpp:127)
+Its alive!
+debug lines? True
+master_audio value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+Master bus value changed
+master_audio value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+Master bus value changed
+effect_audio value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+Effect bus value changed
+effect_audio value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+Effect bus value changed
+ui_audio value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+Ui bus value changed
+ui_audio value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+Ui bus value changed
+base_sens value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+base_sens value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+aim_sens value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+aim_sens value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+max_fov value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+max_fov value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+min_fov value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+min_fov value changed
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+I am1
+   At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
+I am2
+   At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
+Animation over: puska_Equip
+(-7.603212, 1.758147, -16.54388) (13.13494, 11.35188, -113.8982)
+(-7,5994334, 1,7630509, -16,545094) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Equip_Fire
+Animation over: Action
+Aimed playing: puska_Aim
+Animation over: puska_Aim
+51.2820512820513
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+51.2820512820513
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+43.8308130615823
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+43.8308130615823
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+37.4622333859678
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+37.4622333859678
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+32.0190028939896
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+32.0190028939896
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+27.366669140162
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+27.366669140162
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+23.390315504412
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+23.390315504412
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+19.9917226533436
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+19.9917226533436
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+(-7.828238, 1.71695, -16.94088) (-6.926662, -1.835755, -116.8734)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+1
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-7.254728, -0.599751, -81.04204)
+hit vector: (0.008951, -0.036725, -0.999285)
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+3218,7468
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+3218,7468
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+3218,7468
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+3218,7468
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+3218,7468
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+3218,7468
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+3218,7468
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+3218,7468
+(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Bullet Initialized!
+50,206245
+3218,7468
+Animation over: Action
+Animation over: puska_Aim
+USER WARNING: 26 RIDs in Godot Jolt were found to not have been freed. This is likely caused by orphaned nodes. If not, consider reporting this issue.
+   at: ~RID_PtrOwner (src\containers\rid_owner.hpp:20)

@@ -111,6 +111,9 @@ script = ExtResource("1_trpew")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
 
+[node name="Camera3D" parent="HeadbobPivot/PlayerCamera" index="0"]
+current = true
+
 [node name="RayCast3D" type="RayCast3D" parent="HeadbobPivot/PlayerCamera/Camera3D" index="0"]
 visible = false
 target_position = Vector3(0, 0, -100)

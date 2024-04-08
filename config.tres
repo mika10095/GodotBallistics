@@ -1,15 +1,17 @@
 [gd_resource type="Resource" script_class="SaveConfig" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Resources/CustomRes/SaveConfig/save_config.gd" id="1_8lfrb"]
+[ext_resource type="Script" path="res://Resources/CustomRes/SaveConfig/save_config.gd" id="1_ig3f4"]
 
 [resource]
-script = ExtResource("1_8lfrb")
+script = ExtResource("1_ig3f4")
 settings = {
-"aim_sens": 0.01,
+"MSAA_quality": 2,
+"Scope_quality": 2048,
+"aim_sens": 0.05,
 "base_sens": 0.3,
 "debug_lines": true,
 "effect_audio": 1.0,
-"fps_counter": true,
+"fps_counter": false,
 "master_audio": 1.0,
 "max_fov": 0.6,
 "min_fov": 0.15,

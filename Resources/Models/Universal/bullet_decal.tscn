@@ -15,7 +15,7 @@ script = SubResource("GDScript_u1ieg")
 
 [node name="Decal" type="Decal" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-size = Vector3(0.1, 0.1, 0.1)
+size = Vector3(1, 1, 1)
 texture_albedo = ExtResource("1_m612e")
 
 [node name="Timer" type="Timer" parent="."]

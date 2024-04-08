@@ -24,6 +24,8 @@ func handle_hit(bullet: NCBSHitRes):
 	var decal_normal = bullet.HitDict.normal
 	bullet.HitDict.collider.add_child(decal)
 	decal.global_transform.origin = hit_position
+	var decal_scale: float = bullet.BulletRes.Diameter
+	decal.scale = Vector3(decal_scale, decal_scale, decal_scale)
 	if decal_normal == Vector3.DOWN:
 		decal.rotation_degrees.x = 90
 	elif decal_normal != Vector3.UP:

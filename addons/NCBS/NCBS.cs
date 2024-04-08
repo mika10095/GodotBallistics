@@ -79,7 +79,7 @@ namespace NCBS
 				int skipped = 0;
 
 				do { bullet.CurrentState = bullet.Positions.Dequeue(); skipped++; }
-				while (bullet.CurrentState.Delta + bullet.StartTime != CurrentTime);
+				while (bullet.CurrentState.Delta + bullet.StartTime < CurrentTime);
 				//if (skipped != 16) { GD.Print("Found the current one! Skipped: " + skipped); }
 				//Raycast!
 				Vector3 Start = bullet.LastPosition.Position;
@@ -123,7 +123,7 @@ namespace NCBS
 					bullet.BulletNode.Set("global_position", bullet.CurrentState.Position);
 					if (bullet.CurrentState.Position.Y <= -100)
 					{
-						bullet.HitRes = new NCBSHitRes(0,0, null, 0, bullet.CurrentPosition, bullet.Data);
+						new NCBSHitRes(0,0, null, 0, bullet.CurrentPosition, bullet.Data);
 						bullet.HitRes.HitCode = 1;
 						bullet.Clear();
 						hit_pending = true;
@@ -139,10 +139,11 @@ namespace NCBS
 			}
 			if (hit_pending)
 			{
-				GD.Print("Hit pending");
+				//GD.Print("Hit pending");
 			for (int i = 0; i < Bullets.Count; i++)
 			{
 				if (Bullets[i].HitRes.HitCode != 0)
+					GD.Print("Bullet Removed");
 					{Bullets.Remove(Bullets[i]);}
 			}
 			hit_pending = false;

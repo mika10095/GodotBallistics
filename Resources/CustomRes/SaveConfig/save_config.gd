@@ -12,7 +12,9 @@ class_name SaveConfig extends Resource
 	"min_fov": 0.15,
 	"window_setting": 0,
 	"fps_counter": false,
-	"debug_lines": true
+	"debug_lines": true,
+	"MSAA_quality": 2,
+	"Scope_quality": 2048
 }  ##ezek a változók amiket a menüben a saját slidereimmel csapok ki
 
 

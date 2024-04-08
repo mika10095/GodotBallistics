@@ -352,9 +352,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 
 
 [node name="RigidBody3D2" type="RigidBody3D" parent="xsmallbeam_038/JoltHingeJoint3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
-mass = 5.0
+mass = 6.0
 script = ExtResource("3_6j1fu")
-force_multiplier = 0.025
+force_multiplier = 0.018
 
 [node name="RoundPlate1Tri_020" type="MeshInstance3D" parent="xsmallbeam_038/JoltHingeJoint3D/RigidBody3D2"]
 material_override = ExtResource("2_fsbko")
@@ -368,7 +368,7 @@ shape = SubResource("ConvexPolygonShape3D_012sk")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 mass = 12.0
 script = ExtResource("3_6j1fu")
-force_multiplier = 0.025
+force_multiplier = 0.018
 
 [node name="RoundPlate1Tri_019" type="MeshInstance3D" parent="xsmallbeam_038/JoltHingeJoint3D/RigidBody3D3"]
 mesh = SubResource("ArrayMesh_7m7sc")

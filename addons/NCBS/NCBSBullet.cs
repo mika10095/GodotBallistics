@@ -27,7 +27,7 @@ namespace NCBS
         public Transform3D CurrentPosition;
         public Vector3 CurrentVelocity;
         public BulletState CurrentState;
-        public NCBSHitRes HitRes;
+        public NCBSHitRes HitRes = new NCBSHitRes(0,0, null, 0, Transform3D.Identity, new NCBSBulletRes());
 
         public float getJoules
         {
