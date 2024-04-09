@@ -8,125 +8,662 @@ USER ERROR: Viewport Texture must be set to use it.
 Its alive!
 debug lines? True
 master_audio value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 Master bus value changed
 master_audio value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 Master bus value changed
 effect_audio value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 Effect bus value changed
 effect_audio value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 Effect bus value changed
 ui_audio value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 Ui bus value changed
 ui_audio value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 Ui bus value changed
 base_sens value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 base_sens value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 aim_sens value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 aim_sens value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 max_fov value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 max_fov value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 min_fov value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 min_fov value changed
-   At: res://Scenes/menu.tscn::GDScript_mxnsp:48:slider_value_changed()
+   At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 I am1
    At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
 I am2
    At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
 Animation over: puska_Equip
-(-7.603212, 1.758147, -16.54388) (13.13494, 11.35188, -113.8982)
-(-7,5994334, 1,7630509, -16,545094) (800, 0, 0)
-Bullet Initialized!
-Animation over: puska_Equip_Fire
-Animation over: Action
 Aimed playing: puska_Aim
 Animation over: puska_Aim
-51.2820512820513
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-51.2820512820513
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-43.8308130615823
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-43.8308130615823
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-37.4622333859678
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-37.4622333859678
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-32.0190028939896
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-32.0190028939896
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-27.366669140162
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-27.366669140162
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-23.390315504412
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-23.390315504412
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-19.9917226533436
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-19.9917226533436
-   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
-(-7.828238, 1.71695, -16.94088) (-6.926662, -1.835755, -116.8734)
+(-12.87053, 1.679633, -7.878501) (13.42011, -4.167032, -104.1832)
+World
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-12,869582, 1,6814542, -7,879657) (800, 0, 0)
+Bullet Initialized!
+3218,7468
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-12.87187, 1.679633, -7.878867) (13.27428, -4.167032, -104.2229)
 RigidBody3D
    At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+(-12,873822, 1,6800364, -7,8755927) (800, 0, 0)
 Bullet Initialized!
 3260,678
 Target hit
    At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
-1
+2
    At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
 3260.67797851563
    At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
 769.967885538558
    At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
-hitpos (-7.254728, -0.599751, -81.04204)
-hit vector: (0.008951, -0.036725, -0.999285)
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
-Bullet Initialized!
-3218,7468
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
-Bullet Initialized!
-3218,7468
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
-Bullet Initialized!
+hitpos (6.5312, -2.68579, -79.44119)
+hit vector: (0.26124, -0.059299, -0.963451)
+Bullet Removed
 Animation over: puska_Aim_Fire
-3218,7468
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+Animation over: Action
+(-12.84822, 1.679633, -7.872109) (15.84161, -4.167032, -103.4896)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-12,848998, 1,6827528, -7,87017) (800, 0, 0)
 Bullet Initialized!
-3218,7468
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+3
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (8.392192, -2.672735, -78.69409)
+hit vector: (0.286768, -0.059327, -0.956161)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+51.2820512820513
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+51.2820512820513
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+(-13.04481, 1.705125, -7.910815) (-5.505579, -1.401644, -107.5775)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,043378, 1,7037268, -7,9134855) (800, 0, 0)
 Bullet Initialized!
-3218,7468
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+4
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-7.49858, -0.609926, -80.99855)
+hit vector: (0.075611, -0.032081, -0.996621)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.04759, 1.705125, -7.91102) (-5.806541, -1.401644, -107.5997)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,046284, 1,7040591, -7,913406) (800, 0, 0)
 Bullet Initialized!
-3218,7468
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+5
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-7.725343, -0.603843, -80.95808)
+hit vector: (0.072615, -0.032027, -0.996846)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+43.8308130615823
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+43.8308130615823
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+37.4622333859678
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+37.4622333859678
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+32.0190028939896
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+32.0190028939896
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+27.366669140162
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+27.366669140162
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+23.390315504412
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+23.390315504412
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+19.9917226533436
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+19.9917226533436
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+17.0869424387552
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+17.0869424387552
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+(-13.05221, 1.705966, -7.911403) (-6.307804, -1.310412, -107.6376)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,052387, 1,7078598, -7,9107037) (800, 0, 0)
 Bullet Initialized!
-3218,7468
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+6
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-8.123507, -0.558833, -80.88706)
+hit vector: (0.067354, -0.031507, -0.997232)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.05546, 1.705617, -7.911591) (-6.660221, -1.348244, -107.6595)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,056003, 1,7038615, -7,9110794) (800, 0, 0)
 Bullet Initialized!
-3218,7468
-(-7,828894, 1,7171433, -16,940557) (800, 0, 0)
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+7
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-8.382341, -0.568546, -80.84089)
+hit vector: (0.063921, -0.031612, -0.997454)
+Bullet Removed
+17.55
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+17.55
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+20.5335
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+20.5335
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+24.024195
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+24.024195
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+Animation over: puska_Aim_Fire
+28.10830815
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+28.10830815
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+Animation over: Action
+(-13.05894, 1.705617, -7.911807) (-7.037584, -1.348244, -107.6829)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,059284, 1,7079163, -7,9107485) (800, 0, 0)
 Bullet Initialized!
-50,206245
-3218,7468
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+8
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-8.667219, -0.566638, -80.79007)
+hit vector: (0.060125, -0.031671, -0.997688)
+Bullet Removed
+Animation over: puska_Aim_Fire
+32.8867205355
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+32.8867205355
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+38.477463026535
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+38.477463026535
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+45.0186317410459
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+45.0186317410459
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+52.6717991370237
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+52.6717991370237
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
 Animation over: Action
 Animation over: puska_Aim
+Aimed playing: puska_Aim
+Animation over: puska_Aim
+45.0186317410459
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+45.0186317410459
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+38.477463026535
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+38.477463026535
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+32.8867205355
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+32.8867205355
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+28.10830815
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+28.10830815
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+24.024195
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+24.024195
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+20.5335
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+20.5335
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+17.55
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+17.55
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+(-13.00517, 1.705558, -8.427357) (-7.436099, -1.354696, -108.2243)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,004873, 1,7061869, -8,427688) (800, 0, 0)
+Bullet Initialized!
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+9
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-8.965582, -0.53696, -80.73683)
+hit vector: (0.055747, -0.031495, -0.997948)
+Bullet Removed
+Animation over: puska_Aim_Fire
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+Animation over: Action
+17.55
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+17.55
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+20.5335
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+20.5335
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+24.024195
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+24.024195
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+28.10830815
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+28.10830815
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+32.8867205355
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+32.8867205355
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+38.477463026535
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+38.477463026535
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+45.0186317410459
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+45.0186317410459
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+52.6717991370237
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+52.6717991370237
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+(-12.98258, 1.706139, -8.425859) (-4.999037, -1.291638, -108.0604)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-12,9817705, 1,7078125, -8,426766) (800, 0, 0)
+Bullet Initialized!
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+10
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-7.158647, -0.532447, -81.05918)
+hit vector: (0.079877, -0.031264, -0.996314)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.00717, 1.707345, -8.427605) (-7.665926, -1.169399, -108.2422)
+World
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,0055065, 1,7110286, -8,429432) (800, 0, 0)
+Bullet Initialized!
+3177,1785
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.0092, 1.704744, -8.42751) (-7.870533, -1.442932, -108.2445)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,007856, 1,7049471, -8,429538) (800, 0, 0)
+Bullet Initialized!
+3260,678
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+12
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3260.67797851563
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+769.967885538558
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-9.277002, -0.615674, -80.68128)
+hit vector: (0.051541, -0.032597, -0.998139)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+51.2820512820513
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+51.2820512820513
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+43.8308130615823
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+43.8308130615823
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+37.4622333859678
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+37.4622333859678
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+32.0190028939896
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+32.0190028939896
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+27.366669140162
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+27.366669140162
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+23.390315504412
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+23.390315504412
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+19.9917226533436
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+19.9917226533436
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+17.0869424387552
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+17.0869424387552
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+15
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:42:_input()
+(-13.0575, 1.724346, -8.429957) (-13.1094, 0.681396, -108.4231)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,054976, 1,7239367, -8,433948) (800, 0, 0)
+Bullet Initialized!
+3177,1785
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+13
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3177.17846679688
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+760.045271858884
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-13.07745, 0.606607, -106.9802)
+hit vector: (-0.000228, -0.012084, -0.999927)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.0575, 1.724346, -8.429957) (-13.1094, 0.681386, -108.4231)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,056761, 1,7228926, -8,431398) (800, 0, 0)
+Bullet Initialized!
+3177,1785
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+14
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3177.17846679688
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+760.045271858884
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-13.10058, 0.589707, -106.9816)
+hit vector: (-0.000445, -0.012244, -0.999925)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.0575, 1.724346, -8.429957) (-13.1094, 0.681386, -108.4231)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,056045, 1,7240657, -8,432269) (800, 0, 0)
+Bullet Initialized!
+3177,1785
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+15
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3177.17846679688
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+760.045271858884
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-13.08872, 0.624659, -106.9754)
+hit vector: (-0.000332, -0.011903, -0.999929)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.0575, 1.724346, -8.429957) (-13.1094, 0.681386, -108.4231)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,059544, 1,7237238, -8,426917) (800, 0, 0)
+Bullet Initialized!
+3177,1785
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+16
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3177.17846679688
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+760.045271858884
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-13.13664, 0.594838, -106.9932)
+hit vector: (-0.000782, -0.012199, -0.999925)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.0575, 1.724346, -8.429957) (-13.1094, 0.681386, -108.4231)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,058272, 1,7235801, -8,428916) (800, 0, 0)
+Bullet Initialized!
+3177,1785
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+17
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3177.17846679688
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+760.045271858884
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-13.11806, 0.610755, -106.9813)
+hit vector: (-0.000607, -0.012038, -0.999927)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.0575, 1.724346, -8.429957) (-13.1094, 0.681386, -108.4231)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,059006, 1,7230043, -8,427899) (800, 0, 0)
+Bullet Initialized!
+3177,1785
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+18
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3177.17846679688
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+760.045271858884
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-13.12476, 0.622056, -106.9949)
+hit vector: (-0.000667, -0.011915, -0.999929)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: Action
+(-13.0575, 1.724346, -8.429957) (-13.1094, 0.681386, -108.4231)
+RigidBody3D
+   At: res://Resources/Scripts/FPS/fps_gun_base.tres.gd:89:fire_round()
+(-13,056531, 1,7243603, -8,431456) (800, 0, 0)
+Bullet Initialized!
+3177,1785
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+19
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+3177.17846679688
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+760.045271858884
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-13.09704, 0.612815, -106.9795)
+hit vector: (-0.000411, -0.012025, -0.999928)
+Bullet Removed
+Animation over: puska_Aim_Fire
+Animation over: puska_Aim
+17.55
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+17.55
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+20.5335
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+20.5335
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+24.024195
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+24.024195
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+28.10830815
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+28.10830815
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+Animation over: Action
+32.8867205355
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+32.8867205355
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+38.477463026535
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+38.477463026535
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+45.0186317410459
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+45.0186317410459
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+52.6717991370237
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+52.6717991370237
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
+60
+   At: res://Resources/Scripts/Camera/spectator_camera.gd:46:_input()
 USER WARNING: 26 RIDs in Godot Jolt were found to not have been freed. This is likely caused by orphaned nodes. If not, consider reporting this issue.
    at: ~RID_PtrOwner (src\containers\rid_owner.hpp:20)

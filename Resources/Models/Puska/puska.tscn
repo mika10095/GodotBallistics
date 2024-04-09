@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://bi31d28g7bwot"]
+[gd_scene load_steps=67 format=3 uid="uid://bi31d28g7bwot"]
 
 [ext_resource type="Material" uid="uid://umrreal78sb8" path="res://Resources/Models/Puska/Materials/ftzar.tres" id="1_8aolp"]
 [ext_resource type="Material" uid="uid://f7p1y0km3qci" path="res://Resources/Models/Puska/Materials/golyo.tres" id="2_45yon"]
@@ -435,6 +435,23 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_c7joo")
+
+[sub_resource type="GDScript" id="GDScript_1q0e5"]
+resource_name = "change_viewport_size"
+script/source = "extends SubViewport
+
+	
+func _enter_tree() -> void:
+	var index = SettingsManager.get_var(\"scope_quality\")
+	if index == 0:
+		size=Vector2(512,512)
+	elif index == 1:
+		size=Vector2(1024,1024)
+	elif index == 2:
+		size=Vector2(2048,2048)
+	elif index == 3:
+		size=Vector2(4096,4096)
+"
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xnkgq"]
 
@@ -933,9 +950,10 @@ surface_material_override/0 = ExtResource("4_6ttvc")
 handle_input_locally = false
 canvas_cull_mask = 4294443007
 size = Vector2i(1024, 1024)
+script = SubResource("GDScript_1q0e5")
 
 [node name="SubCam" type="Camera3D" parent="tavcso/SubViewport"]
-transform = Transform3D(8.68316e-06, 0.999994, 0.00394537, -1, -6.13597e-06, 0.005, 0.00499999, -0.00220004, 0.999999, -7.25471e-09, 0.0629211, 0.130309)
+transform = Transform3D(3.79611e-06, 0.999996, 0.00174537, -1, -4.37114e-08, 0.0022, 0.0022, -0.00110004, 0.999999, -1.92717e-06, 0.0629211, 0.129209)
 cull_mask = 524287
 fov = 5.0
 near = 0.3
