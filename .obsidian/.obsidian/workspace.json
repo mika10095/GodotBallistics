@@ -6,7 +6,7 @@
       {
         "id": "d8b04429c2cbd25d",
         "type": "tabs",
-        "dimension": 60.501193317422434,
+        "dimension": 43.343653250774,
         "children": [
           {
             "id": "f10669c6af643f42",
@@ -34,7 +34,7 @@
       {
         "id": "9105d1e52a22b1b5",
         "type": "tabs",
-        "dimension": 39.498806682577566,
+        "dimension": 56.656346749226,
         "children": [
           {
             "id": "0aadb87302abce12",
@@ -42,7 +42,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Images/PDFS/379956.pdf"
+                "file": "Images/PDFS/MAM.pdf"
               }
             }
           }
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/PDFS/379956.pdf",
+                "file": "Images/PDFS/MAM.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/PDFS/379956.pdf",
+                "file": "Images/PDFS/MAM.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/PDFS/379956.pdf"
+                "file": "Images/PDFS/MAM.pdf"
               }
             }
           },
@@ -198,18 +198,18 @@
   },
   "active": "0aadb87302abce12",
   "lastOpenFiles": [
-    "Images/PDFS/Stanag4355.pdf",
-    "Images/PDFS/ADA098110.pdf",
-    "Images/PDFS/ADA098110.pdf.crdownload",
-    "Images/PDFS/379956.pdf",
-    "Images/PDFS/Stanag 4119.pdf",
-    "Images/PDFS/FULLTEXT01.pdf",
-    "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
-    "Images/PDFS/flightstab.pdf",
     "Images/PDFS/ISO-2533-1975.pdf",
-    "Images/PDFS/MAM.pdf",
+    "Images/PDFS/FULLTEXT01.pdf",
+    "Images/PDFS/flightstab.pdf",
+    "Images/PDFS/explicitimplicit.pdf",
+    "Images/PDFS/Explicit M-2.pdf",
+    "Images/PDFS/ADA098110.pdf",
+    "Images/PDFS/379956.pdf",
+    "Images/PDFS/Stanag4355.pdf",
+    "Images/PDFS/ADA098110.pdf.crdownload",
+    "Images/PDFS/Stanag 4119.pdf",
+    "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
     "Daily/2024-02-06.md",
-    "Images/PDFS/155mmTraj.pdf",
     "Daily/2023-09-26.md",
     "Daily/2023-11-20.md",
     "Daily/2024-01-09.md",

@@ -15,10 +15,10 @@ func _ready() -> void:
 		if child is Camera3D:
 			camera = child
 	camera.set_process(false)
-	if get_parent_node_3d().get_parent_node_3d().name == "Player":
-		camera.set_process(true)
-		id = 1
-		camera.make_current()
+	#if get_parent_node_3d().get_parent_node_3d().name == "Player":
+	#	camera.set_process(true)
+	#	id = 1
+	#	camera.make_current()
 
 
 func _on_clear_cameras() -> void:
