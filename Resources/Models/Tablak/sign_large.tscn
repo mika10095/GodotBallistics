@@ -8,9 +8,9 @@
 resource_name = "sign_text"
 script/source = "extends Node3D
 @export var text:String 
-@onready var mesh_instance_3d = $MeshInstance3D
+@onready var mesh_instance_3d := $MeshInstance3D
 
-func _ready():
+func _ready()->void:
 	if text:
 		mesh_instance_3d.mesh.text = text
 "

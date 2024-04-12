@@ -38,7 +38,7 @@ func draw_line_color(start: Vector3, end: Vector3, color: Color) -> void:
 	destroy_timer(mesh_instance, 1)
 
 
-func draw_sphere(pos: Vector3, radius = 0.05, color = Color.WHITE_SMOKE, lifetime = 1):
+func draw_sphere(pos: Vector3, radius := 0.05, color := Color.WHITE_SMOKE, lifetime: float = 1)->void:
 	var mesh_instance := MeshInstance3D.new()
 	var sphere_mesh := SphereMesh.new()
 	var material := ORMMaterial3D.new()
@@ -57,7 +57,7 @@ func draw_sphere(pos: Vector3, radius = 0.05, color = Color.WHITE_SMOKE, lifetim
 	destroy_timer(mesh_instance, lifetime)
 
 
-func destroy_timer(node: Node, time: float):
+func destroy_timer(node: Node, time: float)->void:
 	get_tree().get_root().add_child(node)
 	await get_tree().create_timer(time).timeout
 	node.queue_free()

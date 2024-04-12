@@ -2,6 +2,7 @@ extends Node3D
 signal register_camera
 var id: int
 var camera: Camera3D
+
 @export var fixed_free: bool = false
 
 
@@ -10,7 +11,7 @@ func _ready() -> void:
 	FollowObjectManager.use_camera.connect(_on_use_camera)
 	FollowObjectManager.clear_cameras.connect(_on_clear_cameras)
 	id = FollowObjectManager.register_camera()
-	print_debug("I am" + str(id))
+	print_debug("Camera created ID: " + str(id))
 	for child in get_children():
 		if child is Camera3D:
 			camera = child
@@ -27,12 +28,12 @@ func _on_clear_cameras() -> void:
 	print_debug("new" + str(id))
 
 
-func _on_use_camera(currentid: String) -> void:
-	if currentid == "F" + str(id):
+func _on_use_camera(currentid: int) -> void:
+	if currentid == id:
 		camera.freelook_enabled = fixed_free
 		camera.freelook_fixed = fixed_free
 		print_debug("I am current " + str(id))
-		FollowObjectManager.set_current_camera(id)
+
 		camera.set_process(true)
 		camera.make_current()
 	else:

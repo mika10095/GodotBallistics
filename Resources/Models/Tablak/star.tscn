@@ -134,15 +134,15 @@ points = PackedVector3Array(0.0516381, -0.236265, 0.0567698, -0.0489203, -0.5547
 resource_name = "StarDrop"
 script/source = "extends JoltGeneric6DOFJoint3D
 
-@onready var target = $\"..\"
+@onready var target := $\"..\"
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready()->void:
 	target.target_hit.connect(detach)
 
 
-func detach()-> void:
+func detach()->void:
 	print_debug(\"Hit off star part!\")
 	enabled = false
 	

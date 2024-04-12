@@ -61,7 +61,13 @@ namespace NCBS
         {
             Initialized = false;
             Positions.Clear();
-            BulletNode.QueueFree();
+            if(BulletNode.HasMethod("destroy"))
+            {
+                BulletNode.Call("destroy");
+            }
+            else{
+                BulletNode.QueueFree();
+            }
         }
 
         public NCBSBullet(Transform3D start_position, NCBSBulletRes bullet_data, NCBSWorldRes world_res)

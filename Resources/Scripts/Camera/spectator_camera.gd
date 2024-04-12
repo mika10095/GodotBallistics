@@ -29,36 +29,37 @@ func Reset() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if freelook_enabled:
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			if event is InputEventMouseMotion:
-				rotation.y -= event.relative.x / 1000 * sensitivity
-				rotation.x -= event.relative.y / 1000 * sensitivity
-				rotation.x = clamp(rotation.x, PI / -2, PI / 2)
+	if current:
+		if freelook_enabled:
+			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+				if event is InputEventMouseMotion:
+					rotation.y -= event.relative.x / 1000 * sensitivity
+					rotation.x -= event.relative.y / 1000 * sensitivity
+					rotation.x = clamp(rotation.x, PI / -2, PI / 2)
 
-	if Input.is_action_pressed("ZoomPos"):
-		current_fov = clamp(current_fov / speed_scale, min_fov, max_fov)
-		self.fov = current_fov
-		print_debug(current_fov)
-	elif Input.is_action_pressed("ZoomNeg"):
-		current_fov = clamp(current_fov * speed_scale, min_fov, max_fov)
-		self.fov = current_fov
-		print_debug(current_fov)
-	elif Input.is_action_pressed("TimeScaleUp"):
-		TimeManager.set_time_scale(TimeManager.time_scale * speed_scale)
-		print_debug(Engine.time_scale)
-	elif Input.is_action_pressed("TimeScaleDown"):
-		TimeManager.set_time_scale(TimeManager.time_scale / speed_scale)
-		print_debug(Engine.time_scale)
-	elif Input.is_action_pressed("SpeedUp"):
-		current_speed = clamp(current_speed * speed_scale, min_speed, max_speed)
+		if Input.is_action_pressed("ZoomPos"):
+			current_fov = clamp(current_fov / speed_scale, min_fov, max_fov)
+			self.fov = current_fov
+			print_debug(current_fov)
+		elif Input.is_action_pressed("ZoomNeg"):
+			current_fov = clamp(current_fov * speed_scale, min_fov, max_fov)
+			self.fov = current_fov
+			print_debug(current_fov)
+		elif Input.is_action_pressed("TimeScaleUp"):
+			TimeManager.set_time_scale(TimeManager.time_scale * speed_scale)
+			print_debug(Engine.time_scale)
+		elif Input.is_action_pressed("TimeScaleDown"):
+			TimeManager.set_time_scale(TimeManager.time_scale / speed_scale)
+			print_debug(Engine.time_scale)
+		elif Input.is_action_pressed("SpeedUp"):
+			current_speed = clamp(current_speed * speed_scale, min_speed, max_speed)
 
-	elif Input.is_action_pressed("SpeedDown"):
-		current_speed = clamp(current_speed / speed_scale, min_speed, max_speed)
+		elif Input.is_action_pressed("SpeedDown"):
+			current_speed = clamp(current_speed / speed_scale, min_speed, max_speed)
 
 
 func _process(delta: float) -> void:
-	if freelook_enabled:
+	if freelook_enabled and current:
 		var movedir: Vector3 = (
 			Vector3(
 				Input.get_axis("Left", "Right"),

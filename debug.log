@@ -1,5 +1,5 @@
 Godot Engine v4.2.1.stable.mono.official.b09f793f5 - https://godotengine.org
-Vulkan API 1.2.194 - Forward+ - Using Vulkan Device #0: NVIDIA - NVIDIA GeForce MX230
+Vulkan API 1.3.271 - Forward+ - Using Vulkan Device #0: NVIDIA - NVIDIA GeForce GTX 1660 SUPER
  
 USER ERROR: Viewport Texture must be set to use it.
    at: get_height (scene/main/viewport.cpp:137)
@@ -41,129 +41,564 @@ min_fov value changed
    At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
 min_fov value changed
    At: res://Scenes/menu.tscn::GDScript_mxnsp:66:slider_value_changed()
-I am1
-   At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
-I am2
-   At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
+Camera created ID: 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+Camera created ID: 2
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
 Animation over: puska_Equip
-(-13.7385, 1.99582, -6.480167) (-76.01764, 42.77186, 60.29268)
-I am3
-   At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
-(-13,739553, 1,9919597, -6,4791126) (800, 0, 0)
+(-13.90634, 1.662855, -6.752268) (-105.1594, 2.862825, 34.13067)
+Camera created ID: 3
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 3
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 3
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,905645, 1,6644608, -6,753304) (800, 0, 0)
 Bullet Initialized!
-I am current 2
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 2
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
 Animation over: puska_Equip_Fire
-I am current 3
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 3
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
+928,8192
+Bullet Removed
 Animation over: Action
-I am current 2
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 2
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-I am current 1
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
 cameraid= 1
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-Aimed playing: puska_Aim
-Animation over: puska_Aim
-Animation over: puska_Aim
-Aimed playing: puska_Aim
-Animation over: puska_Aim
-(-13.29636, 1.75213, -6.580331) (-66.30054, 3.642015, 78.19565)
-I am4
-   At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
-(-13,298205, 1,7479185, -6,5777307) (800, 0, 0)
-Bullet Initialized!
-I am current 2
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 2
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-I am current 3
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 3
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-Animation over: puska_Aim
-I am current 4
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.67292, 1.657958, -6.377114) (-70.67889, 2.257954, 75.78088)
+Camera created ID: 4
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
 cameraid= 4
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-Animation over: Action
-550,3177
-I am5
-   At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
-(-13,298205, 1,7479185, -6,5777307) (800, 0, 0)
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 4
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,671559, 1,6552657, -6,380733) (800, 0, 0)
 Bullet Initialized!
-I am current 3
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 3
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-I am current 2
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 2
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-I am current 1
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 1
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-550,3177
-Bullet Removed
-I am current 2
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 2
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-I am current 3
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 3
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-I am current 3
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 3
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-invalid camera id
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:25:_unhandled_key_input()
-I am current 3
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 3
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-I am current 2
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 2
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-I am current 1
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 1
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-invalid camera id
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:33:_unhandled_key_input()
-invalid camera id
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:33:_unhandled_key_input()
-(-8.43674, 1.768054, -1.912083) (22.374, 14.43889, 92.37532)
-I am6
-   At: res://Resources/Scripts/Camera/follow_object.gd:13:_ready()
-(-8,437281, 1,7656525, -1,9119138) (800, 0, 0)
-Bullet Initialized!
-I am current 2
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 2
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
 Animation over: puska_Equip_Fire
-I am current 3
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 3
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-Animation over: Action
-I am current 6
-   At: res://Resources/Scripts/Camera/follow_object.gd:34:_on_use_camera()
-cameraid= 6
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:48:set_current_camera()
-88,7604
+2488,8088
 Bullet Removed
-F4
-   At: res://Resources/Scripts/Camera/follow_object_manager.gd:15:_unhandled_key_input()
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+Animation over: Action
+(-13.64906, 1.660406, -6.355535) (-67.4071, 2.560393, 77.96075)
+Camera created ID: 5
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 5
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 5
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,647573, 1,6577109, -6,3594227) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Equip_Fire
+2488,8088
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+Animation over: Action
+(-13.65877, 1.665305, -6.363067) (-68.67149, 3.165248, 77.13139)
+Camera created ID: 6
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 6
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 6
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,6595335, 1,6698754, -6,3602324) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Equip_Fire
+Animation over: Action
+617,29364
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.66063, 1.665305, -6.3647) (-68.92359, 3.165248, 76.96434)
+Camera created ID: 7
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 7
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 7
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,660532, 1,6655865, -6,364834) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Equip_Fire
+Animation over: Action
+611,4039
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+Aimed playing: puska_Aim
+Animation over: puska_Aim
+(-13.63391, 1.746652, -6.208122) (-69.27244, 3.09661, 76.8732)
+Camera created ID: 8
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 8
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 8
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,634547, 1,7515628, -6,205343) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+invalid camera id
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:26:_unhandled_key_input()
+(-13.64125, 1.746652, -6.213087) (-70.06647, 3.09661, 76.33597)
+Camera created ID: 9
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 9
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 9
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,641901, 1,7446709, -6,212213) (800, 0, 0)
+Bullet Initialized!
+cameraid= 8
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Bullet Removed
+cameraid= 7
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+cameraid= 8
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+(-13.6428, 1.747119, -6.21413) (-70.2326, 3.147072, 76.22136)
+Camera created ID: 10
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 10
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 10
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,641944, 1,745103, -6,2165656) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+cameraid= 9
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+cameraid= 8
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+Animation over: Action
+678,55255
+Bullet Removed
+(-13.64508, 1.746186, -6.215738) (-70.4827, 3.046148, 76.05073)
+Camera created ID: 11
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 11
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 11
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,645514, 1,7506583, -6,2135377) (800, 0, 0)
+Bullet Initialized!
+cameraid= 10
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+Animation over: puska_Aim_Fire
+cameraid= 9
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+Animation over: Action
+cameraid= 10
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+cameraid= 11
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 11
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+698,67487
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+invalid camera id
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:26:_unhandled_key_input()
+(-13.64508, 1.746186, -6.215738) (-70.4827, 3.046148, 76.05073)
+Camera created ID: 12
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 12
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 12
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,64519, 1,7453651, -6,215735) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.6474, 1.747119, -6.21731) (-70.73077, 3.147072, 75.87718)
+Camera created ID: 13
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 13
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 13
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,6488085, 1,7447337, -6,214885) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+669,22815
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.64893, 1.747119, -6.218377) (-70.89635, 3.147072, 75.7618)
+Camera created ID: 14
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 14
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 14
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,649898, 1,7423929, -6,2175765) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+669,22815
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65046, 1.747585, -6.219436) (-71.06132, 3.197533, 75.6455)
+Camera created ID: 15
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 15
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 15
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,650005, 1,7475103, -6,2204638) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+669,22815
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65582, 1.74945, -6.223163) (-71.63647, 3.399374, 75.23539)
+Camera created ID: 16
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 16
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 16
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,654507, 1,7520462, -6,225321) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+14
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-581.0653, 3.188387, 790.6812)
+hit vector: (-0.579777, -0.029457, 0.814242)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65582, 1.74945, -6.223163) (-71.63647, 3.399374, 75.23539)
+Camera created ID: 17
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 17
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 17
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,6554165, 1,7469076, -6,2247696) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+15
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-581.0327, 3.088421, 790.716)
+hit vector: (-0.579744, -0.029554, 0.814262)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65582, 1.74945, -6.223163) (-71.63647, 3.399374, 75.23539)
+Camera created ID: 18
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 18
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 18
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,655831, 1,7477442, -6,2236204) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+16
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-581.0087, 2.723822, 790.748)
+hit vector: (-0.579708, -0.029927, 0.814274)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65582, 1.74945, -6.223163) (-71.63647, 3.399374, 75.23539)
+Camera created ID: 19
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 19
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 19
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,65753, 1,7482363, -6,219755) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+17
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-580.7447, 3.106138, 790.929)
+hit vector: (-0.579448, -0.029537, 0.814474)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65582, 1.74945, -6.223163) (-71.63647, 3.399374, 75.23539)
+Camera created ID: 20
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 20
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 20
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,65537, 1,7503028, -6,2239165) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+18
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-580.9918, 3.14745, 790.7547)
+hit vector: (-0.579684, -0.029498, 0.814307)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65582, 1.74945, -6.223163) (-71.63647, 3.399374, 75.23539)
+Camera created ID: 21
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 21
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 21
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,65631, 1,7504369, -6,2218165) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+19
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-580.8453, 3.376199, 790.8533)
+hit vector: (-0.579542, -0.029264, 0.814417)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65504, 1.747585, -6.222662) (-71.55601, 3.197533, 75.29635)
+Camera created ID: 22
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 22
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 22
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,654416, 1,745542, -6,224592) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+669,22815
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65544, 1.748984, -6.222903) (-71.59583, 3.348914, 75.26529)
+Camera created ID: 23
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 23
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 23
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,653705, 1,7468467, -6,227301) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+21
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-580.7896, 2.779491, 790.9067)
+hit vector: (-0.579476, -0.029869, 0.814442)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65544, 1.748984, -6.222903) (-71.59583, 3.348914, 75.26529)
+Camera created ID: 24
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 24
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 24
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,657069, 1,74982, -6,219083) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+22
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-580.3578, 2.356436, 791.2131)
+hit vector: (-0.579033, -0.030305, 0.814741)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65544, 1.748984, -6.222903) (-71.59583, 3.348914, 75.26529)
+Camera created ID: 25
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 25
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 25
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,657085, 1,7489561, -6,2192907) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+23
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-580.3459, 2.568414, 791.2206)
+hit vector: (-0.579019, -0.030088, 0.814759)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65544, 1.748984, -6.222903) (-71.59583, 3.348914, 75.26529)
+Camera created ID: 26
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 26
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 26
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,656183, 1,7491459, -6,221217) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+24
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-580.4277, 2.883433, 791.1577)
+hit vector: (-0.579094, -0.029765, 0.814718)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13.65544, 1.748984, -6.222903) (-71.59583, 3.348914, 75.26529)
+Camera created ID: 27
+   At: res://Resources/Scripts/Camera/follow_object.gd:14:_ready()
+cameraid= 27
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 27
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+(-13,653698, 1,7499106, -6,2264547) (800, 0, 0)
+Bullet Initialized!
+Animation over: puska_Aim_Fire
+Animation over: Action
+678,55255
+Target hit
+   At: res://Resources/Scripts/Ballistics/target.gd:21:handle_hit()
+25
+   At: res://Resources/Scripts/Ballistics/target.gd:22:handle_hit()
+678.552551269531
+   At: res://Resources/Scripts/Ballistics/target.gd:54:joule_to_meters()
+351.245201829755
+   At: res://Resources/Scripts/Ballistics/target.gd:56:joule_to_meters()
+hitpos (-580.7888, 2.408924, 790.9161)
+hit vector: (-0.579465, -0.030251, 0.814436)
+Bullet Removed
+cameraid= 1
+   At: res://Resources/Scripts/Camera/follow_object_manager.gd:41:set_current_camera()
+I am current 1
+   At: res://Resources/Scripts/Camera/follow_object.gd:35:_on_use_camera()
+Animation over: puska_Aim
 USER WARNING: 26 RIDs in Godot Jolt were found to not have been freed. This is likely caused by orphaned nodes. If not, consider reporting this issue.
    at: ~RID_PtrOwner (src\containers\rid_owner.hpp:20)

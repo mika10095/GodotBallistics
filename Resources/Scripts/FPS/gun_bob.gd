@@ -11,13 +11,13 @@ var offset: Transform3D
 var mouse_input: Vector2 = Vector2.ZERO
 
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		mouse_input = event.relative
 
 
 func _physics_process(delta: float) -> void:
-	if player.input_dir != Vector2.ZERO:
+	if player.input_dir != Vector2.ZERO and player.spectator_cam.current:
 		bob_index += bob_speed * delta
 		bob_vector.y = sin(bob_index)
 		bob_vector.x = sin(bob_index) + 0.5
@@ -64,7 +64,7 @@ func _physics_process(delta: float) -> void:
 		pivot.rotation.z = lerp(pivot.rotation.z, 0.0, delta * lerp_speed / 5)
 		pivot.position.z = lerp(pivot.position.z, 0.0, delta * lerp_speed / 5)
 		pivot.position.x = lerp(pivot.position.x, 0.0, delta * lerp_speed / 5)
-	else:
+	elif player.spectator_cam.current:
 		pivot.rotation.x = lerp(
 			pivot.rotation.x,
 			bob_vector.x * bob_dist * mouse_input.y * player.speed / 2,

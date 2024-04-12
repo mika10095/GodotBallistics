@@ -147,11 +147,11 @@ data = PackedVector3Array(-2.05, 0.1, 0.025, -2.05, -0.1, 0.025, -2.05, -0.1, -0
 [sub_resource type="GDScript" id="GDScript_aukwq"]
 resource_name = "Popper"
 script/source = "extends JoltHingeJoint3D
-@onready var rigid_body_3d = $RigidBody3D
+@onready var rigid_body_3d := $RigidBody3D
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta:float)->void:
 	#print_debug(rad_to_deg(rigid_body_3d.rotation.x))
 	if rad_to_deg(rigid_body_3d.rotation.x) >= 4.5:
 		motor_enabled = false

@@ -442,7 +442,7 @@ script/source = "extends SubViewport
 
 	
 func _enter_tree() -> void:
-	var index = SettingsManager.get_var(\"scope_quality\")
+	var index:int = SettingsManager.get_var(\"scope_quality\")
 	if index == 0:
 		size=Vector2(512,512)
 	elif index == 1:

@@ -88,7 +88,7 @@ func fire_round() -> void:
 	if result:
 		print_debug(result.collider.name)
 
-	var flash = muzzle_flash_prefab.instantiate()
+	var flash := muzzle_flash_prefab.instantiate()
 	get_tree().root.add_child(flash)
 	flash.global_position = firepoint.origin
 	flash.get_node("Flash").emitting = true
@@ -96,14 +96,14 @@ func fire_round() -> void:
 	#NCBS.AddBullet(firepoint, NCBS_bullet)
 
 
-func add_innacuracy_moa(transform: Transform3D, innacuracy: float) -> Transform3D:
-	var transformnew = transform.rotated(
-		Vector3(0, 0, 1), randf_range(-0.0003 * accuracy_moa, 0.0003 * accuracy_moa)
+func add_innacuracy_moa(fptransform: Transform3D, innacuracy: float) -> Transform3D:
+	var transformnew := fptransform.rotated(
+		Vector3(0, 0, 1), randf_range(-0.0003 * innacuracy, 0.0003 * innacuracy)
 	)
 	transformnew = transformnew.rotated(
-		Vector3(0, 1, 0), randf_range(-0.0003 * accuracy_moa, 0.0003 * accuracy_moa)
+		Vector3(0, 1, 0), randf_range(-0.0003 * innacuracy, 0.0003 * innacuracy)
 	)
 	transformnew = transformnew.rotated(
-		Vector3(1, 0, 0), randf_range(-0.0003 * accuracy_moa, 0.0003 * accuracy_moa)
+		Vector3(1, 0, 0), randf_range(-0.0003 * innacuracy, 0.0003 * innacuracy)
 	)
 	return transformnew

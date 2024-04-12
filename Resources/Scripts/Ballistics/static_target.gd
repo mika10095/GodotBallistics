@@ -1,13 +1,13 @@
 extends StaticBody3D
 
-var decal_s = preload("res://Resources/Models/Universal/bullet_decal.tscn")
-var sound = preload("res://Resources/Audio/MetalHitSounds/MetalHit3.wav")
+var decal_s := preload("res://Resources/Models/Universal/bullet_decal.tscn")
+var sound := preload("res://Resources/Audio/MetalHitSounds/MetalHit3.wav")
 var audio: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 @export var sound_override: AudioStreamWAV
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	if sound_override:
 		sound = sound_override
 	audio.bus = "Effect"
@@ -15,13 +15,13 @@ func _ready():
 	add_child(audio)
 
 
-func handle_hit(bullet: NCBSHitRes):
+func handle_hit(bullet: NCBSHitRes) -> void:
 	audio.play()
 	var hit_position: Vector3 = bullet.HitDict.position
 
 	#DebugTools.draw_sphere(hit_position)
-	var decal = decal_s.instantiate()
-	var decal_normal = bullet.HitDict.normal
+	var decal := decal_s.instantiate()
+	var decal_normal: Vector3 = bullet.HitDict.normal
 	bullet.HitDict.collider.add_child(decal)
 	decal.global_transform.origin = hit_position
 	var decal_scale: float = bullet.BulletRes.Diameter

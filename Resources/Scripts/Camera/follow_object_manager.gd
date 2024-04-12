@@ -8,27 +8,20 @@ var cameras: Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _unhandled_key_input(event: InputEvent) -> void:
-	var key: String = event.as_text()
-	if key.length() > 1:
-		if key.begins_with("F"):
-			if cameras.has(int(key)):
-				print_debug(key)
-				use_camera.emit(key)
-			else:
-				print_debug("invalid camera id")
 	if Input.is_action_just_pressed("NextCamera"):
 		if cameras.has(currentcamera + 1) or currentcamera + 1 == 1:
 			currentcamera += 1
-			use_camera.emit("F" + str(currentcamera))
-
+			set_current_camera(currentcamera)
 		else:
 			print_debug("invalid camera id")
 
 	if Input.is_action_just_pressed("PreviousCamera"):
-		if cameras.has(currentcamera - 1) or currentcamera - 1 == 1:
+		if cameras.has(currentcamera - 1):
 			currentcamera -= 1
-			use_camera.emit("F" + str(currentcamera))
-
+			set_current_camera(currentcamera)
+		elif currentcamera != 1:
+			currentcamera = 1
+			set_current_camera(currentcamera)
 		else:
 			print_debug("invalid camera id")
 	if Input.is_action_just_pressed("ClearCameras"):
@@ -46,6 +39,7 @@ func reset_cameras() -> void:
 func set_current_camera(cameraID: int) -> void:
 	currentcamera = cameraID
 	print_debug("cameraid= " + str(currentcamera))
+	use_camera.emit(currentcamera)
 
 
 func register_camera() -> int:
