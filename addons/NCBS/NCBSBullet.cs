@@ -59,6 +59,7 @@ namespace NCBS
         }
         public void Clear()
         {
+            GD.Print("Clearing a bullet");
             Initialized = false;
             Positions.Clear();
             if(BulletNode.HasMethod("destroy"))

@@ -12,8 +12,11 @@ class_name SaveConfig extends Resource
 	"window_setting": 0,
 	"fps_counter": false,
 	"debug_lines": true,
-	"MSAA_quality": 2,
-	"Scope_quality": 2
+	"msaa_quality": 2,
+	"scope_quality": 2,
+	"bullet_follow": true,
+	"bullet_follow_start": 0.25,
+	"bullet_follow_end": 0.25
 }
 
 

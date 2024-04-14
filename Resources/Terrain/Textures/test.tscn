@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbqgyoihabuia"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p3c7t"]
+
+[sub_resource type="Gradient" id="Gradient_gxwum"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_778gs"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6ilif"]
+seamless = true
+color_ramp = SubResource("Gradient_gxwum")
+noise = SubResource("FastNoiseLite_778gs")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nngnq"]
+albedo_color = Color(0, 1, 0, 1)
+albedo_texture = SubResource("NoiseTexture2D_6ilif")
+metallic = 1.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_p3c7t")
+surface_material_override/0 = SubResource("StandardMaterial3D_nngnq")

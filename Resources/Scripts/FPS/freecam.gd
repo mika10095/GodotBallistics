@@ -48,9 +48,13 @@ func _input(event: InputEvent) -> void:
 		#spectator_cam.global_transform.origin = Vector3(0, 0, 0)
 		#camera_pivot.rotation.x = 0
 		#camera_pivot.rotation.z = 0
-		spectator_cam.freelook_enabled = !freelook_enabled
-		freelook_enabled = !spectator_cam.freelook_enabled
+		#spectator_cam.freelook_enabled = !freelook_enabled
+		#freelook_enabled = !spectator_cam.freelook_enabled
 		#spectator_cam.Reset()
+		print_debug(
+			"bullet_follow mode changed to " + str(SettingsManager.get_var("bullet_follow"))
+		)
+		SettingsManager.save_var("bullet_follow", !SettingsManager.get_var("bullet_follow"))
 
 	if freelook_enabled and spectator_cam.current:
 		if event is InputEventMouseMotion:

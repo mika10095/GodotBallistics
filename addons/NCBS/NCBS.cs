@@ -15,7 +15,7 @@ namespace NCBS
 		bool debugLines = true;
 		int CurrentHitID = 1;
 		Node debugTools;
-		Node settings; 
+		Node settings;
 		public ulong CurrentTime;
 		public uint TimeStepTime = 1;
 		public uint TimeStepTimeSeconds { get { return TimeStepTime * 1000; } }
@@ -31,11 +31,11 @@ namespace NCBS
 		{
 			debugTools = GetNode("/root/DebugTools");
 			settings = GetNode("/root/SettingsManager");
-			GD.Print("Its alive!");
-			debugLines = (bool)settings.Call("get_var","debug_lines");
-			GD.Print("debug lines? " + (bool)settings.Call("get_var","debug_lines"));
+			GD.Print("NCBS alive!");
+			debugLines = (bool)settings.Call("get_var", "debug_lines");
+			GD.Print("debug lines? " + (bool)settings.Call("get_var", "debug_lines"));
 		}
-		
+
 
 		public override void _PhysicsProcess(double delta)
 		{
@@ -88,21 +88,22 @@ namespace NCBS
 				Dictionary hit = Space.IntersectRay(PhysicsRayQueryParameters3D.Create(Start, End));
 				if (hit.Count != 0)
 				{
+
 					bullet.HitRes = new NCBSHitRes(CurrentHitID, 1, hit, bullet.getJoules, new Transform3D(bullet.Basis, bullet.LastPosition.Position), bullet.Data);
 					CurrentHitID++;
-					if(debugLines)
+					if (debugLines)
 					{
 						debugTools.Call("draw_line_color", bullet.CurrentState.Position, hit["position"], Color.FromHtml("FF0000"));
 					}
-					
+
 					bullet.BulletNode.Set("global_position", hit["position"]);
 					Node3D hitnode = hit["collider"].Obj as Node3D;
 					if (hitnode.HasMethod("handle_hit") && bullet.HitRes.HitCode != 0)
 					{
 						bullet.HitRes.HitCode = 3;
 						hitnode.Call("handle_hit", bullet.HitRes);
-						
-						
+
+
 					}
 					bullet.HitRes.HitCode = 2;
 					bullet.Clear();
@@ -112,18 +113,25 @@ namespace NCBS
 				}
 				else
 				{
-					if(debugLines)
+					if (debugLines)
 					{
-					debugTools.Call("draw_line_color", Start, End, Color.FromHtml("0000FF"));
+						debugTools.Call("draw_line_color", Start, End, Color.FromHtml("0000FF"));
 					}
-					//GD.Print(current.Position);
+
 					//debugTools.Call("draw_line_color", bullet.CurrentState.Position, bullet.Positions.Peek().Position, Color.FromHtml("FFFF66"));
 					//debugTools.Call("draw_line", current.Position, bullet.LastPosition.Position);
+					if(Start != End){
+					bullet.BulletNode.LookAtFromPosition(Start,End);
+					}
+				
+
 					bullet.LastPosition = bullet.CurrentState;
 					bullet.BulletNode.Set("global_position", bullet.CurrentState.Position);
+				
+					
 					if (bullet.CurrentState.Position.Y <= -100)
 					{
-						new NCBSHitRes(0,0, null, 0, bullet.CurrentPosition, bullet.Data);
+						new NCBSHitRes(0, 0, null, 0, bullet.CurrentPosition, bullet.Data);
 						bullet.HitRes.HitCode = 1;
 						bullet.Clear();
 						hit_pending = true;
@@ -133,22 +141,27 @@ namespace NCBS
 					}
 					//GD.Print(bullet.BulletNode.Position.ToString());
 				}
+				//rotate the bullet now
 				
 
-
 			}
+
 			if (hit_pending)
 			{
 				//GD.Print("Hit pending");
-			for (int i = 0; i < Bullets.Count; i++)
-			{
-				if (Bullets[i].HitRes.HitCode != 0)
-					GD.Print("Bullet Removed");
-					{Bullets.Remove(Bullets[i]);}
+				for (int i = 0; i < Bullets.Count; i++)
+				{
+					if (Bullets[i].HitRes.HitCode != 0)
+					{
+						Bullets.Remove(Bullets[i]);
+						GD.Print("Bullet Removed");
+					}
+
+
+				}
+				hit_pending = false;
 			}
-			hit_pending = false;
-			}
-			
+
 		}
 		public float getJoules(NCBSBullet bullet, BulletState current)
 		{
@@ -157,14 +170,15 @@ namespace NCBS
 		public void Initialize(NCBSBullet bullet)
 		{
 			PackedScene bulletscene = GD.Load<PackedScene>("addons/NCBS/bullet_node.tscn");
-			if(bullet.Data.BulletMesh != null)
+			if (bullet.Data.BulletMesh != null)
 			{
-				 bullet.BulletNode = bullet.Data.BulletMesh.Instantiate<Node3D>();
+				bullet.BulletNode = bullet.Data.BulletMesh.Instantiate<Node3D>();
 			}
-			else{
-			bullet.BulletNode = bulletscene.Instantiate<Node3D>();
+			else
+			{
+				bullet.BulletNode = bulletscene.Instantiate<Node3D>();
 			}
-			bullet.BulletNode.Basis = bullet.StartPosition.Basis.Orthonormalized();
+			bullet.BulletNode.Basis = bullet.StartPosition.Basis.Orthonormalized().Rotated(new Vector3(0,1,0),90);
 			GetTree().Root.AddChild(bullet.BulletNode);
 
 			bullet.LastDelta = 0;
@@ -175,29 +189,29 @@ namespace NCBS
 			BulletState NewState = new BulletState(0, bullet.CurrentPosition.Origin, bullet.CurrentVelocity);
 			bullet.Positions.Enqueue(NewState);
 			GD.Print(NewState.Position.ToString() + " " + NewState.Velocity.ToString());
-			
-			
-			
-			
+
+
+
+
 			for (int i = 0; i < PreCalcSteps; i++)
 			{
 				bullet.CalculateStep(TimeStepTimeSeconds);
 			}
 			bullet.LastPosition = NewState;
 			bullet.Initialized = true;
-			
-			
+
+
 		}
 		public void AddBullet(Transform3D firepoint, Vector3 rotation_offset, float rotation_amount, NCBSBulletRes bulletres)
 		{
 			firepoint.Basis = firepoint.Basis.Rotated(rotation_offset, rotation_amount);
 			Bullets.Add(new NCBSBullet(firepoint, bulletres, WorldRes));
-			debugLines = (bool)settings.Call("get_var","debug_lines");
+			debugLines = (bool)settings.Call("get_var", "debug_lines");
 		}
 		public void AddBullet(Transform3D firepoint, NCBSBulletRes bulletres)
 		{
 			Bullets.Add(new NCBSBullet(firepoint, bulletres, WorldRes));
-			debugLines = (bool)settings.Call("get_var","debug_lines");
+			debugLines = (bool)settings.Call("get_var", "debug_lines");
 
 		}
 		public void SetTimeStepTime(uint step_time)

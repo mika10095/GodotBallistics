@@ -6,11 +6,13 @@ extends Control
 
 func _ready() -> void:
 	%PauseMenu/BackButton.pressed.connect(on_menu_button)
+	FollowObjectManager.reset_cameras()
 
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("MenuButton"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		FollowObjectManager.reset_cameras()
 		new_new_world.queue_free()
 		get_tree().root.add_child(preload("res://Scenes/menu.tscn").instantiate())
 

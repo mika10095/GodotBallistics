@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bktsl66rprsep"]
 
-[ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://Resources/Scripts/Camera/camera_follow.tscn" id="1_8upex"]
+[ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://Resources/Scripts/Camera/game_camera.tscn" id="1_8upex"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bw1ih"]
 

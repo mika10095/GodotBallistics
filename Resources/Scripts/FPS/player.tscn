@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://le4jqcaav038"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/FPS/freecam.gd" id="1_trpew"]
-[ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://Resources/Scripts/Camera/camera_follow.tscn" id="2_mg8l0"]
+[ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://Resources/Scripts/Camera/game_camera.tscn" id="2_mg8l0"]
 [ext_resource type="Script" path="res://Resources/Scripts/FPS/fps_rig.gd" id="3_qj7m5"]
 [ext_resource type="Script" path="res://Resources/Scripts/FPS/gun_bob.gd" id="4_qduko"]
 [ext_resource type="PackedScene" uid="uid://bi31d28g7bwot" path="res://Resources/Models/Puska/puska.tscn" id="4_u0tfo"]

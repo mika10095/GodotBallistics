@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://caarwi6um75oi"]
 
 [ext_resource type="Material" uid="uid://f7p1y0km3qci" path="res://Resources/Models/Puska/Materials/golyo.tres" id="1_alima"]
-[ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://Resources/Scripts/Camera/camera_follow.tscn" id="1_oh74r"]
 [ext_resource type="Script" path="res://Resources/Scripts/Camera/camera_bullet.gd" id="1_t7htj"]
+[ext_resource type="PackedScene" uid="uid://fmguqkxj6lv7" path="res://Resources/Scripts/Camera/game_camera.tscn" id="2_ule8g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdw7r"]
 
@@ -39,14 +39,13 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_1hefu")
 
 [node name="bullet" type="Node3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 script = ExtResource("1_t7htj")
 
-[node name="CameraFollow" parent="." instance=ExtResource("1_oh74r")]
-transform = Transform3D(4.56956e-08, 0, -1, 0, 1, 0, 1, 0, 4.56956e-08, -0.5, 0.1, 0)
+[node name="CameraFollow" parent="." instance=ExtResource("2_ule8g")]
+transform = Transform3D(1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, 1, 0, 0.1, 0.5)
 
 [node name="bullet" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, -1.19209e-07, 0, 1.19209e-07, 1, 0, 0, -9.54534e-11)
+transform = Transform3D(-4.37114e-08, 1.19209e-07, 1, 0, 1, -1.19209e-07, -1, -5.21079e-15, -4.37114e-08, 0, 0, -9.54534e-11)
 material_override = ExtResource("1_alima")
 mesh = SubResource("ArrayMesh_xbgn7")
 skeleton = NodePath("")
