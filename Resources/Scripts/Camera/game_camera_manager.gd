@@ -7,7 +7,7 @@ var cameras: Array = []
 
 
 # Called when the node enters the scene tree for the first time.
-func _unhandled_key_input(event: InputEvent) -> void:
+func _unhandled_key_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("NextCamera"):
 		set_current_camera(2)
 
