@@ -1,0 +1,184 @@
+{
+  "main": {
+    "id": "386e8488917a7841",
+    "type": "split",
+    "children": [
+      {
+        "id": "87ffb1b7beee81b8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0877a20b0e61937a",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "aff41b4b43afeb01",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3b266d481416d07",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0ad23c53706cbcd1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "15713800460753c3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "38e71bc9991dd9a4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1bbe9ed551c9a88e",
+    "type": "split",
+    "children": [
+      {
+        "id": "79d8d928bf404130",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e0c956bc54f60325",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cdf67644d7b67cfe",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8f056dd3e2a659bf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "7a6d665adccc0ea9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "5f150ac1d4bb9b7d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "0877a20b0e61937a",
+  "lastOpenFiles": [
+    "Daily/2024-01-09.md",
+    "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
+    "Images/PDFS/Stanag 4119.pdf",
+    "Images/PDFS/MAM.pdf",
+    "Images/PDFS/ISO-2533-1975.pdf",
+    "Images/PDFS/FULLTEXT01.pdf",
+    "Images/PDFS/flightstab.pdf",
+    "Images/PDFS/ExplicitRefinement.pdf",
+    "Images/PDFS/explicitimplicit.pdf",
+    "Images/PDFS/Explicit M-2.pdf",
+    "Images/PDFS/ADA098110.pdf",
+    "Daily/2023-11-20.md",
+    "Daily/felesleges.md",
+    "Daily/2023-09-13.md",
+    "Daily/2023-09-15.md",
+    "Daily/2023-09-25.md",
+    "Daily/2023-09-26.md",
+    "Daily/Mi Micsoda!.md",
+    "V2.5 Godot/Agyfolyás.md",
+    "Daily/2024-02-06.md"
+  ]
+}

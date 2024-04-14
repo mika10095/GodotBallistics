@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://Resources/Scripts/FPS/fps_rig.gd" id="3_qj7m5"]
 [ext_resource type="Script" path="res://Resources/Scripts/FPS/gun_bob.gd" id="4_qduko"]
 [ext_resource type="PackedScene" uid="uid://bi31d28g7bwot" path="res://Resources/Models/Puska/puska.tscn" id="4_u0tfo"]
-[ext_resource type="Script" path="res://Resources/Scripts/FPS/fps_gun_base.tres.gd" id="6_2mn6c"]
 [ext_resource type="Curve" uid="uid://ba8nkmb73vpyj" path="res://addons/NCBS/DragCurves/G5_projectile_curve.tres" id="6_g7wik"]
+[ext_resource type="Script" path="res://Resources/Scripts/FPS/fps_gun_base.gd" id="6_txwj6"]
 [ext_resource type="Script" path="res://addons/NCBS/NCBSBulletRes.cs" id="6_v5kus"]
 [ext_resource type="PackedScene" uid="uid://caarwi6um75oi" path="res://Resources/Models/Puska/bullet.tscn" id="7_wma8o"]
 
@@ -132,10 +132,11 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.113,
 
 [node name="FPSGunBase" type="Node3D" parent="HeadbobPivot/PlayerCamera/fps_rig/GunbobPivot/puska" node_paths=PackedStringArray("gun_model")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0564936, 0.0258399, 2.46941e-09)
-script = ExtResource("6_2mn6c")
+script = ExtResource("6_txwj6")
 is_animation_over = false
 gun_model = NodePath("..")
 NCBS_bullet = SubResource("Resource_1sgk3")
+accuracy_moa = 0.5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HeadbobPivot/PlayerCamera/fps_rig"]
 libraries = {

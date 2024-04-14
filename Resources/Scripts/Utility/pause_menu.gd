@@ -5,7 +5,7 @@ extends Control
 
 
 func _ready() -> void:
-	%PauseMenu/BackButton.pressed.connect(on_menu_button)
+	#%PauseMenu/BackButton.pressed.connect(on_menu_button)
 	FollowObjectManager.reset_cameras()
 
 

@@ -1,7 +1,7 @@
 extends Node
 @export var UI_root: NodePath
 @onready var sound_dictionary: Dictionary = {
-	&"UI_click": AudioStreamPlayer.new(), &"UI_click_soft": AudioStreamPlayer.new()
+	"UI_click": AudioStreamPlayer.new(), "UI_click_soft": AudioStreamPlayer.new()
 }
 
 
@@ -18,12 +18,12 @@ func add_sound_players(node: Node) -> void:
 	for i in node.get_children():
 		#print_debug(i)
 		if i is Button:
-			i.pressed.connect(play_sound.bind(&"UI_click"))
-			i.mouse_entered.connect(play_sound.bind(&"UI_click_soft"))
+			i.pressed.connect(play_sound.bind("UI_click"))
+			i.mouse_entered.connect(play_sound.bind("UI_click_soft"))
 		elif i is Slider:
-			i.mouse_entered.connect(play_sound.bind(&"UI_click_soft"))
-			i.drag_started.connect(play_sound.bind(&"UI_click_soft"))
-			i.drag_ended.connect(play_sound.bind(&"UI_click").unbind(1))
+			i.mouse_entered.connect(play_sound.bind("UI_click_soft"))
+			i.drag_started.connect(play_sound.bind("UI_click_soft"))
+			i.drag_ended.connect(play_sound.bind("UI_click").unbind(1))
 		add_sound_players(i)
 
 

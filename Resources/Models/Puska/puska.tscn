@@ -970,29 +970,65 @@ layers = 524288
 mesh = SubResource("PlaneMesh_tngya")
 surface_material_override/0 = ExtResource("7_rmdbc")
 
+[node name="Crosshair2" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.5, 1.50996e-07, 4.1359e-24, -7.54979e-08, -1, 0, 5.29396e-22, -1.77636e-15, 0.003, 0, -1.1, -1.42109e-14)
+layers = 524288
+mesh = SubResource("PlaneMesh_tngya")
+skeleton = NodePath("../Crosshair1")
+surface_material_override/0 = ExtResource("7_rmdbc")
+
 [node name="200" type="MeshInstance3D" parent="tavcso/lens"]
-transform = Transform3D(-0.001, 1.50996e-07, 2.31611e-23, -1.50996e-10, -1, 8.88178e-16, 9.30578e-25, -3.55271e-15, 0.015, 0.045, -1.1, 0)
+transform = Transform3D(-0.001, 1.50996e-07, 2.31611e-23, -1.50996e-10, -1, 8.88178e-16, 9.30578e-25, -3.55271e-15, 0.015, 0.05, -1.1, 0)
 layers = 524288
 mesh = SubResource("PlaneMesh_tngya")
 surface_material_override/0 = ExtResource("7_rmdbc")
 
 [node name="300" type="MeshInstance3D" parent="tavcso/lens"]
-transform = Transform3D(-0.001, 1.50996e-07, 3.0738e-23, -1.50996e-10, -1, -6.66134e-17, 1.03398e-24, -3.33067e-15, 0.02, 0.12, -1.1, 0)
+transform = Transform3D(-0.001, 1.50996e-07, 3.0738e-23, -1.50996e-10, -1, -6.66134e-17, 1.03398e-24, -3.33067e-15, 0.02, 0.1, -1.1, 0)
 layers = 524288
 mesh = SubResource("PlaneMesh_tngya")
 surface_material_override/0 = ExtResource("7_rmdbc")
 
 [node name="400" type="MeshInstance3D" parent="tavcso/lens"]
-transform = Transform3D(-0.001, 1.50996e-07, 3.0738e-23, -1.50996e-10, -1, -6.66134e-17, 1.03398e-24, -3.33067e-15, 0.02, 0.21, -1.1, 0)
+transform = Transform3D(-0.001, 1.50996e-07, 2.30535e-23, -1.50996e-10, -1, -4.996e-17, 1.03398e-24, -3.33067e-15, 0.015, 0.15, -1.1, 0)
 layers = 524288
 mesh = SubResource("PlaneMesh_tngya")
 surface_material_override/0 = ExtResource("7_rmdbc")
 
-[node name="Crosshair2" type="MeshInstance3D" parent="tavcso/lens"]
-transform = Transform3D(-0.5, 1.50996e-07, 4.1981e-24, -7.54979e-08, -1, -4.66294e-18, 5.82335e-22, -1.55431e-15, 0.003, 0, -1.1, -1.42109e-14)
+[node name="301" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.001, 1.50996e-07, 3.0738e-23, -1.50996e-10, -1, -6.66134e-17, 1.03398e-24, -3.33067e-15, 0.02, 0.2, -1.1, 0)
 layers = 524288
 mesh = SubResource("PlaneMesh_tngya")
-skeleton = NodePath("../Crosshair1")
+surface_material_override/0 = ExtResource("7_rmdbc")
+
+[node name="401" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.001, 1.50996e-07, 2.30535e-23, -1.50996e-10, -1, -4.996e-17, 1.03398e-24, -3.33067e-15, 0.015, 0.25, -1.1, 0)
+layers = 524288
+mesh = SubResource("PlaneMesh_tngya")
+surface_material_override/0 = ExtResource("7_rmdbc")
+
+[node name="302" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.001, 1.50996e-07, 3.0738e-23, -1.50996e-10, -1, -6.66134e-17, 1.03398e-24, -3.33067e-15, 0.02, 0.3, -1.1, 0)
+layers = 524288
+mesh = SubResource("PlaneMesh_tngya")
+surface_material_override/0 = ExtResource("7_rmdbc")
+
+[node name="402" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.001, 1.50996e-07, 2.30535e-23, -1.50996e-10, -1, -4.996e-17, 1.03398e-24, -3.33067e-15, 0.015, 0.35, -1.1, 0)
+layers = 524288
+mesh = SubResource("PlaneMesh_tngya")
+surface_material_override/0 = ExtResource("7_rmdbc")
+
+[node name="303" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.001, 1.50996e-07, 3.0738e-23, -1.50996e-10, -1, -6.66134e-17, 1.03398e-24, -3.33067e-15, 0.02, 0.4, -1.1, 0)
+layers = 524288
+mesh = SubResource("PlaneMesh_tngya")
+surface_material_override/0 = ExtResource("7_rmdbc")
+
+[node name="403" type="MeshInstance3D" parent="tavcso/lens"]
+transform = Transform3D(-0.001, 1.50996e-07, 2.30535e-23, -1.50996e-10, -1, -4.996e-17, 1.03398e-24, -3.33067e-15, 0.015, 0.45, -1.1, 0)
+layers = 524288
+mesh = SubResource("PlaneMesh_tngya")
 surface_material_override/0 = ExtResource("7_rmdbc")
 
 [node name="Marker3D" type="Marker3D" parent="tavcso"]

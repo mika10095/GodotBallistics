@@ -212,7 +212,6 @@ namespace NCBS
 		{
 			Bullets.Add(new NCBSBullet(firepoint, bulletres, WorldRes));
 			debugLines = (bool)settings.Call("get_var", "debug_lines");
-
 		}
 		public void SetTimeStepTime(uint step_time)
 		{
