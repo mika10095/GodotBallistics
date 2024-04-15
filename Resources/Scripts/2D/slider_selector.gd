@@ -5,7 +5,7 @@ extends HBoxContainer
 @export var slider_setting_name: String
 @export var multiplier: float = 100
 var config: SettingsManager = SettingsManager
-@onready var Menu: Node = %Menu
+@onready var menu: Node = %Menu
 @export var IsAudioBus: bool = false
 
 
@@ -21,13 +21,13 @@ func _ready() -> void:
 
 func update_text() -> void:
 	text.text = str(slider.value * multiplier)
-	Menu.slider_value_changed(slider_setting_name, slider)
+	menu.slider_value_changed(slider_setting_name, slider)
 	if IsAudioBus:
 		AudioMixer.change_audio_level(slider_setting_name.capitalize().split(" ")[0], slider.value)
 
 
 func update_slider() -> void:
 	slider.value = float(text.text) / multiplier
-	Menu.slider_value_changed(slider_setting_name, slider)
+	menu.slider_value_changed(slider_setting_name, slider)
 	if IsAudioBus:
 		AudioMixer.change_audio_level(slider_setting_name.capitalize().split(" ")[0], slider.value)

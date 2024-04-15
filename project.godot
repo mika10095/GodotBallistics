@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ballistics"
-config/version="1.6.2"
+config/version="1.7.2"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
 boot_splash/bg_color=Color(0.407843, 0.462745, 0.470588, 1)

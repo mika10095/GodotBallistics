@@ -21,7 +21,7 @@ namespace NCBS
 		public uint TimeStepTimeSeconds { get { return TimeStepTime * 1000; } }
 		public uint PreCalcSteps = 40;
 		public ulong CatchUpTime = 100;
-		public NCBSWorldRes WorldRes;
+		public NCBSWorldRes WorldRes = new NCBSWorldRes(9.8f,1.225f,343.0f);
 		private List<NCBSBullet> Bullets = new List<NCBSBullet>();
 		bool hit_pending = false;
 
@@ -29,6 +29,7 @@ namespace NCBS
 		public List<NCBSBullet> Saved = new List<NCBSBullet>();
 		public override void _Ready()
 		{
+			
 			debugTools = GetNode("/root/DebugTools");
 			settings = GetNode("/root/SettingsManager");
 			GD.Print("NCBS alive!");

@@ -1,6 +1,6 @@
 extends Control
 
-@onready var menu: Node = %PauseMenu
+#@onready var menu: Node = %PauseMenu
 @onready var new_new_world: Node = $"../.."
 
 
