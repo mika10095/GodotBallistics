@@ -7,7 +7,7 @@ script = ExtResource("1_crgq3")
 settings = {
 "aim_sens": 0.1,
 "base_sens": 0.3,
-"bullet_follow": false,
+"bullet_follow": true,
 "bullet_follow_end": 0.25,
 "bullet_follow_start": 0.25,
 "debug_lines": true,

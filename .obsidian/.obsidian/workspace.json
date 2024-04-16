@@ -16,8 +16,19 @@
                 "file": "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf"
               }
             }
+          },
+          {
+            "id": "2db3c9c05d25949c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Images/PDFS/Stanag4355.pdf"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
+                "file": "Images/PDFS/Stanag4355.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
+                "file": "Images/PDFS/Stanag4355.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf"
+                "file": "Images/PDFS/Stanag4355.pdf"
               }
             }
           }
@@ -158,26 +169,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0877a20b0e61937a",
+  "active": "2db3c9c05d25949c",
   "lastOpenFiles": [
-    "Daily/2024-01-09.md",
-    "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
     "Images/PDFS/Stanag 4119.pdf",
+    "Daily/Mi Micsoda!.md",
+    "Daily/felesleges.md",
+    "Images/PDFS/Modern Exterior Ballistics - The Launch and Flight Dynamics of Symmetric Projectiles 2nd ed. - R. McCoy.pdf",
+    "Daily/2024-01-09.md",
+    "Daily/2023-11-20.md",
+    "Daily/2023-09-26.md",
+    "Daily/2023-09-25.md",
+    "Daily/2023-09-15.md",
+    "Daily/2023-09-13.md",
+    "Images/PDFS/ADA098110.pdf",
+    "Images/PDFS/379956.pdf",
     "Images/PDFS/MAM.pdf",
     "Images/PDFS/ISO-2533-1975.pdf",
     "Images/PDFS/FULLTEXT01.pdf",
     "Images/PDFS/flightstab.pdf",
     "Images/PDFS/ExplicitRefinement.pdf",
     "Images/PDFS/explicitimplicit.pdf",
-    "Images/PDFS/Explicit M-2.pdf",
-    "Images/PDFS/ADA098110.pdf",
-    "Daily/2023-11-20.md",
-    "Daily/felesleges.md",
-    "Daily/2023-09-13.md",
-    "Daily/2023-09-15.md",
-    "Daily/2023-09-25.md",
-    "Daily/2023-09-26.md",
-    "Daily/Mi Micsoda!.md",
     "V2.5 Godot/Agyfolyás.md",
     "Daily/2024-02-06.md"
   ]

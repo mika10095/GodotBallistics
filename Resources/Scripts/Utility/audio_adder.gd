@@ -5,7 +5,7 @@ extends Node
 }
 
 
-# Called when the node enters the scene tree for the first time.
+#Ez a script erősen inspirált ezáltal a videó által viszont erre ez a legjobb megoldás: https://www.youtube.com/watch?v=QgBecUl_lFs
 func _ready() -> void:
 	for sound: StringName in sound_dictionary.keys():
 		sound_dictionary[sound].stream = load("res://Resources/Audio/SFX/" + str(sound) + ".wav")
